@@ -61,7 +61,7 @@ def run(config: Config):
 
 
 def main():
-    parser = argparse.ArgumentParser('metaframe', 'Prints metadatafiles in a neat dataframe')
+    parser = argparse.ArgumentParser('mdframe', 'Prints metadatafiles in a neat dataframe')
     parser.add_argument('-d', '--directory',
                         type=str,
                         help="Path to the directory containing the data and the metadata")

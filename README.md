@@ -1,4 +1,4 @@
-# MetaFrame
+# mdframe
 
 View metadata files as a Pandas DataFrame
 
