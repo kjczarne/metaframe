@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "metaframe"
+version = "0.1.0"
+description = "Simple metadata viewer for datasets utilizing per-file metadata descriptors"
+authors = ["Krzysztof J. Czarnecki <kjczarne@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "metaframe", from="src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "^2.1.0"
+toml = "^0.10.2"
+
+[tool.poetry.group.dev.dependencies]
+pylint = "^2.17.5"
+pytest = "^7.4.2"
+
+[tool.poetry.scripts]
+metaframe = "metaframe:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pylint.messages_control]
+max-line-length = 100
+disable = [
+  "missing-docstring",
+  "bad-whitespace",
+  "bad-continuation",
+]
