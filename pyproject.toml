@@ -17,7 +17,7 @@ pylint = "^2.17.5"
 pytest = "^7.4.2"
 
 [tool.poetry.scripts]
-mdframe = "mdframe:main"
+mdfr = "mdframe:main"
 
 [build-system]
 requires = ["poetry-core"]
