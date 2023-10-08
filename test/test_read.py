@@ -1,6 +1,6 @@
 import pytest
 from pathlib import Path
-from mdframe import run, Config
+from mdframe.reader import run, Config
 
 
 def test_metadata_print():
