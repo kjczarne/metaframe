@@ -1,3 +1,7 @@
 [image]
 width = 2048
 height = 4096
+
+[time]
+started = "12:12"
+finished = "12:38"
