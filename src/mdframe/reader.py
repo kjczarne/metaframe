@@ -26,7 +26,8 @@ def metadata_file_to_df(metadata_file_contents):
     return pd.DataFrame(metadata_file_contents)
 
 
-def data_dir_to_dataframes(data_dir_path: Path, metadata_file_extension: MetadataFileExtension) -> List[pd.DataFrame]:
+def data_dir_to_dataframes(data_dir_path: Path,
+                           metadata_file_extension: MetadataFileExtension) -> List[pd.DataFrame]:
     metadata_file_paths = data_dir_path.glob(f"*.{metadata_file_extension}")
     metadata_file_contents = map(load_metadata_file, metadata_file_paths)
     metadata_records = map(metadata_file_to_df, metadata_file_contents)
