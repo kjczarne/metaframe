@@ -5,17 +5,32 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Module",
+            "name": "Test Timing",
+            "type": "python",
+            "request": "launch",
+            "program": "test/test_timing.py",
+            "justMyCode": true
+        },
+        {
+            "name": "Test Read",
+            "type": "python",
+            "request": "launch",
+            "program": "test/test_read.py",
+            "justMyCode": true
+        },
+        {
+            "name": "Reader module",
             "type": "python",
             "request": "launch",
             "module": "mdframe.reader",
             "args": [
-                "-d", "test/data_dir"
+                "-d",
+                "test/data_dir"
             ],
             "justMyCode": true
         },
         {
-            "name": "Python: Current File",
+            "name": "Current File",
             "type": "python",
             "request": "launch",
             "program": "${file}",
