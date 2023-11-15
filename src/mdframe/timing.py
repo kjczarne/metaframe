@@ -79,7 +79,7 @@ def calc_time_and_rate_from_a_generic_df(df: pd.DataFrame) -> (float, float):
     Returns:
         _type_: _description_
     """
-    deltas = []
-    for row in df.iterrows():
-        deltas = calc_time_row(row, lambda row: (row["time"]["start"], row["time"]["end"]))
-    return sum(deltas), calc_rate(sum(deltas), len(deltas))
+    starts = df['time'].map(lambda x: x['start']).astype('datetime64[ns]')
+    ends = df['time'].map(lambda x: x['end']).astype('datetime64[ns]')
+    deltas = ends - starts
+    return deltas.sum(), calc_rate(deltas.sum().total_seconds(), len(deltas))
