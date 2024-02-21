@@ -1,89 +1,87 @@
-def check_equality(category : str, df_category : str) -> bool:
-    """Checks if the category is the same as the one in the dataframe
-    
-    Args:
-        category (str): The category
-        df_category (str): The category in the dataframe
-    
-    Returns:
-        bool: True if the category is the same as the one in the dataframe or None, False otherwise
-    """
-    if category == None:
-        return True
-    return category == df_category
+def check_existence(arg: str, row: str) -> bool:
 
-def check_category_existence(category : str, df : str) -> bool:
-    """Checks if the category exists in the dataframe index
+    """Check if the arg exist to the row
     
-    Args:
-        category (str): The category
-        df (pandas.DataFrame): The category in the dataframe
-    
-    Returns:
-        bool: True if the category exists in the dataframe index, False otherwise
+    Args::
+        arg -- the arg to check
+        row -- the row to check
+    Return:
+        bool: True if the arg exists in the row, False otherwise
     """
-    if category in list(df.index):
-        return True
     
+    for item in row:
+        if type(item) == list and arg in item:
+            return True
+        
+        if arg == item:
+            return True
+        
     return False
 
-def dataframe_check(df, nutrition_subgroup : str = None, food_type : str = None, description : str = None, weight : float = None,
-                     unit : str = None, ingredients : list = None, project_name : str = None, rgbd_file_names : list = None,
-              nutrition_facts_sources : list = None, texture_sources : list = None, quality : int = None, quality_comments : str = None,
-              merged : bool = None, textured : bool = None, started : str = None, ended : str = None) -> bool:
+def filter_files_and(df_list: str,  **kwargs) -> list[str]:
+
+    """Filter the dataframes based on the given parameters for AND condition
     
-    """Filters the dataframe based on the given parameters
-    
-    Args:
-        df (pd.DataFrame): The dataframe
-        nutrition_subgroup (str, optional): The nutrition subgroup. Defaults to None.
-        food_type (str, optional): The food type. Defaults to None.
-        description (str, optional): The description. Defaults to None.
-        weight (float, optional): The weight. Defaults to None.
-        unit (str, optional): The unit. Defaults to None.
-        ingredients (list, optional): The ingredients. Defaults to None.
-        project_name (str, optional): The project name. Defaults to None.
-        rgbd_file_names (list, optional): The rgbd file names. Defaults to None.
-        nutrition_facts_sources (list, optional): The nutrition facts sources. Defaults to None.
-        texture_sources (list, optional): The texture sources. Defaults to None.
-        quality (int, optional): The quality. Defaults to None.
-        quality_comments (str, optional): The quality comments. Defaults to None.
-        merged (bool, optional): The merged. Defaults to None.
-        textured (bool, optional): The textured. Defaults to None.
-        started (str, optional): The started. Defaults to None.
-        ended (str, optional): The ended. Defaults to None.
+    Args::
+        df_list -- the list of dataframes
+        kwargs -- the parameters
     Return:
-        bool: True if the dataframe satisfies the given parameters, False otherwise
+        list[str]: The list of satisfied files
     """
 
-    categories_list = ["nutrition_subgroup", "food_type", "description", "weight", "unit", "ingredients", "project_name", "rgbd_file_names", 
-                       "nutrition_facts_sources", "texture_sources", "quality", "quality_comments", "merged", "textured", "started", "finished"]
-    
-    categories_item = ["nutrition_subgroup", "food_type", "description"]
-    categories_metrics = ["weight", "unit", "ingredients"]
-    categories_model = ["project_name", "rgbd_file_names", "nutrition_facts_sources", "texture_sources", "quality", "quality_comments", "merged", "textured"]
-    categories_time = ["started", "finished"]
+    statisfied_files = []
 
-    categories_existence = []
-
-    for category in categories_list:
-        if not check_category_existence(category, df):
-            categories_existence.append(None)
-            continue
+    for df in df_list:
+        check_if_satisfied = True
+        for key, arg in kwargs.items():
+            if key not in list(df.index):
+                print(key + " is not a valid parameter")
+                continue
+            
+            row = list(df.loc[key,:].values)
+            if type(arg) == list:
+                check_if_satisfied = False
+                for sub_arg in arg:
+                    if check_existence(sub_arg, row):
+                        check_if_satisfied = True
+            elif not check_existence(arg, row):
+                check_if_satisfied = False
         
-        if category in categories_item:
-            categories_existence.append(df.loc[category, "item"])
-        elif category in categories_metrics:  
-            categories_existence.append(df.loc[category, "metrics"])
-        elif category in categories_model:
-            categories_existence.append(df.loc[category, "model"])
-        elif category in categories_time:
-            categories_existence.append(df.loc[category, "time"])
-
-    argument_list = [nutrition_subgroup, food_type, description, weight, unit, ingredients, project_name, 
-                     rgbd_file_names, nutrition_facts_sources, texture_sources, quality, quality_comments, merged, textured, started, ended]
+        if check_if_satisfied:
+            statisfied_files.append(df.loc["nutrition_subgroup", "gid"])
     
-    for index in range(len(argument_list)):
-        if not check_equality(argument_list[index], categories_existence[index]):
-            return False
-    return True
+    return sorted(statisfied_files)
+
+def filter_files_or(df_list: str,  **kwargs) -> list[str]:
+    """Filter the dataframes based on the given parameters for OR condition
+    
+    Args::
+        df_list -- the list of dataframes
+        kwargs -- the parameters
+    Return:
+        list[str]: The list of satisfied files
+    """
+    
+    statisfied_files = []
+
+    for df in df_list:
+        check_if_satisfied = False
+        for key, arg in kwargs.items():
+            if key not in list(df.index):
+                print(key + " is not a valid parameter")
+                continue
+            
+            row = list(df.loc[key,:].values)
+            if type(arg) == list:
+                for sub_arg in arg:
+                    if check_existence(sub_arg, row):
+                        check_if_satisfied = True
+                        break
+            elif check_existence(arg, row):
+                check_if_satisfied = True
+                break
+        
+        if check_if_satisfied:
+            statisfied_files.append(df.loc["nutrition_subgroup", "gid"])
+    
+    return sorted(statisfied_files)
