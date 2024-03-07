@@ -5,7 +5,7 @@ from typing import Dict, Any, Tuple, Optional, Literal, get_args, List
 from pathlib import Path
 from dataclasses import dataclass
 from jsonschema import validate
-from schema import schema
+from mdframe.schema import schema
 
 DataFileExtension = Literal["txt", "jpg"]
 SUPPORTED_DATA_FILE_EXTENSIONS = get_args(DataFileExtension)
@@ -23,6 +23,7 @@ def load_metadata_file(metadata_file_path: Path, schema: Dict) -> Dict[str, Any]
     validate(instance = metadata_file_contents, schema = schema)
 
     return metadata_file_contents
+
 
 def metadata_file_to_df(metadata_file_contents):
     return pd.DataFrame(metadata_file_contents)
@@ -43,8 +44,8 @@ class Config:
     # data_file_extensions: List[DataFileExtension]
     schema: Dict
     
+
 def run(config: Config):
-    print(**config.__dict__)
     return data_dir_to_dataframes(**config.__dict__)
 
 
