@@ -112,9 +112,7 @@ schema = {
         "finished": {
           "type": "string"
         }
-      },
-      "required": [
-      ]
+      }
     }
   },
   "required": [

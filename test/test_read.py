@@ -6,7 +6,7 @@ from mdframe.schema import schema
 class TestReader(unittest.TestCase):
 
     def test_metadata_print(self):
-        data_dir_path = Path(__file__).parent / "data_dir" / "data_file3.toml"
+        data_dir_path = Path(__file__).parent / "data_dir"
         config = Config(data_dir_path, "toml", schema)
         df = run(config)
         print(df)
