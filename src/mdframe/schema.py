@@ -43,8 +43,7 @@ schema = {
       },
       "required": [
         "weight",
-        "unit",
-        "ingredients"
+        "unit"
       ]
     },
     "model": {
@@ -102,10 +101,6 @@ schema = {
       "required": [
         "project_name",
         "rgbd_file_names",
-        "nutrition_facts_sources",
-        "texture_sources",
-        "quality",
-        "quality_comments"
       ]
     },
     "time": {
@@ -119,8 +114,6 @@ schema = {
         }
       },
       "required": [
-        "started",
-        "finished"
       ]
     }
   },
