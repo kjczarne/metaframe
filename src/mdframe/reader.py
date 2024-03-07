@@ -5,7 +5,7 @@ from typing import Dict, Any, Tuple, Optional, Literal, get_args, List
 from pathlib import Path
 from dataclasses import dataclass
 from jsonschema import validate
-from schema import validation_schema
+from schema import schema
 
 DataFileExtension = Literal["txt", "jpg"]
 SUPPORTED_DATA_FILE_EXTENSIONS = get_args(DataFileExtension)
