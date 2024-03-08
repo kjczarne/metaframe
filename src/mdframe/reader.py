@@ -24,7 +24,7 @@ def load_metadata_file(metadata_file_path: Path, schema: Dict) -> Dict[str, Any]
     with open(metadata_file_path, "r") as f:
         metadata_file_contents = toml.load(f)
 
-    # validates JSON according to schema located in schema.py
+    # validates JSON according to schema located in schema.json
     validate(instance = metadata_file_contents, schema = schema)
 
     return metadata_file_contents
