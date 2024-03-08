@@ -66,7 +66,7 @@ class Config:
                 if response.status == 200:
                    self.__schema = json.loads(response.data.decode('utf-8'))
                 else:
-                    raise HTTPError(f"Failed to fetch schema from URL: {self.schema_url}")
+                    raise HTTPError(f"Failed to fetch schema from URL {self.schema_url}")
         return self.__schema
 
 def run(config: Config):
@@ -85,7 +85,7 @@ def main():
                         default="toml")
     parser.add_argument('-s', '--schema',
                         type=str,
-                        help="URL or Path to the schema file for validating the data",
+                        help="URL or Path to the schema file for validating the metadata",
                         default="schema.json")
     args = parser.parse_args()
 
@@ -98,7 +98,7 @@ def main():
             Path(args.schema).exists()
             schema = Path(parsed_schema)
         except:
-            raise ValueError(f"Specified schema {parsed_schema} is neither a URL nor Path")
+            raise ValueError(f"Specified schema location {parsed_schema} is neither a URL nor Path")
 
     config = Config(
         data_dir_path=Path(args.directory),
