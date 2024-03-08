@@ -96,7 +96,7 @@ def main():
     else:
         try:
             Path(args.schema).exists()
-            schema = Path(parsed_schema)
+            schema = Path(args.schema)
         except:
             raise ValueError(f"Specified schema location {parsed_schema} is neither a URL nor Path")
 
