@@ -1,11 +1,15 @@
 import argparse
+import json
+from dataclasses import dataclass
+from jsonschema import validate
 import pandas as pd
 import toml
 from typing import Dict, Any, Tuple, Optional, Literal, get_args, List
 from pathlib import Path
-from dataclasses import dataclass
-from jsonschema import validate
-from mdframe.schema import schema
+import urllib3
+from urllib3 import Url
+from urllib.parse import urlparse
+from urllib3.exceptions import HTTPError
 
 DataFileExtension = Literal["txt", "jpg"]
 SUPPORTED_DATA_FILE_EXTENSIONS = get_args(DataFileExtension)
@@ -43,8 +47,27 @@ class Config:
     data_dir_path: Path
     metadata_file_extension: Optional[MetadataFileExtension]
     # data_file_extensions: List[DataFileExtension]
-    schema: Dict
-    
+    schema_url: Url | Path
+    __schema: Dict | None = None
+
+    @property
+    def schema(self):
+        if self.__schema is None:
+            if isinstance(self.schema_url, Path):
+                if not self.schema_url.exists():
+                    raise ValueError(f"Path {self.schema_url} does not seem to point to a valid JSON schema file")
+
+                with open(self.schema_url, "r") as f:
+                    self.__schema = json.loads(f.read())
+            else: # schema_url is of type Url
+                http = urllib3.PoolManager()
+                response = http.request('GET', self.schema_url)
+
+                if response.status == 200:
+                   self.__schema = json.loads(response.data.decode('utf-8'))
+                else:
+                    raise HTTPError(f"Failed to fetch schema from URL: {self.schema_url}")
+        return self.__schema
 
 def run(config: Config):
     return data_dir_to_dataframes(**config.__dict__)
@@ -60,11 +83,27 @@ def main():
                         help="Extension of the metadata files",
                         choices=SUPPORTED_METADATA_FILE_EXTENSIONS,
                         default="toml")
+    parser.add_argument('-s', '--schema',
+                        type=str,
+                        help="URL or Path to the schema file for validating the data",
+                        default="schema.json")
     args = parser.parse_args()
+
+    # parse schema url to determine whether Url or Path passed
+    parsed_schema = urlparse(args.schema)
+    if parsed_schema.scheme in ['http', 'https']:
+        schema = Url(parsed_schema)
+    else:
+        try:
+            Path(args.schema).exists()
+            schema = Path(parsed_schema)
+        except:
+            raise ValueError(f"Specified schema {parsed_schema} is neither a URL nor Path")
+
     config = Config(
-        data_dir_path = Path(args.directory),
-        metadata_file_extension = args.metadata_ext,
-        schema = schema
+        data_dir_path=Path(args.directory),
+        metadata_file_extension=args.metadata_ext,
+        schema_url=schema,
     )
     dfs = run(config)
     print(dfs)
