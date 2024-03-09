@@ -104,9 +104,9 @@ def main():
 
     # parse schema url to determine whether Url or Path passed
     parsed_schema = urlparse(args.schema)
-    if parsed_schema.scheme in ['http', 'https']:
-        schema = Url(parsed_schema)
-    else:
+
+    # only change schema if it is not a Path (if it is a Url, just pass it as a string)
+    if parsed_schema.scheme not in ['http', 'https']:
         try:
             Path(args.schema).exists()
             schema = Path(args.schema)
