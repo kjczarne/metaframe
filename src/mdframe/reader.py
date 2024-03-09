@@ -7,7 +7,6 @@ import toml
 from typing import Dict, Any, Tuple, Optional, Literal, get_args, List
 from pathlib import Path
 import urllib3
-from urllib3 import Url
 from urllib.parse import urlparse
 from urllib3.exceptions import HTTPError
 
@@ -17,17 +16,21 @@ SUPPORTED_DATA_FILE_EXTENSIONS = get_args(DataFileExtension)
 MetadataFileExtension = Literal["toml"]
 SUPPORTED_METADATA_FILE_EXTENSIONS = get_args(MetadataFileExtension)
 
+# change return type here
 def load_metadata_file(metadata_file_path: Path, schema: Dict) -> Dict[str, Any]:
     if not metadata_file_path.exists():
         raise ValueError(f"Path {metadata_file_path} does not seem to point to a valid file")
 
-    with open(metadata_file_path, "r") as f:
-        metadata_file_contents = toml.load(f)
+    try:
+        with open(metadata_file_path, "r") as f:
+            metadata_file_contents = toml.load(f)
 
-    # validates JSON according to schema located in schema.json
-    validate(instance = metadata_file_contents, schema = schema)
+        # validates JSON according to schema located in schema.json
+        validate(instance = metadata_file_contents, schema = schema)
 
-    return metadata_file_contents
+        return metadata_file_contents
+    except:
+        return None        
 
 
 def metadata_file_to_df(metadata_file_contents):
@@ -39,6 +42,11 @@ def data_dir_to_dataframes(data_dir_path: Path,
                            schema: Dict) -> List[pd.DataFrame]:
     metadata_file_paths = data_dir_path.glob(f"*.{metadata_file_extension}")    
     metadata_file_contents = [load_metadata_file(path, schema) for path in metadata_file_paths]
+
+    # remove all None(s) representing empty reads
+    metadata_file_contents = [text for text in metadata_file_contents if text != None]
+    
+    # need to standardize metadata files so they all have the same structure
     metadata_records = map(metadata_file_to_df, metadata_file_contents)
     return list(metadata_records)
 
@@ -47,30 +55,35 @@ class Config:
     data_dir_path: Path
     metadata_file_extension: Optional[MetadataFileExtension]
     # data_file_extensions: List[DataFileExtension]
-    schema_url: Url | Path
+    schema_loc: Path | str
     __schema: Dict | None = None
 
     @property
     def schema(self):
         if self.__schema is None:
-            if isinstance(self.schema_url, Path):
-                if not self.schema_url.exists():
-                    raise ValueError(f"Path {self.schema_url} does not seem to point to a valid JSON schema file")
+            if isinstance(self.schema_loc, Path):
+                if not self.schema_loc.exists():
+                    raise ValueError(f"Path {self.schema_loc} does not seem to point to a valid JSON schema file")
 
-                with open(self.schema_url, "r") as f:
+                with open(self.schema_loc, "r") as f:
                     self.__schema = json.loads(f.read())
-            else: # schema_url is of type Url
+            else: # schema_url is a string (representing a URL)
                 http = urllib3.PoolManager()
-                response = http.request('GET', self.schema_url)
+                response = http.request('GET', self.schema_loc)
 
                 if response.status == 200:
                    self.__schema = json.loads(response.data.decode('utf-8'))
                 else:
-                    raise HTTPError(f"Failed to fetch schema from URL {self.schema_url}")
+                    raise HTTPError(f"Failed to fetch schema from URL {self.schema_loc}")
         return self.__schema
 
+
 def run(config: Config):
-    return data_dir_to_dataframes(**config.__dict__)
+    return data_dir_to_dataframes(
+        data_dir_path=config.data_dir_path, 
+        metadata_file_extension=config.metadata_file_extension, 
+        schema=config.schema
+    )
 
 
 def main():
@@ -103,7 +116,7 @@ def main():
     config = Config(
         data_dir_path=Path(args.directory),
         metadata_file_extension=args.metadata_ext,
-        schema_url=schema,
+        schema_loc=schema,
     )
     dfs = run(config)
     print(dfs)
