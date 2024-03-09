@@ -1,0 +1,38 @@
+gid = 70
+uid = "bb8432fc-5ffd-44a1-9553-f465bc1db5b5"
+
+[item]
+nutrition_subgroup = "french fries and other fried potatoes"
+food_type = "french fries"
+description = "seven regular cut french fries (pile)"
+
+[metrics]
+weight = 31
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project02072024200546"
+rgbd_file_names = [
+    "70_fries_1_0",
+]
+nutrition_facts_sources = [
+    
+]
+texture_sources = [
+    "IMG_4312",
+    "IMG_4313",
+    "IMG_4314",
+    "IMG_4315",
+]
+
+quality = 2
+quality_comments = "resembles a pile of fries"
+merged = false
+textured = false
+
+[time]
+started = "19:18:10"
+finished = "20:46:10"

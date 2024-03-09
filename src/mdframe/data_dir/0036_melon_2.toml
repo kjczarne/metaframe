@@ -1,0 +1,46 @@
+gid = 32
+uid = "4d830950-789a-4456-90c5-c4ca0dd6f9b6"
+
+[item]
+nutrition_subgroup = "melons"
+food_type = "melon"
+description = "pineapple"
+
+[metrics]
+weight = 31
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project10252023181425"
+rgbd_file_names = [
+    "36_melon_2_0",
+    "36_melon_2_1",
+]
+nutrition_facts_sources = [
+    
+]
+
+quality = 2
+quality_comments = "individual scans look alright, but unable to merge (use meshlab)"
+merged = false
+
+[time]
+started = "18:09:31"
+finished = "18:36:51"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: very good
+Model quality:  requires merging
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false

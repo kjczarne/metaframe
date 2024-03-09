@@ -1,0 +1,47 @@
+gid = 14
+uid = "115576af-2ff8-4515-8421-d3d93d6c8888"
+
+[item]
+nutrition_subgroup = "pancakes waffles french toast"
+food_type = "waffle"
+description = "small waffle quarter"
+
+[metrics]
+weight = 18
+unit = "g"
+
+[model]
+project_name = "Project10022023172708"
+rgbd_file_names = [
+    "14_waffle_4_0",
+    "14_waffle_4_1",
+]
+nutrition_facts_sources = [
+    "IMG_4008"
+]
+quality = 2
+quality_comments = """Toothpick + triangle-square markers needed
+for capture to merge. Automatic feature-based merge failed even with the markers.
+Marker-based merge succeeded, albeit with many artifacts. Misalignment,
+holes which have been filled. Overall the model is workable, 14_waffle_3 was much
+better however.
+"""
+
+[time]
+started = "17:25:01"
+finished = "17:41:32"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: very good
+Model quality: poor, but passable. The texturing is a bit off.
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

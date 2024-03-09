@@ -1,0 +1,46 @@
+gid = 8
+uid = "fe9b277c-c328-457b-a6e4-bbab7e011572"
+
+[item]
+nutrition_subgroup = "biscuits muffins quick breads"
+food_type = "muffin"
+description = "wrapped blueberry muffin"
+
+[metrics]
+weight = 108
+unit = "g"
+
+[model]
+project_name = "Project09182023151713"
+rgbd_file_names = [
+    "8_muffin_0_0",
+    "8_muffin_0_1",
+]
+nutrition_facts_sources = []
+quality = 2
+quality_comments = """the wrapper seems split off,
+a number of irregularities have not been captured
+properly on the surface of the muffin
+"""
+
+[time]
+started = "15:06:25"
+finished = "15:38:15"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: borderline pass, one of the sides of the object
+might not have been sufficiently captured
+Model quality: good, a couple of artefacts related to the presence
+of the wrapper, a number of local misalignments in the mesh.
+Quality level 2 seems appropriate.
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

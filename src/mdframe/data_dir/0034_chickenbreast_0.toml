@@ -1,0 +1,41 @@
+gid = 34
+uid = "ce625930-565c-46d1-9394-d033c6470bf9"
+
+[item]
+nutrition_subgroup = "poultry"
+food_type = "chicken breast"
+description = "skin on chicken breast detached from roasted whole chicken"
+
+[metrics]
+weight = 170
+unit = "g"
+
+[model]
+project_name = "Project10222023170524"
+rgbd_file_names = [
+    "34_chickenbreast_0_0",
+    "34_chickenbreast_0_1",
+]
+nutrition_facts_sources = [
+    "IMG_6834"
+]
+quality = 3
+quality_comments = "great chicken breast, few holes and isolation, good merge"
+
+[time]
+started = "16:52:51"
+finished = "17:16:15"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: very good
+Model quality:  very good
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

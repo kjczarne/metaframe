@@ -1,0 +1,55 @@
+gid = 57
+uid = "490abe96-a862-471d-b226-0bc1df55e75e"
+
+[item]
+nutrition_subgroup = "plant-based protein foods"
+food_type = "beans (bowl)"
+description = "lump of baked beans"
+
+[metrics]
+weight = 13
+unit = "g"
+ingredients = [
+]
+
+[model]
+project_name = "Project11272023154136"
+rgbd_file_names = [
+    "57_bakedbeans_1",
+]
+nutrition_facts_sources = [
+    "IMG_7207",
+    "IMG_7208",
+    "IMG_7209"
+]
+
+texture_sources = [
+    "IMG_7196",
+    "IMG_7197",
+    "IMG_7198",
+    "IMG_7199",
+    "IMG_7200"
+]
+
+quality = 3
+quality_comments = "one scan with texture, came out very well."
+merged = true
+textured = true
+
+[time]
+started = "15:34:47"
+finished = "15:46:13"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: very good
+Model quality:  very good
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

@@ -1,0 +1,55 @@
+gid = 58
+uid = "30da6372-9290-4a99-bf6b-5bef765070c6"
+
+[item]
+nutrition_subgroup = "string beans"
+food_type = "green beans"
+description = "pile of green bean peas"
+
+[metrics]
+weight = 25
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project11272023164444"
+rgbd_file_names = [
+    "58_greenbeans_1",
+]
+nutrition_facts_sources = [
+    "IMG_7210",
+    "IMG_7211" 
+]
+
+texture_sources = [
+    "IMG_7217",
+    "IMG_7218",
+    "IMG_7219",
+    "IMG_7220",
+    "IMG_7221"
+]
+
+quality = 3
+quality_comments = "just one scan, good texturing, and is clear even with the sauce"
+merged = true
+textured = true
+
+[time]
+started = "16:34:39"
+finished = "16:54:12"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: very good
+Model quality:  very good
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

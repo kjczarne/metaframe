@@ -1,0 +1,37 @@
+gid = 64
+uid = "3b2f6930-3df8-479d-8958-4d4b3389d830"
+
+[item]
+nutrition_subgroup = "french fries and other fried potatoes"
+food_type = "hashbrowns"
+description = "shredded hashbrowns in a bowl"
+
+[metrics]
+weight = 132
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project02022024182940"
+rgbd_file_names = [
+    "64_hashbrowns_0"
+]
+nutrition_facts_sources = [
+    
+]
+texture_sources = [
+    "IMG_4241",
+    "IMG_4242",
+    "IMG_4243"
+]
+
+quality = 2
+quality_comments = "unable to merge"
+merged = false
+textured = false
+
+[time]
+started = "18:15:03"
+finished = "18:56:34"

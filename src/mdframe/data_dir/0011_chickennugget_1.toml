@@ -1,0 +1,43 @@
+gid = 11
+uid = "1a0b928e-e543-4311-b5c2-796e3a936f08"
+
+[item]
+nutrition_subgroup = "poultry"
+food_type = "chicken nugget"
+description = ""
+
+[metrics]
+weight = 24
+unit = "g"
+
+[model]
+project_name = "Project10192023211845"
+rgbd_file_names = [
+    "11_chickennugget_1_0",
+    "11_chickennugget_1_1",
+]
+nutrition_facts_sources = [
+    
+]
+quality = 3
+quality_comments = "need to merge with meshlab"
+merged = false
+
+[time]
+started = "17:19:07"
+finished = "17:40:36"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: well captured
+Model quality: splendid, we merged this in Blender/Meshlab
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

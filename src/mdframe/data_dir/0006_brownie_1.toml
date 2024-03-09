@@ -1,0 +1,39 @@
+gid = 6
+uid = "4d0cd7b0-20c8-497c-99f1-0df4cdba2f6e"
+
+[item]
+nutrition_subgroup = "cookies and brownies"
+food_type = "brownie"
+description = "very tasty"
+
+[metrics]
+weight = 103
+unit = "g"
+
+[model]
+project_name = "Project09172023155228"
+rgbd_file_names = [
+    "6_brownie_1_0",
+    "6_brownie_1_1",
+]
+quality = 3
+quality_comments = "very high quality"
+
+[time]
+started = "15:51:03"
+finished = "15:59:56"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = false
+ingredients_acceptable = true
+
+comments = """
+RGBD files: do not represent all sides of the object! Very disappointing!
+Model quality: great.
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = false

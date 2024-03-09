@@ -1,0 +1,43 @@
+gid = 73
+uid = "258258be-c6e9-46eb-8cc3-d1f63f4a00a5"
+
+[item]
+nutrition_subgroup = "meats"
+food_type = "bacon"
+description = "a single strip of smoked bacon"
+
+[metrics]
+weight = 7
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project02102024172459"
+rgbd_file_names = [
+    "73_bacon_0_0",
+    "73_bacon_0_1",
+]
+nutrition_facts_sources = [
+    "IMG_7374"
+]
+texture_sources = [
+    
+]
+
+quality = 2
+quality_comments = """
+Capture was surprisingly tough, tracking was not possible until
+dark-object scanning mode was used. This resulted in more artefacts
+captured around the edges of the item which have been removed as much
+as possible. Automatic merge failed.
+Texture of high quality, so skipping the capture of texture sources
+because I've spent way too much time on this item already.
+"""
+merged = false
+textured = false
+
+[time]
+started = "16:48:38"
+finished = "17:40:15"

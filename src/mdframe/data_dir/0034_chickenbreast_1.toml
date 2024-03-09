@@ -1,0 +1,41 @@
+gid = 34
+uid = "e5dc5909-156c-4d8a-937f-9edd38aa5154"
+
+[item]
+nutrition_subgroup = "poultry"
+food_type = "chicken breast"
+description = "skin on chicken breast detached from roasted whole chicken"
+
+[metrics]
+weight = 157
+unit = "g"
+
+[model]
+project_name = "Project10222023171457"
+rgbd_file_names = [
+    "34_chickenbreast_1_0",
+    "34_chickenbreast_1_1",
+]
+nutrition_facts_sources = [
+    "IMG_6834"
+]
+quality = 2
+quality_comments = "good top and bottom scans but merge left unwanted gaps. Heavy colour uneveness."
+
+[time]
+started = "16:59:42"
+finished = "17:24:32"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: very good
+Model quality:  very good
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

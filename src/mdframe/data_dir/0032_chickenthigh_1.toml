@@ -1,0 +1,43 @@
+gid = 32
+uid = "d8128a58-5a36-4008-82dc-3201d5171d6f"
+
+[item]
+nutrition_subgroup = "poultry"
+food_type = "chicken thigh"
+description = "chicken thigh with big and small leg attached, skin on"
+
+[metrics]
+weight = 208
+unit = "g"
+
+[model]
+project_name = "Project10222023165105"
+rgbd_file_names = [
+    "32_chickenthigh_1_0",
+    "32_chickenthigh_1_1",
+]
+nutrition_facts_sources = [
+    "IMG_6834"
+]
+quality = 2
+quality_comments = "recognizable as chicken but the structure due to the merge is a bit confusing"
+
+[time]
+started = "16:39:42"
+finished = "17:05:01"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = false
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: 
+Model quality: 
+Ingredients list: 
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false

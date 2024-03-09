@@ -1,0 +1,42 @@
+gid = 10
+uid = "34e8cdc9-a8e0-4b19-ad16-e19e0e5318d7"
+
+[item]
+nutrition_subgroup = "tomatoes (slice)"
+food_type = "tomato slice"
+description = ""
+
+[metrics]
+weight = 31
+unit = "g"
+
+[model]
+project_name = "Project09242023165801"
+rgbd_file_names = [
+    "10_tomato_3_0",
+    "10_tomato_3_1",
+]
+nutrition_facts_sources = []
+quality = 2
+quality_comments = "Tried using marker merge but didn't work well."
+
+[time]
+started = "16:40:47"
+finished = "17:10:07"
+
+[[qa]]
+done = true
+rgbd_files_present = false
+model_quality_acceptable = false
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: missing
+Model quality: bungled merge, underside hole filled, the object
+is not representative of a tomato slice at all. Could be an export issue
+from RevoScan.
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false

@@ -1,0 +1,38 @@
+gid = 60
+uid = "efb285c6-9298-4e36-98f5-63042556c13f"
+
+[item]
+nutrition_subgroup = "pizza"
+food_type = "pizza"
+description = "veggie pizza (large slice)"
+
+[metrics]
+weight = 380
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project01312024181858"
+rgbd_file_names = [
+    "60_pizza_0_0",
+]
+nutrition_facts_sources = [
+    
+]
+texture_sources = [
+    "IMG_7306",
+    "IMG_7307",
+    "IMG_7308",
+    "IMG_7309"
+]
+
+quality = 1
+quality_comments = "no scan for this as it doesn't fit on the turntable; going to cut up the slice and make a new scan (also no bottom scan)"
+merged = true
+textured = false
+
+[time]
+started = "18:16:09"
+finished = "18:48:58"

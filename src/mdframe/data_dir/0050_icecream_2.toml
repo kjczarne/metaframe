@@ -1,0 +1,54 @@
+gid = 50
+uid = "a93b8601-fb71-495a-ba77-c03a6e37ec73"
+
+[item]
+nutrition_subgroup = "ice cream and frozen dairy desserts"
+food_type = "ice cream"
+description = "Compliments Vanilla Ice Cream"
+
+[metrics]
+weight = 97
+unit = "g"
+ingredients = [
+     "cream, sugars, mono- and diglycerides, etc"   
+]
+
+[model]
+project_name = "Project11192023141214"
+rgbd_file_names = [
+    "50_icecream_2",
+]
+nutrition_facts_sources = [
+    "IMG_7079",
+    "IMG_7080"
+]
+
+texture_sources = [
+    "IMG_7069",
+    "IMG_7070",
+    "IMG_7071",
+    "IMG_7072",
+    "IMG_7073"
+]
+
+quality = 3
+quality_comments = "great texture, detail"
+
+[time]
+started = "13:51:52"
+finished = "14:21:55"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: very good
+Model quality:  very good, missing bottom but we cannot
+rotate melting ice-cream
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

@@ -1,0 +1,35 @@
+gid = 2
+uid = "b21b8e6b-fa94-4949-b312-8b2b0e28a213"
+
+[item]
+nutrition_subgroup = "bananas"
+food_type = "banana"
+description = ""
+
+[metrics]
+weight = 167
+unit = "g"
+
+[model]
+project_name = "Project09152023160201"
+rgbd_file_names = [
+    "2_banana_3_0",
+    "2_banana_3_1",
+]
+quality = 3
+quality_comments = ""
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: no unique-frame markers
+Model quality: minor shadow captured near the tail-end of the banana, might require editing
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

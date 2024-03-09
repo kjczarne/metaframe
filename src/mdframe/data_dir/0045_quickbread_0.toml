@@ -1,0 +1,50 @@
+gid = 45
+uid = "e13db7c7-be53-4703-a0a8-e45f4579017d"
+
+[item]
+nutrition_subgroup = "biscuits muffins quick breads"
+food_type = "quick bread"
+description = "one whole loaf of marble pound cake"
+
+[metrics]
+weight = 372
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = ""
+rgbd_file_names = [
+    "45_quickbread_0_0",
+    "45_quickbread_0_1",
+    "45_quickbread_0_2",
+]
+nutrition_facts_sources = [
+    "IMG_6930"
+]
+
+quality = 
+quality_comments = ""
+
+[time]
+started = "15:13:15"
+finished = "unknown"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = false
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+requires_nutritional_facts_imputation = true
+comments = """
+RGBD files: ok
+Model quality: missing model, no project listed,
+could not find the project for this file looking through
+captures for this day.
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false
+unsalvageable = true

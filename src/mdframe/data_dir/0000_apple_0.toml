@@ -1,0 +1,51 @@
+gid = 0
+uid = "b91807a2-0cb3-4b05-bded-f2760e6cda5c"
+
+[item]
+nutrition_subgroup = "apple"
+food_type = "apple"
+description = "Eaten, no RGBD files available for this one"
+
+[metrics]
+weight = 234
+unit = "g"
+
+[model]
+project_name = "0_apple_0"
+rgbd_file_names = [
+    
+]
+
+[[qa]]
+done = true
+rgbd_files_present = false
+model_quality_acceptable = true
+rgbd_quality_acceptable = false
+ingredients_acceptable = true
+
+comments = """
+RGBD files: not present
+Model quality: 
+Ingredients list: 
+
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false
+
+
+[[qa]]
+done = true
+rgbd_files_present = false
+model_quality_acceptable = true
+rgbd_quality_acceptable = false
+ingredients_acceptable = true
+requires_nutritional_facts_imputation = true
+comments = """
+RGBD files: not present
+Model quality: 
+Ingredients list: 
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false

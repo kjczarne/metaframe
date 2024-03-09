@@ -1,0 +1,44 @@
+gid = 17
+uid = "62bedbb8-891a-4b68-bc63-7564a992ac9a"
+
+[item]
+nutrition_subgroup = "carrots"
+food_type = "baby carrot"
+description = "5 cm length thin baby carrot"
+
+[metrics]
+weight = 7
+unit = "g"
+
+[model]
+project_name = "Project10022023161713"
+rgbd_file_names = [
+    "4_carrot_11_0",
+    "4_carrot_11_1",
+]
+nutrition_facts_sources = [
+    
+]
+quality = 2
+quality_comments = "merging was unsuccesful as raw scans were scattered (close to losing tracking). Used best scan and filled in holes."
+
+[time]
+started = "15:55:34"
+finished = "16:30:28"
+
+[[qa]]
+done = true
+rgbd_files_present = false
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: Missing `_1` file. We need to investigate whether it's a missing capture
+or a missing upload.
+Model quality: hole plugging on the terminal ends of the carrots did not work out great.
+I could still give it a quality 2 pass.
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = false

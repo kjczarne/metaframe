@@ -1,0 +1,42 @@
+gid = 34
+uid = "4bde60e0-db4c-4150-9cd8-58c835dd0c10"
+
+[item]
+nutrition_subgroup = "poultry"
+food_type = "chicken breast"
+description = "skin on chicken breast detached from roasted whole chicken"
+
+[metrics]
+weight = 168
+unit = "g"
+
+[model]
+project_name = "Project10232023160951"
+rgbd_file_names = [
+    "34_chickenbreast_2_0",
+    "34_chickenbreast_2_1",
+]
+nutrition_facts_sources = [
+   "IMG_6874" 
+]
+quality = 2
+quality_comments = "texture and shape captured well, need to merge on meshlab"
+merged = false
+
+[time]
+started = "16:18:30"
+finished = "16:47:12"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: very good
+Model quality:  requires merging
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false

@@ -1,0 +1,49 @@
+gid = 29
+uid = "0c0040a6-af1a-40f9-8238-ffc7920d4edf"
+
+[item]
+nutrition_subgroup = "frankfurter sandwiches"
+food_type = "frankfurter sandwich"
+description = "speckled hotdog bun and sausage with ketchup in squiggly line"
+
+[metrics]
+weight = 122
+unit = "g"
+ingredients = [
+    {name = "sausage", weight = 39},
+    {name = "bun", weight = 83},
+]
+
+[model]
+project_name = "Project10212023170945"
+rgbd_file_names = [
+    "29_frankfurter_1_0",
+    "29_frankfurter_1_1",
+]
+nutrition_facts_sources = [
+    "IMG_6818",
+    "IMG_6819",
+    "IMG_6820",
+    "IMG_6822"
+]
+quality = 3
+quality_comments = "great and get the sauce accurately. Some minor discolorations"
+
+[time]
+started = "16:34:20"
+finished = "17:45:30"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: very good
+Model quality:  very good
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

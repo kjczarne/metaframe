@@ -1,0 +1,41 @@
+gid = 12
+uid = "c18c51e4-d64a-4de9-ad08-fbaff0dc02a0"
+
+[item]
+nutrition_subgroup = "doughnuts sweet rolls pastries"
+food_type = "croissant"
+description = "cheese croissant, tim hortons"
+
+[metrics]
+weight = 64
+unit = "g"
+
+[model]
+project_name = "Project09262023161315"
+rgbd_file_names = [
+    "12_croissant_1_0",
+    "12_croissant_1_1",
+]
+nutrition_facts_sources = []
+
+quality = 3
+quality_comments = "no holes, no isolation"
+
+[time]
+started = "16:06:15"
+finished = "16:18:59"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: very good
+Model quality: very good
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true
