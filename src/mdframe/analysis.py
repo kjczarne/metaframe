@@ -10,8 +10,21 @@ config = Config(
     schema_loc=Path('schema.json')
 )
 
-
 def generate_histogram(config, property_name='quality', data_type='discrete'):
+    """Generates a histogram based on the given configuration, property name, and data type.
+
+    Args:
+        config: The configuration for generating the histogram.
+        property_name (str, optional): The name of the property. Defaults to 'quality'.
+        data_type (str, optional): The type of data. Either 'discrete' or 'continuous'. Defaults to 'discrete'.
+
+    Raises:
+        ValueError: If the data type is not 'discrete' or 'continuous'.
+
+    Returns:
+        None
+    """
+
     def flatten_property_dict(property_dict: Dict) -> Dict:
         flattened_dict = dict()
         for property_name, value in property_dict.items():
