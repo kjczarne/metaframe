@@ -46,10 +46,12 @@ def data_dir_to_dataframes(data_dir_path: Path,
     # remove all None(s) representing empty reads
     metadata_file_contents = [text for text in metadata_file_contents if text != None]
     
-    # need to standardize metadata files so they all have the same structure
-    metadata_records = map(metadata_file_to_df, metadata_file_contents)
-    return list(metadata_records)
+    metadata_records = []
+    for text in metadata_file_contents:
+        metadata_records.append(pd.Series(text))
 
+    return metadata_records
+    
 @dataclass
 class Config:
     data_dir_path: Path

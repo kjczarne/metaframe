@@ -9,7 +9,7 @@ class TestReader(unittest.TestCase):
         config = Config(
             data_dir_path=data_dir_path, 
             metadata_file_extension="toml", 
-            schema_url='../src/mdframe/schema.json'
+            schema_loc='../src/mdframe/schema.json'
         )
         df = run(config)
         print(df)
