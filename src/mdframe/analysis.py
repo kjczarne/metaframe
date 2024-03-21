@@ -11,6 +11,18 @@ config = Config(
 )
 
 def load_flattened_data(config):
+    """
+    Loads and flattens data based on the given configuration.
+
+    Args:
+        config: Configuration for data retrieval and processing.
+
+    Returns:
+        pandas.DataFrame: DataFrame containing flattened data.
+
+    Note:
+        This function flattens nested dictionaries in the data entries.
+    """
     def flatten_property_dict(property_dict: Dict) -> Dict:
         flattened_dict = dict()
         for property_name, value in property_dict.items():
@@ -31,6 +43,21 @@ def load_flattened_data(config):
     return df
 
 def filter_data(config, query, filename):
+    """
+    Filters data from a DataFrame based on a given query and saves the result to a CSV file.
+
+    Args:
+        config: Configuration for data retrieval and processing.
+        query (str): A string representing the filtering condition.
+        filename (str): The name of the CSV file to save the filtered data.
+
+    Returns:
+        None
+
+    Note:
+        This function evaluates the query string to filter the DataFrame. Use with caution,
+        as using `eval()` with arbitrary input can pose security risks.
+    """
     df = load_flattened_data(config)
 
     # df.query has many limitations, so ditching that for eval(query)
@@ -46,17 +73,13 @@ def generate_histogram(config, property_name='quality', data_type='discrete'):
     """Generates a histogram based on the given configuration, property name, and data type.
 
     Args:
-        config: The configuration for generating the histogram.
+        config: Configuration for data retrieval and processing.
         property_name (str, optional): The name of the property. Defaults to 'quality'.
         data_type (str, optional): The type of data. Either 'discrete' or 'continuous'. Defaults to 'discrete'.
-
-    Raises:
-        ValueError: If the data type is not 'discrete' or 'continuous'.
 
     Returns:
         None
     """
-
     def flatten_property_dict(property_dict: Dict) -> Dict:
         flattened_dict = dict()
         for property_name, value in property_dict.items():
@@ -76,19 +99,17 @@ def generate_histogram(config, property_name='quality', data_type='discrete'):
     entries = [pd.Series.to_dict(entry) for entry in entries]
     entries = [flatten_property_dict(entry) for entry in entries]
 
-    # extract all model quality data and generate a model histogram
+    # extract all data relevant to specific property_name
     property_data = []
-
     for entry in entries:
         if property_name in entry:
             property_data.append(entry[property_name])
-    
+
+    # if the property_name doesn't exist in the data, then raise ValueError    
     if len(property_data) == 0:
         raise ValueError(f'No entries with column name {property_name} found')
 
-    # property_series = pd.Series(property_data)
-    # property_series.plot.hist()
-
+    # plotting discrete and continuous data in different fashion
     if data_type == 'discrete':
         unique_values = sorted(set(property_data))
         frequencies = [property_data.count(value) for value in unique_values]
@@ -111,7 +132,7 @@ if __name__ == '__main__':
     print(df.columns)
 
     # generate histogram
-    # generate_histogram(config, "quality", data_type='discrete')
+    generate_histogram(config, "quality", data_type='discrete')
     # generate_histogram(config, "weight", data_type='continuous')
 
     # filter data and get insights
