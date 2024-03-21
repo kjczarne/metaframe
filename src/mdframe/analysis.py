@@ -10,6 +10,37 @@ config = Config(
     schema_loc=Path('schema.json')
 )
 
+def load_flattened_data(config):
+    def flatten_property_dict(property_dict: Dict) -> Dict:
+        flattened_dict = dict()
+        for property_name, value in property_dict.items():
+            if isinstance(value, dict):
+                for subproperty, subvalue in value.items():
+                    flattened_dict[subproperty] = subvalue
+            else:
+                flattened_dict[property_name] = value
+        return flattened_dict
+
+    entries = run(config)
+    
+    # convert all pandas Series objects into dictionaries, and flatten them in order to isolate property_name
+    entries = [pd.Series.to_dict(entry) for entry in entries]
+    entries = [flatten_property_dict(entry) for entry in entries]
+
+    df = pd.DataFrame(entries)
+    return df
+
+def filter_data(config, query, filename):
+    df = load_flattened_data(config)
+
+    # df.query has many limitations, so ditching that for eval(query)
+    # df = df.query(query)
+
+    df = df[eval(query)]
+ 
+    df.to_csv(filename)
+  
+# TODO: augment generate_histogram to use load_data function
 def generate_histogram(config, property_name='quality', data_type='discrete'):
     """Generates a histogram based on the given configuration, property name, and data type.
 
@@ -75,6 +106,17 @@ def generate_histogram(config, property_name='quality', data_type='discrete'):
 
 
 if __name__ == '__main__':
-    # generate_histogram(config)
-    generate_histogram(config, "quality", data_type='discrete')
-    generate_histogram(config, "weight", data_type='continuous')      
+    df = load_flattened_data(config)
+    print(df)
+
+    # generate histogram
+    # generate_histogram(config, "quality", data_type='discrete')
+    # generate_histogram(config, "weight", data_type='continuous')
+
+    # filter data and get insights
+    filter_data(config, "df['quality'] == 1", "quality1-scans.csv")
+    # filter_data(config, "nutrition_facts_sources.apply(len) == 0", "empty-nutrition-facts.csv")
+
+
+# - how many of the files we have in the dataset do have a non-empty list of nutrition facts label files (and please give me a list of those that have and have no labels associated with them)
+# - how many have extra texture sources (and also list them)
