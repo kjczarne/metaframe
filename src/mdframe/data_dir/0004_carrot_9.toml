@@ -1,0 +1,43 @@
+gid = 17
+uid = "02fb37cb-ea2b-4dc2-82b4-cb37428f46f0"
+
+[item]
+nutrition_subgroup = "carrots"
+food_type = "carrot"
+description = "15 cm long carrot with peel on and a small stem stub"
+
+[metrics]
+weight = 93
+unit = "g"
+
+[model]
+project_name = "Project10022023153909"
+rgbd_file_names = [
+    "4_carrot_9_0",
+    "4_carrot_9_1",
+]
+nutrition_facts_sources = [
+    
+]
+quality = 2
+quality_comments = "most of carrot was captured minus some light differences, but the scan of the stem was unable to merge properly with the rest of the carrot. Hole filled instead."
+
+[time]
+started = "15:38:04"
+finished = "15:58:28"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+Model quality: the stem stub is not represented on the 3D model but
+I would give it a borderline accept. Most of the carrot is represented well
+and the quality level 2 is appropriate.
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

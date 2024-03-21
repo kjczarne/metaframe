@@ -1,0 +1,46 @@
+gid = 20
+uid = "0d2aa396-8b10-4692-b025-52584b110da9"
+
+[item]
+nutrition_subgroup = "tortilla and corn chips"
+food_type = "tortilla"
+description = "dempster's tortillas (original)"
+
+[metrics]
+weight = 61
+unit = "g"
+
+[model]
+project_name = "Project10062023175336"
+rgbd_file_names = [
+    "20_tortilla_0_0",
+    "20_tortilla_0_1",
+]
+nutrition_facts_sources = [
+    
+]
+quality = 2
+quality_comments = "left both sides of tortilla unmerged"
+merged = false
+
+[time]
+started = "17:48:19"
+finished = "18:44:37"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = false
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: very good
+Model quality: very discolored, misaligned merge.
+I think the only way to salvage tortilla models is to use
+only one side capture as the model and use the same texture to
+color the underside.
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false

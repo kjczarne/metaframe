@@ -1,0 +1,39 @@
+gid = 76
+uid = "f7de92a1-944c-4692-b8b5-10c5609d20b1"
+
+[item]
+nutrition_subgroup = "rice"
+food_type = "rice"
+description = "steamed white rice in a ball"
+
+[metrics]
+weight = 115
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project02142024233537"
+rgbd_file_names = [
+    "74_rice_1_0",
+]
+nutrition_facts_sources = [
+    
+]
+texture_sources = [
+    "IMG_4326",
+    "IMG_4327",
+    "IMG_4328",
+    "IMG_4329",
+    "IMG_4330"
+]
+
+quality = 2
+quality_comments = "slight texture discoloration on both halves"
+merged = false
+textured = false
+
+[time]
+started = "18:17:14"
+finished = "19:04:58"

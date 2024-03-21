@@ -1,0 +1,42 @@
+gid = 30
+uid = "113d7a0c-e1fb-41b0-8138-40d06284a787"
+
+[item]
+nutrition_subgroup = "white potatoes (baked or broiled)"
+food_type = "baked potato"
+description = "asymmetrical baked white potato with skin on, cut in half along the width, with bottom skin still attached"
+
+[metrics]
+weight = 162
+unit = "g"
+
+[model]
+project_name = "Project10222023143710"
+rgbd_file_names = [
+    "30_potato_3_0",
+    "30_potato_3_1",
+]
+nutrition_facts_sources = [
+    
+]
+quality = 3
+quality_comments = "great scan of potato aside from hole that needed to be filled (from the split between halves)"
+
+[time]
+started = "13:30:33"
+finished = "15:00:23"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: very good
+Model quality:  very good
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

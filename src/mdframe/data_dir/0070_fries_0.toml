@@ -1,0 +1,41 @@
+gid = 70
+uid = "2b74f418-2d0d-446c-846c-c4c8cd251ff3"
+
+[item]
+nutrition_subgroup = "french fries and other fried potatoes"
+food_type = "french fries"
+description = "single regular cut french fry"
+
+[metrics]
+weight = 5
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project02072024185446"
+rgbd_file_names = [
+    "70_fries_0_0",
+    "70_fries_0_1",
+]
+nutrition_facts_sources = [
+    
+]
+texture_sources = [
+    "IMG_4301",
+    "IMG_4302",
+    "IMG_4303",
+    "IMG_4304",
+    "IMG_4305",
+    "IMG_4306"
+]
+
+quality = 2
+quality_comments = "decent looking fry"
+merged = true
+textured = false
+
+[time]
+started = "18:32:53"
+finished = "19:53:54"

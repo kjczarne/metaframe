@@ -1,0 +1,44 @@
+gid = 28
+uid = "aabc3e5d-7f53-4f40-b64e-3622d35321f6"
+
+[item]
+nutrition_subgroup = "shellfish"
+food_type = "shrimp"
+description = "slightly frozen cooked shrimp, unpeeled with tail shell on"
+
+[metrics]
+weight = 6
+unit = "g"
+
+[model]
+project_name = "Project10212023180958"
+rgbd_file_names = [
+    "28_shrimp_2_0",
+    "28_shrimp_2_1",
+]
+nutrition_facts_sources = [
+    "IMG_6823"
+]
+
+quality = 3
+quality_comments = "individual scan maintained colour, texture, but unable to merge together (some significant holes in each scan)"
+merged = false
+
+[time]
+started = "18:04:45"
+finished = "18:33:41"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = false
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: ok
+Model quality: requires merging
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false

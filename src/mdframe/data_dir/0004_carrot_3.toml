@@ -1,0 +1,48 @@
+gid = 4
+uid = "43c477c4-52a3-4e74-8cc6-b91dcbf7a0af"
+
+[item]
+nutrition_subgroup = "carrots"
+food_type = "baby carrot"
+description = """for this scan pushpins (blue and green) were used in a cross configuration
+to fix the misalignment issue during the merge due to the symmetry of the object
+"""
+
+[metrics]
+weight = 5
+unit = "g"
+
+[model]
+project_name = "Project09182023174028"
+rgbd_file_names = [
+    "4_carrot_3_0",
+    "4_carrot_3_1",
+]
+nutrition_facts_sources = []
+quality = 2
+quality_comments = """Quality improved from the scans
+which were not using pushpins as artificial features. However
+the diameter of the pushpins is large in comparison with the size
+of the object and a considerable portion of the object needs to be
+cut and then interpolated from the surrounding area, resulting
+in an unnatural discoloration in the texture surrounding the
+removal points. One could perhaps use thinner markers in the future.
+"""
+
+[time]
+started = "17:46:06"
+finished = "17:56:31"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = false
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+Model quality: OK, a little bit of a discoloration around where
+the pushpin was inserted.
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

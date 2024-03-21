@@ -1,0 +1,49 @@
+gid = 45
+uid = "92df189e-8388-4525-962f-d4230ec7f57e"
+
+[item]
+nutrition_subgroup = "biscuits muffins quick breads"
+food_type = "quick bread"
+description = "slice of marble pound cake"
+
+[metrics]
+weight = 
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = ""
+rgbd_file_names = [
+    "",
+    "",
+]
+nutrition_facts_sources = [
+    "IMG_6930"
+]
+
+quality = 
+quality_comments = ""
+
+[time]
+started = "15:25:47"
+finished = 
+
+[[qa]]
+done = true
+rgbd_files_present = false
+model_quality_acceptable = false
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+requires_nutritional_facts_imputation = true
+comments = """
+RGBD files: missing
+Model quality: missing, the project name is missing,
+looking at captures from the same day I wasn't able to find it
+at all
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false
+unsalvageable = true

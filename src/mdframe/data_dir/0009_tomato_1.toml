@@ -1,0 +1,42 @@
+gid = 9
+uid = "73e175dd-9497-418f-b70b-37e681adaf97"
+
+[item]
+nutrition_subgroup = "tomatoes (whole)"
+food_type = "tomatoes (whole)"
+description = ""
+
+[metrics]
+weight = 315
+unit = "g"
+
+[model]
+project_name = "Project09242023145450"
+rgbd_file_names = [
+    "9_tomato_1_0",
+    "9_tomato_1_1",
+]
+nutrition_facts_sources = ["IMG_3966"]
+quality = 2
+quality_comments = "Tried using the toothpicks and turned out better"
+
+[time]
+started = "13:54:30"
+finished = "15:14:13"
+
+[[qa]]
+done = true
+rgbd_files_present = false
+model_quality_acceptable = false
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: missing from the dataset copy that I'm working with.
+Check if they got missed in the sync.
+Model quality: quite bad, might be salvageable performing a manual merge
+but the quality of the surface on the mesh is quite bad.
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false

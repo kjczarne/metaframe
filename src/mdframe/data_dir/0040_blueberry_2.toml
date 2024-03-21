@@ -1,0 +1,46 @@
+gid = 40
+uid = "cc6f7662-02ae-4404-831f-514d58dba865"
+
+[item]
+nutrition_subgroup = "blueberries"
+food_type = "blueberry"
+description = "one single blueberry"
+
+[metrics]
+weight = 1.67
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project10302023200344"
+rgbd_file_names = [
+    "40_blueberry_2_0",
+    "40_blueberry_2_1",
+]
+nutrition_facts_sources = [
+    
+]
+
+quality = 2
+quality_comments = "a lot of shadow and splits off the image so used marker based scan on a small spinner"
+merged = false
+
+[time]
+started = "20:01:30"
+finished = "20:36:00"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: very good
+Model quality:  requires merging
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false

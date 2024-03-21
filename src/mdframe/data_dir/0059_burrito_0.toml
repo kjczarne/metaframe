@@ -1,0 +1,41 @@
+gid = 59
+uid = "c0bc4140-6480-4c5b-98bf-2a52a24dca34"
+
+[item]
+nutrition_subgroup = "burritos and tacos"
+food_type = "burrito"
+description = ""
+
+[metrics]
+weight = 535
+unit = "g"
+ingredients = [
+
+]
+
+[model]
+project_name = "Project01312024173255"
+rgbd_file_names = [
+    "59_burrito_0_0",
+    "59_burrito_0_1",
+]
+nutrition_facts_sources = [
+    
+]
+texture_sources = [
+    "IMG_7294",
+    "IMG_7295",
+    "IMG_7296",
+    "IMG_7297",
+    "IMG_7298",
+    "IMG_7299"
+]
+
+quality = 3
+quality_comments = "realistic-looking burrito"
+merged = true
+textured = false
+
+[time]
+started = "17:40:29"
+finished = "18:17:07"

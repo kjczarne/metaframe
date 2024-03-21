@@ -1,0 +1,41 @@
+gid = 10
+uid = "c33c6874-4980-40b6-b904-260c701c8471"
+
+[item]
+nutrition_subgroup = "tomatoes (slice)"
+food_type = "tomato slice"
+description = "A single tomato slice, about 2.5 cm thick at the peel, and converging to an apex at the tomato core. Placed in grey bowl."
+
+[metrics]
+weight = 19
+unit = "g"
+
+[model]
+project_name = "Project09242023161000"
+rgbd_file_names = [
+    "10_tomato_0_0",
+    "10_tomato_0_1",
+]
+nutrition_facts_sources = ["IMG_3966"]
+quality = 3
+quality_comments = "good scan of tomato, lacks a bit of texture however. Backside of bowl is missing."
+
+[time]
+started = "14:54:54"
+finished = "16:16:52"
+
+[[qa]]
+done = true
+rgbd_files_present = false
+model_quality_acceptable = false
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: not present, could have been lost at sync
+Model quality: overally good but the hole at the bottom of the bowl needs to be 
+filled in before we accept this
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = false

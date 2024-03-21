@@ -1,0 +1,46 @@
+gid = 38
+uid = "b6a6b136-7e43-41ea-8943-e875a92aa3d4"
+
+[item]
+nutrition_subgroup = "cakes and pies"
+food_type = "pies"
+description = "A quarter of Compliments apple pie with no artificial flavours"
+
+[metrics]
+weight = 138
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project10282023181409"
+rgbd_file_names = [
+    "38_applepie_1_0",
+    "38_applepie_1_1",
+]
+nutrition_facts_sources = [
+    "IMG_6900","IMG_6901","IMG_6902"
+]
+
+quality = 2
+quality_comments = "the piece disintegrated and couldn't merge, but got a realistic image"
+merged = false
+
+[time]
+started = "17:53:43"
+finished = "18:26:13"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: very good
+Model quality:  requires merging
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false

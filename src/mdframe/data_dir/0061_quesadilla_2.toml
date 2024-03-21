@@ -1,0 +1,41 @@
+gid = 61
+uid = "e4c217d1-ac94-4ba8-b524-7bce93c24c46"
+
+[item]
+nutrition_subgroup = "other mexican mixed dishes"
+food_type = "quesadilla"
+description = "quarter-circular quesadilla with meat, veggies, and cheese"
+
+[metrics]
+weight = 87
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project01312024205449"
+rgbd_file_names = [
+    "61_quesadilla_2_0",
+    "61_quesadilla_2_1",
+]
+nutrition_facts_sources = [
+    
+]
+texture_sources = [
+    "IMG_7331",
+    "IMG_7332",
+    "IMG_7333",
+    "IMG_7334",
+    "IMG_7335",
+    "IMG_7336"
+]
+
+quality = 2
+quality_comments = "resembles a quesadilla"
+merged = true
+textured = false
+
+[time]
+started = "20:36:48"
+finished = "21:07:15"

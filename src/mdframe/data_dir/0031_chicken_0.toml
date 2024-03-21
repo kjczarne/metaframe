@@ -1,0 +1,44 @@
+gid = 31
+uid = "dd9336fd-5304-4e96-ab58-4dd251925dbc"
+
+[item]
+nutrition_subgroup = "poultry"
+food_type = "whole chicken"
+description = "BBQ seasoned whole oven roasted chicken from sobeys (cold)"
+
+[metrics]
+weight = 1004
+unit = "g"
+
+[model]
+project_name = "Project10222023151121"
+rgbd_file_names = [
+    "31_chicken_0_0",
+    "31_chicken_0_1",
+    "31_chicken_0_2",
+    "31_chicken_0_3",
+]
+nutrition_facts_sources = [
+    "IMG_6834"
+]
+quality = 3
+quality_comments = "very representative chicken with few colour problems. Holes in the back part of chicken (where legs intersect) left unfilled"
+
+[time]
+started = "14:41:25"
+finished = "15:28:53"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: very good
+Model quality:  very good
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

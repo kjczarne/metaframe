@@ -1,0 +1,46 @@
+gid = 40
+uid = "2306e50a-09b6-4e69-86f3-e6126eb72e09"
+
+[item]
+nutrition_subgroup = "blueberries"
+food_type = "blueberries"
+description = "one single blueberry"
+
+[metrics]
+weight = 3
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project10302023190654"
+rgbd_file_names = [
+    "40_blueberry_0_0",
+    "40_blueberry_0_1",
+]
+nutrition_facts_sources = [
+    
+]
+
+quality = 2
+quality_comments = "had a lot of shadow because of dark object and trouble with merging so saved individually for mesh lab later"
+merged = false
+
+[time]
+started = "19:07:23"
+finished = "19:35:44"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: very good
+Model quality:  requires merging
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false

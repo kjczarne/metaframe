@@ -1,0 +1,42 @@
+gid = 21
+uid = "ab485965-5b57-413e-bdbc-666288dc1492"
+
+[item]
+nutrition_subgroup = "cakes and pies"
+food_type = "cake"
+description = "The Cheesecake Factory (Classic Cheesecake Selection), Double Chocolate Cheesecake"
+
+[metrics]
+weight = 121
+unit = "g"
+
+[model]
+project_name = "Project10062023194444"
+rgbd_file_names = [
+    "21_cake_1_0",
+    "21_cake_1_1",
+]
+nutrition_facts_sources = [
+    "IMG_4029"
+]
+quality = 3
+quality_comments = "minor artefacts stemming from the shadow of a dark-object-capture, overall quality is still very good"
+
+[time]
+started = "19:39:10"
+finished = "20:00:36"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: very good
+Model quality: very good, bar the 1996 "Tomb Raider" quality of the texture
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

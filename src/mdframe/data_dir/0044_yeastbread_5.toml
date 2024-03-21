@@ -1,0 +1,45 @@
+gid = 44
+uid = "7c3c8909-17f2-4cf4-af7c-68bad7233539"
+
+[item]
+nutrition_subgroup = "yeast breads"
+food_type = "yeast bread"
+description = "one slice of italian-style crispy yeast bread, oblong in shape"
+
+[metrics]
+weight = 27
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project11052023164504"
+rgbd_file_names = [
+    "44_yeastbread_5_0",
+    "44_yeastbread_5_1",
+]
+nutrition_facts_sources = [
+    "IMG_6926"
+]
+
+quality = 3
+quality_comments = "tracking lost at first, then switched to marker turntable and worked perfectly"
+
+[time]
+started = "16:12:44"
+finished = "17:04:08"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: very good
+Model quality:  very good
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

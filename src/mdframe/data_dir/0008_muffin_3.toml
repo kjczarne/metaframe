@@ -1,0 +1,40 @@
+gid = 8
+uid = "d842a4b4-8333-4818-87cb-2c4b977646dc"
+
+[item]
+nutrition_subgroup = "biscuits muffins quick breads"
+food_type = "muffin"
+description = "unwrapped chocolate chip"
+
+[metrics]
+weight = 107
+unit = "g"
+
+[model]
+project_name = "Project09182023163357"
+rgbd_file_names = [
+    "8_muffin_3_0",
+    "8_muffin_3_1",
+]
+nutrition_facts_sources = []
+quality = 3
+quality_comments = "experimented with texture on raw scans (one-click editing), great texture"
+
+[time]
+started = "16:21:07"
+finished = "16:35:07"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: borderline accept, no unique-frame markers present
+Model quality: spectacular
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

@@ -1,0 +1,45 @@
+gid = 18      
+uid = "ed01b8d6-17f1-48b0-8998-60205d5db715"
+
+[item]  
+nutrition_subgroup = "Yogurt"
+food_type = "raspberry yogurt"
+description = "Astro Original Whole Milk Raspberry Yogurt"
+
+[metrics]
+weight = 162
+unit = "g"
+
+[model]
+project_name = "Project10022023163052"
+rgbd_file_names = [
+    "18_yogurt_0_0",
+    "18_yogurt_0_1",
+]
+nutrition_facts_sources = [
+    "IMG_4011",
+    "IMG_4012"
+]
+quality = 2
+quality_comments = "good complete scan, but lacks lumpy texture of yogurt."
+
+[time]
+started = "16:02:14"
+finished = "16:37:42"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: very good
+Model quality: borderline accept, the bowl is not represented well
+but I make the assumption here that we only care about the contents
+of the bowl.
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

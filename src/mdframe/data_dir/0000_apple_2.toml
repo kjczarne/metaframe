@@ -1,0 +1,33 @@
+gid = 0
+uid = "fbcd0f00-7cfa-4506-a7f5-dd350ec22d54"
+
+[item]
+nutrition_subgroup = "apple"
+food_type = "apple"
+description = "Red apple"
+
+[metrics]
+weight = 222
+unit = "g"
+
+[model]
+project_name = "0_apple_2"
+rgbd_file_names = [
+    "2023-09-13--19-50-11",
+    "2023-09-13--19-49-55"
+]
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: no unique-frame markers
+Model quality: 
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

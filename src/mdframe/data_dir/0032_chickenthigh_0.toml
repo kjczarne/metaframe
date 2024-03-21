@@ -1,0 +1,42 @@
+gid = 32
+uid = "6a32b8c7-b5e8-42dd-b22f-5aa8f470cfd7"
+
+[item]
+nutrition_subgroup = "poultry"
+food_type = "chicken thigh"
+description = "chicken thigh with big and small leg attached, skin on"
+
+[metrics]
+weight = 182
+unit = "g"
+
+[model]
+project_name = "Project10222023163841"
+rgbd_file_names = [
+    "32_chickenthigh_0_0",
+    "32_chickenthigh_0_1",
+]
+nutrition_facts_sources = [
+   "IMG_6834" 
+]
+quality = 2
+quality_comments = "good on top side but too many holes and some alignment problem on bottom/sides"
+
+[time]
+started = "16:03:41"
+finished = "16:52:15"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: very good
+Model quality:  very good
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

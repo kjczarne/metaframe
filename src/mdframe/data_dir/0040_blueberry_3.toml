@@ -1,0 +1,46 @@
+gid = 40
+uid = "533ea41e-3307-4808-9292-310ab330e10b"
+
+[item]
+nutrition_subgroup = "blueberries"
+food_type = "blueberries"
+description = "bowl of a couple blueberries"
+
+[metrics]
+weight = 66
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project10302023204040"
+rgbd_file_names = [
+    "40_blueberry_3_0"
+]
+nutrition_facts_sources = [
+    
+]
+
+quality = 2
+quality_comments = "pretty clear capturing"
+
+[time]
+started = "20:36:25"
+finished = "20:53:33"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: very good
+Model quality:  ok, bottom of the bowl is missing
+but that's intended - since this a bowl capture, we
+care only about the objects within the bowl
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

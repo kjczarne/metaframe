@@ -1,0 +1,35 @@
+gid = 3
+uid = "edbeb541-95e4-4fc7-96e9-e7ad45f97f0a"
+
+[item]
+nutrition_subgroup = "strawberries"
+food_type = "strawberry"
+description = "yellow lamp lighting used for capture, white light turned off"
+
+[metrics]
+weight = 26
+unit = "g"
+
+[model]
+project_name = "Project09172023110713"
+rgbd_file_names = [
+    "3_strawberry_2_0",
+    "3_strawberry_2_1",
+]
+quality = 3
+quality_comments = "beautiful strawberry, discoloration after merge"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: no unique-frame markers
+Model quality: slight post-merge discolorations which might impact the texture, to me it is still acceptable
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

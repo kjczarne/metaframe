@@ -1,0 +1,56 @@
+gid = 56
+uid = "77431646-01bc-4105-9c26-930adf935331"
+
+[item]
+nutrition_subgroup = "meat mixed dishes"
+food_type = "meatloaf"
+description = "slice of meatloaf"
+
+[metrics]
+weight = 89
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project11262023161908"
+rgbd_file_names = [
+    "56_meatloaf_1_0",
+    "56_meatloaf_1_1",
+]
+nutrition_facts_sources = [
+    "IMG_7163",
+    "IMG_7164"    
+]
+texture_sources = [
+    "IMG_7171",
+    "IMG_7172",
+    "IMG_7173",
+    "IMG_7174",
+    "IMG_7175",
+    "IMG_7176",
+]
+
+quality = 3
+quality_comments = "incredible scan"
+merged = true
+textured = false
+
+[time]
+started = "16:18:01"
+finished = "16:29:12"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: very good
+Model quality:  very good
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

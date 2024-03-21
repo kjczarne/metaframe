@@ -1,0 +1,46 @@
+gid = 41
+uid = "e81b6113-7471-4530-aa8d-f7319175e7d7"
+
+[item]
+nutrition_subgroup = "meats"
+food_type = "pork chop"
+description = "cooked pork chop with bone in"
+
+[metrics]
+weight = 148
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project11052023131747"
+rgbd_file_names = [
+    "41_porkchop_0_0",
+    "41_porkchop_0_1",
+]
+nutrition_facts_sources = [
+    
+]
+
+quality = 3
+quality_comments = "high precision and detail - just couldn't merge"
+merged = false
+
+[time]
+started = "13:15:34"
+finished = "13:36:17"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: very good
+Model quality:  requires merging
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false

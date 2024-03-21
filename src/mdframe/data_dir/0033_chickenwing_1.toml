@@ -1,0 +1,41 @@
+gid = 33
+uid = "904fd2e4-71fc-4501-84f0-e7f656ee4c18"
+
+[item]
+nutrition_subgroup = "poultry"
+food_type = "chicken wing"
+description = "detached chicken wing from roasted chicken"
+
+[metrics]
+weight = 48
+unit = "g"
+
+[model]
+project_name = "Project10222023162457"
+rgbd_file_names = [
+    "33_chickenwing_1_0",
+    "33_chickenwing_1_1",
+]
+nutrition_facts_sources = [
+    "IMG_6834"
+]
+quality = 3
+quality_comments = "representative chicken wing with detail, some holes left unfilled because of gaps"
+
+[time]
+started = "16:08:13"
+finished = "16:33:59"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: very good
+Model quality:  very good
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

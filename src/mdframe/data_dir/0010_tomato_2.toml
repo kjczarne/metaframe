@@ -1,0 +1,42 @@
+gid = 10
+uid = "248e9623-7eae-4689-846c-e7a11930441b"
+
+[item]
+nutrition_subgroup = "tomatoes (slice)"
+food_type = "tomato slice"
+description = "a single tomato slice placed directly on black table cover (no plate or bowl)"
+
+[metrics]
+weight = 12
+unit = "g"
+
+[model]
+project_name = "Project09242023163211"
+rgbd_file_names = [
+    "10_tomato_2_0",
+    "10_tomato_2_1",
+]
+nutrition_facts_sources = ["IMG_3966"]
+quality = 2
+quality_comments = "both sides of slice was difficult to merge (used markers to manually mark features), so result is not a perfect slice."
+
+[time]
+started = "15:14:12"
+finished = "16:56:30"
+
+[[qa]]
+done = true
+rgbd_files_present = false
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: missing
+Model quality: borderline pass, the texture is quite bad
+but one can make out that this is indeed a slice of a tomato.
+Could be a good candidate for retexturing
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = false

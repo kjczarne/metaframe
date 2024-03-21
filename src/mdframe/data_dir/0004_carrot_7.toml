@@ -1,0 +1,43 @@
+gid = 4
+uid = "67b6b649-8deb-463a-9781-7dfc44576c82"
+
+[item]
+nutrition_subgroup = "carrots"
+food_type = "carrot"
+description = "french-cut cooking carrots in a bowl"
+
+[metrics]
+weight = 39
+unit = "g"
+
+[model]
+project_name = "Project10062023174016"
+rgbd_file_names = [
+    "4_carrot_7_0",
+    "",
+]
+nutrition_facts_sources = [
+    
+]
+
+quality = 3
+quality_comments = ""
+
+[time]
+started = "17:35:04"
+finished = "17:44:56"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: URAs hand is present in a couple of the frames but does not seem to obscure the object
+Model quality: this one was a pile of shredded carrots in a bowl
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

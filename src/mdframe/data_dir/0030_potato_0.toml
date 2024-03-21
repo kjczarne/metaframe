@@ -1,0 +1,42 @@
+gid = 30
+uid = "e12f9423-476a-4b64-afc1-2b02d2700425"
+
+[item]
+nutrition_subgroup = "white potatoes (baked or broiled)"
+food_type = "baked potatoes"
+description = "whole baked white potato with skin on (baked wrapped with tin foil)"
+
+[metrics]
+weight = 195
+unit = "g"
+
+[model]
+project_name = "Project10222023132213"
+rgbd_file_names = [
+    "30_potato_0_0",
+    "30_potato_0_1",
+]
+nutrition_facts_sources = [
+    
+]
+quality = 3
+quality_comments = "great scan, merge and wonderful potato. Minor discoloration band due to shadow, but skin detail still visible."
+
+[time]
+started = "13:11:48"
+finished = "13:52:54"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: very good
+Model quality:  very good
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

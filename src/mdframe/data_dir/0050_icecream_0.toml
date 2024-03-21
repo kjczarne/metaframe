@@ -1,0 +1,54 @@
+gid = 50
+uid = "a4c870d3-917a-4d35-b146-898bb6831fd2"
+
+[item]
+nutrition_subgroup = "ice cream and frozen dairy desserts"
+food_type = "ice cream"
+description = "Kawartha Death by Chocolate ice cream made with fresh milk and cream"
+
+[metrics]
+weight = 86
+unit = "g"
+ingredients = [
+ "fresh  milk, cream, sugars, chocolatey sauce, water, cocoa, modified corn starch, etc"   
+]
+
+[model]
+project_name = "Project11192023132317"
+rgbd_file_names = [
+    "50_icecream_0",
+]
+nutrition_facts_sources = [
+    "IMG_7055",
+    "IMG_7056",
+    "IMG_7057"
+]
+
+texture_sources = [
+    "IMG_7058",
+    "IMG_7059",
+    "IMG_7061",
+    "IMG_7063"
+]
+
+quality = 3
+quality_comments = "great texture"
+
+[time]
+started = "13:29:30"
+finished = "13:46:37"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: very good
+Model quality:  very good, missing bottom but we cannot
+rotate melting ice-cream
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

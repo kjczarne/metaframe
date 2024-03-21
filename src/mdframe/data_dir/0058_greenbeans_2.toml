@@ -1,0 +1,57 @@
+gid = 58
+uid = "4acea0aa-cd53-45af-96bb-5aed1c8bebe2"
+
+[item]
+nutrition_subgroup = "string beans"
+food_type = "green beans"
+description = "single green bean"
+
+[metrics]
+weight = 0.5
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project11272023165530"
+rgbd_file_names = [
+    "58_greenbeans_2_0",
+    "58_greenbeans_2_1",
+]
+nutrition_facts_sources = [
+    "IMG_7210",
+    "IMG_7211" 
+]
+
+texture_sources = [
+    "IMG_7222",
+    "IMG_7223",
+    "IMG_7224",
+    "IMG_7225",
+    "IMG_7226",
+    "IMG_7227"
+]
+
+quality = 2
+quality_comments = "overall good scan but couldn't merge, and texturing wasn't similar to the actual texture"
+merged = false
+textured = false
+
+[time]
+started = "16:44:49"
+finished = "17:18:16"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: very good
+Model quality:  very good
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

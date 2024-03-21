@@ -1,0 +1,43 @@
+gid = 25
+uid = "becbc134-a170-4847-b79b-148f1f6e5898"
+
+[item]
+nutrition_subgroup = "egg rolls dumplings sushi"
+food_type = "sushi"
+description = "sushi roll with salmon"
+
+[metrics]
+weight = 14
+unit = "g"
+
+[model]
+project_name = "Project10162023175111"
+rgbd_file_names = [
+    "25_sushi_4_0",
+    "25_sushi_4_1",
+]
+nutrition_facts_sources = [
+    
+]
+quality = 3
+quality_comments = "merge worked well but the it had trouble dectecting the orange colour"
+
+[time]
+started = "17:51:37"
+finished = "18:09:30"
+
+[[qa]]
+done = true
+rgbd_files_present = false
+model_quality_acceptable = false
+rgbd_quality_acceptable = true
+ingredients_acceptable = false
+
+comments = """
+RGBD files: missing, possibly due to sync issues?
+Model quality: terrible, misaligned, not acceptable at all
+Ingredients list: not decomposed into individual ingredients
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false

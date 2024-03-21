@@ -1,0 +1,41 @@
+gid = 7
+uid = "81e8695e-38c1-4be1-9f75-adff37c0bdbe"
+
+[item]
+nutrition_subgroup = "bagels and english muffins"
+food_type = "bagel"
+description = "sesame seed, tim hortons"
+
+[metrics]
+weight = 109
+unit = "g"
+
+[model]
+project_name = "Project09262023163626"
+rgbd_file_names = [
+    "7_bagel_3_0",
+    "7_bagel_3_1",
+]
+nutrition_facts_sources = []
+
+quality = 3
+quality_comments = "colouring is slightly off, otherwise perfect"
+
+[time]
+started = "16:32:27"
+finished = "16:40:57"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: good capture, represents all sides of the object
+Model quality: spectacular.
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

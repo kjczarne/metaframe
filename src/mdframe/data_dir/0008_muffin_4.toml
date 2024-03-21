@@ -1,0 +1,44 @@
+gid = 8
+uid = "8e300594-5e55-4464-bdd9-ba94344a1ff8"
+
+[item]
+nutrition_subgroup = "biscuits muffins quick breads"
+food_type = "muffin"
+description = "banana-pecan muffin"
+
+[metrics]
+weight = 107
+unit = "g"
+
+[model]
+project_name = "Project09182023163357"
+rgbd_file_names = [
+    "8_muffin_4_0",
+    "8_muffin_4_1",
+]
+nutrition_facts_sources = []
+quality = 2
+quality_comments = "Simiilar issue with the wrapper separation with the muffin."
+
+[time]
+started = "16:25:07"
+finished = "16:53:59"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: borderline pass, some of the frames do not have
+the object in the frame. The scale markers are not visible in all
+of the frames. There are no unique-frame markers since this is one
+of the captures from the old pipeline
+Model quality: good but **not meshed**, this needs to be
+re-done before we can accept it.
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = false

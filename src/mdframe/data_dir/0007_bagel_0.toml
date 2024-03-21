@@ -1,0 +1,41 @@
+gid = 7
+uid = "656442d1-36d1-4b5e-9f0b-caba8029292f"
+
+[item]
+nutrition_subgroup = "bagels and english muffins"
+food_type = "bagel"
+description = ""
+
+[metrics]
+weight = 75
+unit = "g"
+
+[model]
+project_name = "Project09172023162453"
+rgbd_file_names = [
+    "7_bagel_0_0",
+    "7_bagel_0_1",
+]
+quality = 3
+quality_comments = "some shadows in the area around the cut between the two bagels"
+
+[time]
+started = "16:23:07"
+finished = "16:31:46"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: borderline accept, one of the sides of the bagel
+was not represented fully, it's less of an issue for a ring-shaped
+object, it was a downright reject for the brownies though.
+Model quality: great.
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

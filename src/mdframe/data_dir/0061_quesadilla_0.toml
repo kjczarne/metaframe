@@ -1,0 +1,41 @@
+gid = 61
+uid = "c3feb5a2-208e-4684-ac45-f48c9ca082b5"
+
+[item]
+nutrition_subgroup = "other mexican mixed dishes"
+food_type = "quesadilla"
+description = "rectangular quesadilla with meat, veggies, and cheese"
+
+[metrics]
+weight = 109
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project01312024200928"
+rgbd_file_names = [
+    "61_quesadilla_0_0",
+    "61_quesadilla_0_1",
+]
+nutrition_facts_sources = [
+    
+]
+texture_sources = [
+    "IMG_7319",
+    "IMG_7320",
+    "IMG_7321",
+    "IMG_7322",
+    "IMG_7323",
+    "IMG_7330"
+]
+
+quality = 3
+quality_comments = "realistic looking quesadilla"
+merged = true
+textured = false
+
+[time]
+started = "20:07:47"
+finished = "20:29:50"

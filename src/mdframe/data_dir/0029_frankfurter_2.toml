@@ -1,0 +1,49 @@
+gid = 29
+uid = "6fc7ecc4-b0ea-49f2-84ab-5df5b0f009c0"
+
+[item]
+nutrition_subgroup = "frankfurter sandwiches"
+food_type = "frankfurter sandwich"
+description = "speckled hotdog bun and sausage with mustard"
+
+[metrics]
+weight = 121
+unit = "g"
+ingredients = [
+    {name = "sausage", weight = 37},
+    {name = "bun", weight = 84},
+]
+
+[model]
+project_name = "Project10212023174552"
+rgbd_file_names = [
+    "29_frankfurter_2_0",
+    "29_frankfurter_2_1",
+]
+nutrition_facts_sources = [
+    "IMG_6818",
+    "IMG_6819",
+    "IMG_6820",
+    "IMG_6822"
+]
+quality = 3
+quality_comments = "mostly good except some holes needed to be filled at the ends of the sausage. Also some discolourations."
+
+[time]
+started = "16:37:09"
+finished = "18:01:42"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: very good
+Model quality:  very good
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

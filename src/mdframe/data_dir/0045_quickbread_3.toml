@@ -1,0 +1,45 @@
+gid = 45
+uid = "47322436-c802-470c-ac2b-ba98d000ddc8"
+
+[item]
+nutrition_subgroup = "biscuits muffins quick breads"
+food_type = "quick bread"
+description = "slice of banana & pecan pound cake"
+
+[metrics]
+weight = 67
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project11052023171205"
+rgbd_file_names = [
+    "45_quickbread_3_0",
+    "45_quickbread_3_1",
+]
+nutrition_facts_sources = [
+    "IMG_6932"
+]
+
+quality = 3
+quality_comments = "great merge, pecans and patterns present"
+
+[time]
+started = "15:30:57"
+finished = "17:29:26"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: very good
+Model quality:  very good
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

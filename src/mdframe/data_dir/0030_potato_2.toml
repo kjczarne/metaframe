@@ -1,0 +1,43 @@
+gid = 30
+uid = "55172f13-f921-459f-b75a-eb1ba77101ba"
+
+[item]
+nutrition_subgroup = "white potatoes (baked or broiled)"
+food_type = "baked potato"
+description = "baked white potato with skin on, cut in half along the length, with bottom skin still attached"
+
+[metrics]
+weight = 204
+unit = "g"
+
+[model]
+project_name = "Project10222023141342"
+rgbd_file_names = [
+    "30_potato_2_0",
+    "30_potato_2_1",
+]
+nutrition_facts_sources = [
+    
+]
+quality = 3
+quality_comments = "complete scan, but discolorations due to shadows"
+
+[time]
+started = "13:27:10"
+finished = "14:37:30"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: very good
+Model quality:  very good, texture on the inside of the potato
+could be better
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

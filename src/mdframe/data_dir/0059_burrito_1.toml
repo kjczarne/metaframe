@@ -1,0 +1,36 @@
+gid = 59
+uid = "53efbe93-a4c0-457e-bd6f-ac02150e1cbb"
+
+[item]
+nutrition_subgroup = "burritos and tacos"
+food_type = "burrito"
+description = "burrito cut in half"
+
+[metrics]
+weight = 291
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project01312024182945"
+rgbd_file_names = [
+    "59_burrito_1_0",
+    "59_burrito_1_1",
+]
+nutrition_facts_sources = [
+    
+]
+texture_sources = [
+    
+]
+
+quality = 2
+quality_comments = "the cross section of the burrito was not captured well"
+merged = true
+textured = false
+
+[time]
+started = "18:42:08"
+finished = "19:32:01"

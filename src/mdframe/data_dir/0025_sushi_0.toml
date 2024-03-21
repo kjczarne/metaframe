@@ -1,0 +1,42 @@
+gid = 25
+uid = "487accfe-4fad-4fec-80dd-ebcf304d206c"
+
+[item]
+nutrition_subgroup = "egg rolls dumplings sushi"
+food_type = "sushi"
+description = "california roll with cucumber, crab meat, red caviar, avocado, rice, seaweed"
+
+[metrics]
+weight = 29
+unit = "g"
+
+[model]
+project_name = "Project10162023154302"
+rgbd_file_names = [
+    "25_sushi_0_0",
+    "25_sushi_0_1"
+]
+quality = 2
+quality_comments = "low precision in image quality"
+
+[time]
+started = "15:23:54"
+finished = "16:18:38"
+
+[[qa]]
+done = true
+rgbd_files_present = false
+model_quality_acceptable = false
+rgbd_quality_acceptable = true
+ingredients_acceptable = false
+
+comments = """
+RGBD files: mislabeled, the captures with this name seem to correspond
+to sushi_6
+Model quality: pretty bad, low resolution, hard to make out the ingredients of the
+sushi roll
+Ingredients list: not captured and should have been measured separately
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = false

@@ -1,0 +1,42 @@
+gid = 22
+uid = "08775968-b546-4c21-9018-366fd8323182"
+
+[item]
+nutrition_subgroup = "broccoli"
+food_type = "broccoli"
+description = "whole bunch of raw broccoli"
+
+[metrics]
+weight = 285
+unit = "g"
+
+[model]
+project_name = "Project10082023144255"
+rgbd_file_names = [
+    "22_broccoli_0_0",
+    "22_broccoli_0_1",
+]
+nutrition_facts_sources = [
+    "IMG_4041"
+]
+quality = 3
+quality_comments = "good representative scan of broccoli, but a lot of small holes that were filled"
+
+[time]
+started = "14:14:05"
+finished = "14:59:01"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: very good
+Model quality: very good
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

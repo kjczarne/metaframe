@@ -1,0 +1,46 @@
+gid = 42
+uid = "619566c9-3dea-4c1f-b665-1f0919b7e62c"
+
+[item]
+nutrition_subgroup = "meats"
+food_type = "steak"
+description = "cooked beef steak"
+
+[metrics]
+weight = 222
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project11052023141903"
+rgbd_file_names = [
+    "42_steak_1_0",
+    "42_steak_1_1",
+]
+nutrition_facts_sources = [
+    
+]
+
+quality = 2
+quality_comments = "the bottom scan had a slightly different shade of colour, not entirely representative and couldn't merge"
+merged = false
+
+[time]
+started = "13:33:32"
+finished = "14:32:26"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: very good
+Model quality:  requires merging
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false

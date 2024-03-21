@@ -1,0 +1,41 @@
+gid = 16
+uid = "cd8d9ac0-e4b4-4e7e-8833-a40ddcec100f"
+
+[item]
+nutrition_subgroup = "plant-based protein foods"
+food_type = "almond, singular"
+description = ""
+
+[metrics]
+weight = 0.7
+unit = "g"
+
+[model]
+project_name = "Project09282023152925"
+rgbd_file_names = [
+    "16_almond_0_0",
+    "16_almond_0_1",
+]
+nutrition_facts_sources = []
+
+quality = 1
+quality_comments = "still a work in progress... terrible captures"
+
+[time]
+started = "15:53:48"
+finished = "15:54:49"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = false
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: very good
+Model quality: requires merge
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false

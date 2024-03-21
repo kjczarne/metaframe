@@ -1,0 +1,44 @@
+gid = 33
+uid = "5184850f-5fde-448c-9fa0-9cf06d61c4ee"
+
+[item]
+nutrition_subgroup = "poultry"
+food_type = "chicken wing"
+description = "detached chicken wing from roasted chicken"
+
+[metrics]
+weight = 32
+unit = "g"
+
+[model]
+project_name = "Project10232023170124"
+rgbd_file_names = [
+    "33_chickenwing_2_0",
+    "33_chickenwing_2_1",
+]
+nutrition_facts_sources = [
+   "IMG_6874" 
+]
+quality = 2
+quality_comments = "texture and shape captured well, need to merge on meshlab"
+merged = false
+
+[time]
+started = "16:57:55"
+finished = "17:08:33"
+
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = false
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+requires_nutritional_facts_imputation = true
+comments = """
+RGBD files: ok
+Model quality: Merge required
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false

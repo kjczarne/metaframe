@@ -1,0 +1,34 @@
+gid = 2
+uid = "76ed4baa-55f2-4b3a-a878-5fee1d35e528"
+
+[item]
+nutrition_subgroup = "bananas"
+food_type = "banana"
+description = ""
+
+[metrics]
+weight = 160
+unit = "g"
+
+[model]
+project_name = "Project09152023151250"
+rgbd_file_names = [
+    "2_banana_0_0",
+    "2_banana_0_1",
+]
+quality = 1
+quality_comments = "Revopoint software unable to align point clouds at merge"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = false
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+Model quality: not acceptable, misaligned point clouds, no meshing done
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = false

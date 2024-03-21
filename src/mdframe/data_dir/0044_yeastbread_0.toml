@@ -1,0 +1,45 @@
+gid = 44
+uid = "3a9d0eb7-8606-4f27-916d-eaba98691e17"
+
+[item]
+nutrition_subgroup = "yeast breads"
+food_type = "yeast bread"
+description = "whole loaf of italian-style crispy yeast bread, oblong in shape"
+
+[metrics]
+weight = 466
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project11052023153759"
+rgbd_file_names = [
+    "44_yeastbread_0_0",
+    "44_yeastbread_0_1",
+]
+nutrition_facts_sources = [
+    "IMG_6926"
+]
+
+quality = 2
+quality_comments = "good scans but had shadows due to lighting, which resulted in discolouration in merge."
+
+[time]
+started = "14:15:45"
+finished = "15:56:05"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: very good
+Model quality:  very good
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

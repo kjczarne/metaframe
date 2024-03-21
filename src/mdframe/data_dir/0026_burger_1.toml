@@ -1,0 +1,53 @@
+gid = 26
+uid = "31f07597-e3c5-4574-8814-b3356ec754b6"
+
+[item]
+nutrition_subgroup = "meat mixed dishes"
+food_type = "burger"
+description = ""
+
+[metrics]
+weight = 270
+unit = "g"
+ingredients = [
+    {name = "tomatoes", weight = 38},
+    {name = "onions", weight = 20},
+    {name = "cheese", weight = 20},
+    {name = "beef patty", weight = 107},
+    {name = "lettuce", weight = 7},
+    {name = "buns", weight = 78},
+]
+
+[model]
+project_name = "Project10192023203546"
+rgbd_file_names = [
+    "26_burger_1_0",
+    "26_burger_1_1",
+]
+nutrition_facts_sources = [
+    
+]
+quality = 3
+quality_comments = "unable to merge, use meshlab"
+merged = false
+
+[time]
+started = "16:12:42"
+finished = "16:50:52"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = false
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: ok
+Model quality: porous, misaligned parts of the model.
+It is also hard to merge the two perspectives because components
+of the sandwich flop down when the burger is flipped.
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false

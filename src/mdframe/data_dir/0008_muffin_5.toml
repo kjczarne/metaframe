@@ -1,0 +1,42 @@
+gid = 8
+uid = "f11d2a8f-d38d-46aa-9c87-7f89a58ebdc7"
+
+[item]
+nutrition_subgroup = "biscuits muffins quick breads"
+food_type = "muffin"
+description = "banana-pecan muffin"
+
+[metrics]
+weight = 101
+unit = "g"
+
+[model]
+project_name = "Project09182023165404"
+rgbd_file_names = [
+    "8_muffin_5_0",
+    "8_muffin_5_1",
+]
+nutrition_facts_sources = []
+quality = 3
+quality_comments = "Unproblematic scan with few holes or detached parts."
+
+[time]
+started = "16:55:29"
+finished = "17:06:39"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: borderline pass, some of the frames do not capture
+the object in full. Scale markers only, no unique-frame markers,
+since this is the old pipeline.
+Model quality: very good.
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

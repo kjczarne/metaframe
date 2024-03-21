@@ -1,0 +1,55 @@
+gid = 47
+uid = "27d4245b-0fea-4e39-b8e1-325a1fbb0917"
+
+[item]
+nutrition_subgroup = "pancakes waffles french toast"
+food_type = "french toast"
+description = ""
+
+[metrics]
+weight = 64
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project11122023141851"
+rgbd_file_names = [
+    "47_frenchtoast_2_0",
+    "47_frenchtoast_2_1",
+]
+nutrition_facts_sources = [
+    
+]
+texture_sources = [
+    "IMG_6979",
+    "IMG_6980",
+    "IMG_6981",
+    "IMG_6982",
+    "IMG_6983",
+    "IMG_6984"
+]
+
+quality = 3
+quality_comments = "great individual scans, unable to merge"
+merged = false
+textured = false
+
+[time]
+started = "14:09:52"
+finished = "14:35:43"
+
+[[qa]]
+done = true
+rgbd_files_present = false
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: missing
+Model quality:  very good
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = false

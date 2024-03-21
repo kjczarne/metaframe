@@ -1,0 +1,46 @@
+gid = 36
+uid = "95492a97-077d-4cf4-9fb5-1adfb3ea9d85"
+
+[item]
+nutrition_subgroup = "melons"
+food_type = "melon"
+description = "green melon"
+
+[metrics]
+weight = 24
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project10262023153951"
+rgbd_file_names = [
+    "36_melon_6_0",
+    "36_melon_6_1",
+]
+nutrition_facts_sources = [
+    
+]
+
+quality = 2
+quality_comments = "individual scans look alright, but unable to merge (use meshlab)"
+merged = false
+
+[time]
+started = "15:34:33"
+finished = "16:01:54"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: very good
+Model quality:  requires merging
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false

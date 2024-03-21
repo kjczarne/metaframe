@@ -1,0 +1,55 @@
+gid = 49
+uid = "0b3554a9-b172-462b-9c5d-42b86a56c46d"
+
+[item]
+nutrition_subgroup = "fish"
+food_type = "breaded fish"
+description = ""
+
+[metrics]
+weight = 61
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project11132023151425"
+rgbd_file_names = [
+    "49_breaded_fish_0_0",
+    "49_breaded_fish_0_1",
+]
+nutrition_facts_sources = [
+    
+]
+texture_sources = [
+    "IMG_7002",
+    "IMG_7003",
+    "IMG_7004",
+    "IMG_7005",
+    "IMG_7006",
+    "IMG_7007",
+]
+
+quality = 3
+quality_comments = "good, realistic capture but slightly different colour between front and back because of lighting"
+merged = true
+textured = false
+
+[time]
+started = "15:12:32"
+finished = "15:51:37"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: very good
+Model quality:  very good
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

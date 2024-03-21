@@ -1,0 +1,43 @@
+gid = 14
+uid = "605d962f-1287-417c-a56a-52c4e141ca5b"
+
+[item]
+nutrition_subgroup = "pancakes waffles french toast"
+food_type = "waffle"
+description = "small waffle"
+
+[metrics]
+weight = 72
+unit = "g"
+
+[model]
+project_name = "Project10012023134414"
+rgbd_file_names = [
+    "14_waffle_2_0_pc",
+    "14_waffle_2_1_pc",
+]
+nutrition_facts_sources = ["IMG_4008"]
+quality = 2
+quality_comments = "Point cloud captures successful and of high quality but no ability to merge"
+merged = false
+
+[time]
+started = "13:38:51"
+finished = "14:09:07"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = false
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: very good
+Model quality: the exported OBJ mesh has no color information. This
+has been exported from Blender, so find the corresponding `.blend` project
+file (or `_ml.obj` file) and export again with color information.
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = false

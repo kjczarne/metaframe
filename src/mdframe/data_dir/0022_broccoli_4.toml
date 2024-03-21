@@ -1,0 +1,42 @@
+gid = 22
+uid = "1f0b568e-8dbf-4128-a2e9-1c00058b93d2"
+
+[item]
+nutrition_subgroup = "broccoli"
+food_type = "broccoli"
+description = "small bunch of broccoli cut from main bunch"
+
+[metrics]
+weight = 9
+unit = "g"
+
+[model]
+project_name = "Project10082023160215"
+rgbd_file_names = [
+    "22_broccoli_4_0",
+    "22_broccoli_4_1",
+]
+nutrition_facts_sources = [
+    "IMG_4041"
+]
+quality = 3
+quality_comments = "representative, easy merge, minimal isolation and some holes left unfilled as appropriate."
+
+[time]
+started = "15:46:13"
+finished = "16:10:06"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: very good
+Model quality: very good
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

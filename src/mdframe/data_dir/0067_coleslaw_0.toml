@@ -1,0 +1,39 @@
+gid = 67
+uid = "1e52300d-cf30-418c-8d7c-911b9e7ed2cc"
+
+[item]
+nutrition_subgroup = "coleslaw"
+food_type = "coleslaw"
+description = "a small pile of coleslaw"
+
+[metrics]
+weight = 18
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project02042024165952"
+rgbd_file_names = [
+    "67_coleslaw_0_0",
+]
+nutrition_facts_sources = [
+    
+]
+texture_sources = [
+    "IMG_4273",
+    "IMG_4274",
+    "IMG_4275",
+    "IMG_4276",
+    "IMG_4277",
+]
+
+quality = 3
+quality_comments = "very good texture"
+merged = false
+textured = true
+
+[time]
+started = "16:59:21"
+finished = "17:18:44"

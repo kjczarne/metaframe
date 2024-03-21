@@ -1,0 +1,41 @@
+gid = 14
+uid = "31f4b569-ea73-43f3-b4ec-711861278b31"
+
+[item]
+nutrition_subgroup = "pancakes waffles french toast"
+food_type = "waffle"
+description = ""
+
+[metrics]
+weight = 157
+unit = "g"
+
+[model]
+project_name = "Project09282023140245"
+rgbd_file_names = [
+    "14_waffle_1_0",
+    "14_waffle_1_0",
+]
+nutrition_facts_sources = []
+quality = 3
+quality_comments = "lots of hole filling done, looks great!"
+
+[time]
+started = "13:54:04"
+finished = "14:20:34"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = false
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: very good
+Model quality: slight remnant of the blue toothpick marker to the side, should be
+cut out before we accept this model.
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = false

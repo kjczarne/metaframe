@@ -1,0 +1,42 @@
+gid = 10
+uid = "730ce01f-ea0e-4021-8a73-b9f2bb8a1189"
+
+[item]
+nutrition_subgroup = "tomatoes (slice)"
+food_type = "tomato slice"
+description = "single tomato slice on white plate"
+
+[metrics]
+weight = 20
+unit = "g"
+
+[model]
+project_name = "Project09242023161702"
+rgbd_file_names = [
+    "10_tomato_1_0",
+    "10_tomato_1_1",
+]
+nutrition_facts_sources = ["IMG_3966"]
+quality = 2
+quality_comments = "lack of detail in tomato slice + hard to remove artefacts."
+
+[time]
+started = "15:06:24"
+finished = "16:30:54"
+
+[[qa]]
+done = true
+rgbd_files_present = false
+model_quality_acceptable = false
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: missing
+Model quality: requires a hole at the bottom of the plate to be filled in
+before we let this through. The texture is horrible, one can hardly make out it
+is a slice of a tomato. Could be a prime candidate for re-texturing.
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = false

@@ -1,0 +1,44 @@
+gid = 60
+uid = "b193b14d-c29e-40eb-9460-f564127ceaa2"
+
+[item]
+nutrition_subgroup = "pizza"
+food_type = "pizza"
+description = "veggie pizza (large slice)"
+
+[metrics]
+weight = 150
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project01312024193543"
+rgbd_file_names = [
+    "60_pizza_1_0",
+    "60_pizza_1_1"
+]
+nutrition_facts_sources = [
+    
+]
+texture_sources = [
+    "IMG_7310",
+    "IMG_7311",
+    "IMG_7312",
+    "IMG_7313",
+    "IMG_7314",
+    "IMG_7315",
+    "IMG_7316",
+    "IMG_7317",
+    "IMG_7318"    
+]
+
+quality = 2
+quality_comments = "looks like a pizza, toppings not captured in great detail"
+merged = true
+textured = false
+
+[time]
+started = "19:28:32"
+finished = "20:06:30"

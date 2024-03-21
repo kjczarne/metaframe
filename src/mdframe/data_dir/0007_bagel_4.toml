@@ -1,0 +1,41 @@
+gid = 7
+uid = "a706cce0-cc75-414b-abba-ceeee25e6aea"
+
+[item]
+nutrition_subgroup = "doughnuts sweet rolls pastries"
+food_type = "bagel"
+description = "cheese on top, tim hortons"
+
+[metrics]
+weight = 114
+unit = "g"
+
+[model]
+project_name = "Project09262023165045"
+rgbd_file_names = [
+    "7_bagel_4_0",
+    "7_bagel_4_1",
+]
+nutrition_facts_sources = []
+
+quality = 3
+quality_comments = "slight discoloration, perfect otherwise"
+
+[time]
+started = "16:42:22"
+finished = "16:54:52"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: great capture
+Model quality: spectacular.
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

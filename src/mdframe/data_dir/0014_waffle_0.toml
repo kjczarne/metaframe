@@ -1,0 +1,42 @@
+gid = 14
+uid = "5b432d82-8b56-45c5-9b3f-912549af67d4"
+
+[item]
+nutrition_subgroup = "pancakes waffles french toast"
+food_type = "waffle"
+description = ""
+
+[metrics]
+weight = 191
+unit = "g"
+
+[model]
+project_name = "Project09282023131638"
+rgbd_file_names = [
+    "14_waffle_0",
+    "14_waffle_0",
+]
+nutrition_facts_sources = []
+quality = 3
+quality_comments = "texturing slightly off"
+
+[time]
+started = "13:10:42"
+finished = "13:57:18"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = false
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: very good
+Model quality: has visible remnants of toothpick markers on either side.
+These need to be carefully cut out and surface reconstruction or hole filling should
+be performed to fill in the resulting holes.
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = false

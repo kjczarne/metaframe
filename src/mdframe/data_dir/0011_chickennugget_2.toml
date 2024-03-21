@@ -1,0 +1,45 @@
+gid = 11
+uid = "3e54c165-ddd4-4268-b015-85841f352a86"
+
+[item]
+nutrition_subgroup = "poultry"
+food_type = "chicken nugget"
+description = ""
+
+[metrics]
+weight = 23
+unit = "g"
+
+[model]
+project_name = "Project10192023214114"
+rgbd_file_names = [
+    "11_chickennugget_2_0",
+    "11_chickennugget_2_1",
+]
+nutrition_facts_sources = [
+    
+]
+quality = 3
+quality_comments = "need to merge with meshlab"
+merged = false
+
+[time]
+started = "17:22:45"
+finished = "18:04:59"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = false
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: well done
+Model quality: no color information exported from Blender! We need to re-export from the
+Blender project file.
+Ingredients list: 
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = false

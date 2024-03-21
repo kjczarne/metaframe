@@ -1,0 +1,39 @@
+gid = 69
+uid = "0cbe428c-e323-4e9b-9a37-e020ae55a034"
+
+[item]
+nutrition_subgroup = "meat mixed dishes"
+food_type = "meat mixed dishes"
+description = "beef stew"
+
+[metrics]
+weight = 217
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = ""
+rgbd_file_names = [
+    "69_stew_1_0"
+]
+nutrition_facts_sources = [
+    
+]
+texture_sources = [
+    "IMG_4296",
+    "IMG_4297",
+    "IMG_4298",
+    "IMG_4299",
+    "IMG_4300"
+]
+
+quality = 1
+quality_comments = ""
+merged = false
+textured = false
+
+[time]
+started = "18:09:20"
+finished = 

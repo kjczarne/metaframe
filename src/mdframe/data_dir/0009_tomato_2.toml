@@ -1,0 +1,41 @@
+gid = 9
+uid = "06a87bc0-ffe3-43a7-b0e8-c422859721c9"
+
+[item]
+nutrition_subgroup = "tomatoes (whole)"
+food_type = "tomatoes (whole)"
+description = ""
+
+[metrics]
+weight = 332
+unit = "g"
+
+[model]
+project_name = "Project09242023151551"
+rgbd_file_names = [
+    "9_tomato_2_0",
+    "9_tomato_2_1",
+]
+nutrition_facts_sources = ["IMG_3967"]
+quality = 1
+quality_comments = "Couldn't get the side scan. Merge couldn't detect overlapping area."
+
+[time]
+started = "14:01:17"
+finished = "16:08:23"
+
+[[qa]]
+done = true
+rgbd_files_present = false
+model_quality_acceptable = false
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: not present, perhaps got lost in sync??
+Model quality: abhorrant. The tomato is halved and the bottom has been filled
+in as a hole. It might be a mis-export from RevoScan.
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false

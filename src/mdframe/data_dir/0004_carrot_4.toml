@@ -1,0 +1,39 @@
+gid = 4
+uid = "2c0dc051-5c03-4cf2-8603-04d48070f61f"
+
+[item]
+nutrition_subgroup = "carrots"
+food_type = "baby carrot"
+description = ""
+
+[metrics]
+weight = 8
+unit = "g"
+
+[model]
+project_name = "Project09292023181342"
+rgbd_file_names = [
+    "4_carrot_4_0",
+    "4_carrot_4_1",
+]
+nutrition_facts_sources = []
+quality = 1
+quality_comments = "unable to get merge two halves of carrot"
+
+[time]
+started = "18:20:08"
+finished = "18:51:43"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = false
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+Model quality: not present
+"""
+model_merge_required = false
+model_texture_required = false
+accepted = false

@@ -1,0 +1,39 @@
+gid = 72
+uid = "5f4537c8-a83f-4d16-bd4f-c94f85793394"
+
+[item]
+nutrition_subgroup = "cabbage"
+food_type = "cabbage"
+description = "pile of shredded cabbage"
+
+[metrics]
+weight = 34
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project02092024181900"
+rgbd_file_names = [
+    "71_cabbage_1_0",
+]
+nutrition_facts_sources = [
+    
+]
+texture_sources = [
+    "IMG_7360",
+    "IMG_7361",
+    "IMG_7362",
+    "IMG_7363",
+    "IMG_7364",
+]
+
+quality = 2
+quality_comments = "scan looks okay but there are some holes. Only one scan taken, pile could not be flipped"
+merged = false
+textured = false
+
+[time]
+started = "18:18:09"
+finished = "18:33:23"

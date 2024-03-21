@@ -1,0 +1,45 @@
+gid = 44
+uid = "e6972bc3-8e69-4197-83aa-6b3500366ec6"
+
+[item]
+nutrition_subgroup = "yeast breads"
+food_type = "yeast bread"
+description = "one slice of italian-style crispy yeast bread, oblong in shape"
+
+[metrics]
+weight = 43
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project11052023163139"
+rgbd_file_names = [
+    "44_yeastbread_3_0",
+    "44_yeastbread_3_1",
+]
+nutrition_facts_sources = [
+    "IMG_6926"
+]
+
+quality = 3
+quality_comments = "great texture on bread slice, but some minor shadows on crust"
+
+[time]
+started = "16:00:30"
+finished = "16:38:50"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: very good
+Model quality:  very good
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

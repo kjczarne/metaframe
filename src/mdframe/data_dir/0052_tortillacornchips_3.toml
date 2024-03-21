@@ -1,0 +1,56 @@
+gid = 52
+uid = "ce928754-4263-46da-b2dd-cd3688556ebd"
+
+[item]
+nutrition_subgroup = "tortilla and corn chips"
+food_type = "tortilla and corn chips"
+description = "single Fritos original corn chip"
+
+[metrics]
+weight = 2
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project11192023160951"
+rgbd_file_names = [
+    "52_tortillacornchips_3_0",
+    "52_tortillacornchips_3_1"
+]
+nutrition_facts_sources = [
+    "IMG_7099"
+]
+
+texture_sources = [
+    "IMG_7105",
+    "IMG_7106",
+    "IMG_7107",
+    "IMG_7108",
+    "IMG_7109",
+    "IMG_7110"
+]
+
+quality = 3
+quality_comments = "good quality and textured scans but couldn't merge properly"
+merged = false
+textured = true
+
+[time]
+started = "15:42:39"
+finished = "16:20:52"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: very good
+Model quality:  requires merging
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false

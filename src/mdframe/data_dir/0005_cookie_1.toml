@@ -1,0 +1,39 @@
+gid = 5
+uid = "8df53c28-b2d7-4cad-a484-a4859fad1c45"
+
+[item]
+nutrition_subgroup = "cookies and brownies"
+food_type = "cookie"
+description = "oatmeal and raisin"
+
+[metrics]
+weight = 43
+unit = "g"
+
+[model]
+project_name = "Project09172023151959"
+rgbd_file_names = [
+    "5_cookie_1_0",
+    "5_cookie_1_1",
+]
+quality = 3
+quality_comments = "Amazing quality as usual."
+
+[time]
+started = "15:19:52"
+finished = "15:31:31"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: no unique-frame markers, some frames have the object not fully in view.
+Model quality: spectacular.
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

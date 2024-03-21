@@ -1,0 +1,37 @@
+gid = 74
+uid = "f5828469-7799-417e-b255-343923f8dc18"
+
+[item]
+nutrition_subgroup = "apple"
+food_type = "applesauce"
+description = "applesauce portion in a bowl"
+
+[metrics]
+weight = 138
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project02102024174424"
+rgbd_file_names = [
+    "74_applesauce_0_0",
+]
+nutrition_facts_sources = [
+    "IMG_7376"
+]
+texture_sources = [
+    "IMG_7375"
+]
+
+quality = 3
+quality_comments = """Good capture, captured only the top part of the bowl with the product inside.
+Texturing impossible due to RevoScan freezing on texture generation.
+"""
+merged = true
+textured = false
+
+[time]
+started = "17:43:34"
+finished = "18:03:09"

@@ -1,0 +1,45 @@
+gid = 71
+uid = "f861d2fa-3361-4a6a-86fc-a4b8560f205c"
+
+[item]
+nutrition_subgroup = "cabbage"
+food_type = "cabbage"
+description = "head of cabbage"
+
+[metrics]
+weight = 1861
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project02092024170826"
+rgbd_file_names = [
+    "71_cabbage_0_0",
+    "71_cabbage_0_1",
+]
+nutrition_facts_sources = [
+
+]
+texture_sources = [
+    "IMG_7350",
+    "IMG_7351",
+    "IMG_7352",
+    "IMG_7353",
+    "IMG_7354",
+    "IMG_7355",
+    "IMG_7356",
+    "IMG_7357",
+    "IMG_7358",
+    "IMG_7359",
+]
+
+quality = 2
+quality_comments = "looks like a cabbage, does contain minor shadowing"
+merged = true
+textured = false
+
+[time]
+started = "16:56:18"
+finished = "17:53:53"

@@ -1,0 +1,41 @@
+gid = 5
+uid = "71826141-d25d-4f48-8ae5-e584426a7358"
+
+[item]
+nutrition_subgroup = "cookies and brownies"
+food_type = "cookie"
+description = "chocolate chip"
+
+[metrics]
+weight = 36
+unit = "g"
+
+[model]
+project_name = "Project09172023151219"
+rgbd_file_names = [
+    "5_cookie_0_0",
+    "5_cookie_0_1",
+]
+quality = 3
+quality_comments = "Amazing quality. No holes/isolations even!"
+
+[time]
+started = "15:08:47"
+finished = "15:19:18"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: no unique-feature markers, some frames have the object not in full view.
+Not entirely satisfied with the RGBD capture quality but should have enough
+frames for representing the object.
+Model quality: spectacular
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

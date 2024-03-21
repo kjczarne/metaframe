@@ -1,0 +1,46 @@
+gid = 25
+uid = "212118fb-ed44-40b8-a156-ce12f519c765"
+
+[item]
+nutrition_subgroup = "egg rolls dumplings sushi"
+food_type = "sushi"
+description = "sushi roll with cucumber"
+
+[metrics]
+weight = 9
+unit = "g"
+
+[model]
+project_name = "Project10172023182825"
+rgbd_file_names = [
+    "25_sushi_6_0",
+    "25_sushi_6_1",
+]
+nutrition_facts_sources = [
+    
+]
+quality = 2
+quality_comments = "Merge unsuccessful, post-processing in Meshlab required"
+merged = false
+
+[time]
+started = "18:14:32"
+finished = "18:42:31"
+
+[[qa]]
+done = true
+rgbd_files_present = false
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = false
+
+comments = """
+RGBD files: seem to be mislabeled, sushi_0 rgbd captures
+seem to be the captures corresponding to this particular sample
+Model quality: mediocre, the texture over the rice and cucumber is
+of very poor quality but one can make out that this is a cucumber sushi roll
+Ingredients list: not decomposed into individual ingredients
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = false

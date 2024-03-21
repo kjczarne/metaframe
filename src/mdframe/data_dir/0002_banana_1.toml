@@ -1,0 +1,35 @@
+gid = 2
+uid = "10eea083-08b3-4c11-a6af-b0f4438a9e9d"
+
+[item]
+nutrition_subgroup = "bananas"
+food_type = "banana"
+description = ""
+
+[metrics]
+weight = 196
+unit = "g"
+
+[model]
+project_name = "Project09152023153115"
+rgbd_file_names = [
+    "2_banana_1_0",
+    "2_banana_1_1",
+]
+quality = 3
+quality_comments = ""
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: no unique-frame markers, capture might be insufficient for 3d reconstruction
+due to the person performing the capture not having represented all sides of the object.
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

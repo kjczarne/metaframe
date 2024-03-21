@@ -1,0 +1,56 @@
+gid = 47
+uid = "a5dbf20d-2eb1-44e5-be88-9b2a3c40175d"
+
+[item]
+nutrition_subgroup = "carrots"
+food_type = ""
+description = ""
+
+[metrics]
+weight = 75
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project11122023140530"
+rgbd_file_names = [
+    "47_frenchtoast_1_0",
+    "47_frenchtoast_1_1",
+]
+nutrition_facts_sources = [
+    
+]
+texture_sources = [
+    "IMG_6973",
+    "IMG_6974",
+    "IMG_6975",
+    "IMG_6976",
+    "IMG_6977",
+    "IMG_6978"
+]
+
+quality = 3
+quality_comments = "great individual scans + merged"
+merged = true
+textured = false
+
+[time]
+started = "13:17:47"
+finished = "14:26:46"
+
+[[qa]]
+done = true
+rgbd_files_present = false
+model_quality_acceptable = false
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+requires_nutritional_facts_imputation = true
+comments = """
+RGBD files: missing
+Model quality: unmeshed and unmerged
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = false

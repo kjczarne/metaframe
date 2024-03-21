@@ -1,0 +1,42 @@
+gid = 13
+uid = "7acebb27-3bd2-4b10-924b-6ebb584a891e"
+
+[item]
+nutrition_subgroup = "doughnuts sweet rolls pastries"
+food_type = "doughnut"
+description = "sugar glazed, rope-like shape, tim hortons"
+
+[metrics]
+weight = 81
+unit = "g"
+
+[model]
+project_name = "Project09262023172816"
+rgbd_file_names = [
+    "13_doughnut_1_0",
+    "13_doughnut_1_1",
+]
+nutrition_facts_sources = []
+
+quality = 3
+quality_comments = "top hole of doughnut got filled in by software, its due to the doughnut hole being too small as compared to bagels"
+
+[time]
+started = "17:15:11"
+finished = "17:51:09"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = false
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: very good
+Model quality: the hole in the doughnut was closed 🤦.
+We need to re-export this model without the hole plugged up.
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = false

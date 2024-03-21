@@ -31,7 +31,7 @@
       "type": "object",
       "properties": {
         "weight": {
-          "type": "integer"
+          "type": "number"
         },
         "unit": {
           "type": "string"
@@ -120,7 +120,6 @@
     "uid",
     "item",
     "metrics",
-    "model",
-    "time"
+    "model"
   ]
 }

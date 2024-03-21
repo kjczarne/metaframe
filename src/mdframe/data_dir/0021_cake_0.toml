@@ -1,0 +1,42 @@
+gid = 21
+uid = "f3fb1f74-e71c-47b3-804d-2dd3013c33cf"
+
+[item]
+nutrition_subgroup = "cakes and pies"
+food_type = "cake"
+description = "The Cheesecake Factory (Classic Cheesecake Selection), Vanilla Bean Cheesecake"
+
+[metrics]
+weight = 134
+unit = "g"
+
+[model]
+project_name = "Project10062023192001"
+rgbd_file_names = [
+    "21_cake_0_0",
+    "21_cake_0_1",
+]
+nutrition_facts_sources = [
+    "IMG_4029"
+]
+quality = 3
+quality_comments = "tasty cake"
+
+[time]
+started = "19:21:57"
+finished = "19:39:25"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: very good
+Model quality: very good, bar the 1996 "Tomb Raider" quality of the texture
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

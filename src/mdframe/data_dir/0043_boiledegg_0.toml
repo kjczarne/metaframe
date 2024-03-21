@@ -1,0 +1,47 @@
+gid = 43
+uid = "16317dda-2cb2-43e9-831d-e2ca8c43caf3"
+
+[item]
+nutrition_subgroup = "eggs"
+food_type = "egg"
+description = "hard boiled brown-shelled egg with shell on"
+
+[metrics]
+weight = 60
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project11052023143445"
+rgbd_file_names = [
+    "43_boiledegg_0_0",
+    "43_boiledegg_0_1",
+]
+nutrition_facts_sources = [
+    
+]
+
+quality = 3
+quality_comments = "good quality from marker-based tracking with smaller turntable but couldn't merge"
+merged = false
+
+[time]
+started = "13:54:25"
+finished = "15:07:36"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: very good
+Model quality:  very good, the `0_0` sample contains
+an already-merged model
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

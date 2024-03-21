@@ -1,0 +1,46 @@
+gid = 36
+uid = "2d227524-3f56-4ede-a6c7-564d54441297"
+
+[item]
+nutrition_subgroup = "melons"
+food_type = "melon"
+description = "pineapple"
+
+[metrics]
+weight = 30
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project10252023175029"
+rgbd_file_names = [
+    "36_melon_1_0",
+    "36_melon_1_1",
+]
+nutrition_facts_sources = [
+    
+]
+
+quality = 2
+quality_comments = "individual scans look alright, but unable to merge (use meshlab)"
+merged = false
+
+[time]
+started = "17:37:09"
+finished = "18:09:31"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+requires_nutritional_facts_imputation = true
+comments = """
+Rejected because this is a pineapple, not a melon.
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false

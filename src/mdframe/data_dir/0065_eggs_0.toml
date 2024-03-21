@@ -1,0 +1,40 @@
+gid = 65
+uid = "8a4f6da8-08bd-4de9-a87d-5536a4d07824"
+
+[item]
+nutrition_subgroup = "eggs"
+food_type = "two fried eggs"
+description = "two sunny-side up fried eggs"
+
+[metrics]
+weight = 75
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project02022024185830"
+rgbd_file_names = [
+    "65_eggs_0_0",
+    "65_eggs_0_1"
+]
+nutrition_facts_sources = [
+    
+]
+texture_sources = [
+    "IMG_4249",
+    "IMG_4250",
+    "IMG_4251",
+    "IMG_4252",
+    "IMG_4253"
+]
+
+quality = 2
+quality_comments = "Decent capture quality, manual merge required"
+merged = false
+textured = false
+
+[time]
+started = "16:35:06"
+finished = "17:04:49"
