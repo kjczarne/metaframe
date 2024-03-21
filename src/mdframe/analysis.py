@@ -37,7 +37,8 @@ def filter_data(config, query, filename):
     # df = df.query(query)
 
     df = df[eval(query)]
- 
+    print(df)
+
     df.to_csv(filename)
   
 # TODO: augment generate_histogram to use load_data function
@@ -107,7 +108,7 @@ def generate_histogram(config, property_name='quality', data_type='discrete'):
 
 if __name__ == '__main__':
     df = load_flattened_data(config)
-    print(df)
+    print(df.columns)
 
     # generate histogram
     # generate_histogram(config, "quality", data_type='discrete')
@@ -115,8 +116,4 @@ if __name__ == '__main__':
 
     # filter data and get insights
     filter_data(config, "df['quality'] == 1", "quality1-scans.csv")
-    # filter_data(config, "nutrition_facts_sources.apply(len) == 0", "empty-nutrition-facts.csv")
-
-
-# - how many of the files we have in the dataset do have a non-empty list of nutrition facts label files (and please give me a list of those that have and have no labels associated with them)
-# - how many have extra texture sources (and also list them)
+    filter_data(config, "df['nutrition_facts_sources'].astype(bool)", "empty-nutrition-facts.csv")
