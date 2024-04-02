@@ -2,12 +2,13 @@ import argparse
 import json
 from dataclasses import dataclass
 from jsonschema import validate
+from copy import deepcopy
 import pandas as pd
 import toml
 from typing import Dict, Any, Tuple, Optional, Literal, get_args, List
 from pathlib import Path
 import urllib3
-from urllib3 import Url
+from urllib3.util import Url
 from urllib.parse import urlparse
 from urllib3.exceptions import HTTPError
 
@@ -70,7 +71,10 @@ class Config:
         return self.__schema
 
 def run(config: Config):
-    return data_dir_to_dataframes(**config.__dict__)
+    kwargs = deepcopy(config.__dict__)
+    for k in ["_Config__schema", "schema_url"]:
+        kwargs.pop(k)
+    return data_dir_to_dataframes(**kwargs, schema=config.schema)
 
 
 def main():
@@ -86,7 +90,7 @@ def main():
     parser.add_argument('-s', '--schema',
                         type=str,
                         help="URL or Path to the schema file for validating the metadata",
-                        default="schema.json")
+                        default=Path(__file__).parent / "schema.json")
     args = parser.parse_args()
 
     # parse schema url to determine whether Url or Path passed

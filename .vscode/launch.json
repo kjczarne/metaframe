@@ -30,6 +30,12 @@
             "justMyCode": true
         },
         {
+            "name": "NutritionVerse: avg collection time",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "mdframe.nutritionverse.get_avg_timing"
+        },
+        {
             "name": "Current File",
             "type": "python",
             "request": "launch",
