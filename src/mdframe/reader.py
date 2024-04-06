@@ -69,7 +69,7 @@ class Config:
 
                 with open(self.schema_loc, "r") as f:
                     self.__schema = json.loads(f.read())
-            else: # schema_url is a string (representing a URL)
+            elif urlparse(self.schema_loc).scheme is not None: # schema_url is a string (representing a URL)
                 http = urllib3.PoolManager()
                 response = http.request('GET', self.schema_loc)
 
@@ -77,6 +77,8 @@ class Config:
                    self.__schema = json.loads(response.data.decode('utf-8'))
                 else:
                     raise HTTPError(f"Failed to fetch schema from URL {self.schema_loc}")
+            else:
+                raise ValueError(f"Passed schema location is not a path or a URL")
         return self.__schema
 
 
