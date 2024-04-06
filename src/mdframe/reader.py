@@ -53,16 +53,24 @@ def load_metadata_file(metadata_file_path: Path, schema: Dict) -> Dict[str, Any]
     try:
         with open(metadata_file_path, "r") as f:
             metadata_file_contents = toml.load(f)
-    except toml.decoder.TomlDecodeError as toml_exception:
-        raise toml_exception
+    except toml.decoder.TomlDecodeError as toml_error:
+        specific_file_name = str(metadata_file_path)
+        specific_file_name = specific_file_name[specific_file_name.rfind('/')+1:]
+
+        # using general exception instead of TomlDecodeError because TomlDecodeError needs irrelevant parameters for initialization
+        raise TomlDecodeError(f"Crashed when processing metadata file {specific_file_name}; {toml_error}", doc=toml_error.doc, pos=toml_error.pos) from toml_error
 
     try:
         # validates JSON according to schema located in schema.json
         validate(instance = metadata_file_contents, schema = schema)
     except SchemaError as schema_error:
-        raise schema_error 
+        specific_file_name = str(metadata_file_path)
+        specific_file_name = specific_file_name[specific_file_name.rfind('/')+1:]
+        raise SchemaError(f"Crashed when processing metadata file {specific_file_name}; {schema_error.message}") from schema_error
     except ValidationError as validation_error:
-        raise validation_error
+        specific_file_name = str(metadata_file_path)
+        specific_file_name = specific_file_name[specific_file_name.rfind('/')+1:]
+        raise ValidationError( f"Crashed when processing metadata file {specific_file_name}; {validation_error.message}") from validation_error
 
     return metadata_file_contents
 
