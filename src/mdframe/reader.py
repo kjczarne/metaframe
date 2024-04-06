@@ -47,6 +47,10 @@ class Config:
         return self.__schema
 
 def load_metadata_file(metadata_file_path: Path, schema: Dict) -> Dict[str, Any]:
+    filename_suffix = metadata_file_path.suffix
+    if filename_suffix not in SUPPORTED_METADATA_FILE_EXTENSIONS:
+        raise ValueError(f"{filename_suffix} is not supported")
+
     if not metadata_file_path.exists():
         raise FileNotFoundError(f"Path {metadata_file_path} does not seem to point to a valid file")
 
