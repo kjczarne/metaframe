@@ -17,7 +17,35 @@ SUPPORTED_DATA_FILE_EXTENSIONS = get_args(DataFileExtension)
 MetadataFileExtension = Literal["toml"]
 SUPPORTED_METADATA_FILE_EXTENSIONS = get_args(MetadataFileExtension)
 
-# change return type here
+@dataclass
+class Config:
+    data_dir_path: Path
+    metadata_file_extension: Optional[MetadataFileExtension]
+    # data_file_extensions: List[DataFileExtension]
+    schema_loc: Path | str
+    __schema: Dict | None = None
+
+    @property
+    def schema(self):
+        if self.__schema is None:
+            if isinstance(self.schema_loc, Path):
+                if not self.schema_loc.exists():
+                    raise ValueError(f"Path {self.schema_loc} does not seem to point to a valid JSON schema file")
+
+                with open(self.schema_loc, "r") as f:
+                    self.__schema = json.loads(f.read())
+            elif urlparse(self.schema_loc).scheme in ['http', 'https']: # schema_url is a string (representing a URL)
+                http = urllib3.PoolManager()
+                response = http.request('GET', self.schema_loc)
+
+                if response.status == 200:
+                   self.__schema = json.loads(response.data.decode('utf-8'))
+                else:
+                    raise HTTPError(f"Failed to fetch schema from URL {self.schema_loc}")
+            else:
+                raise ValueError(f"Passed schema location is not a path or a URL")
+        return self.__schema
+
 def load_metadata_file(metadata_file_path: Path, schema: Dict) -> Dict[str, Any]:
     if not metadata_file_path.exists():
         raise FileNotFoundError(f"Path {metadata_file_path} does not seem to point to a valid file")
@@ -75,7 +103,7 @@ class Config:
 
                 with open(self.schema_loc, "r") as f:
                     self.__schema = json.loads(f.read())
-            elif urlparse(self.schema_loc).scheme is not None: # schema_url is a string (representing a URL)
+            elif isinstance(self.schema_loc, str): # schema_url is a string (representing a URL)
                 http = urllib3.PoolManager()
                 response = http.request('GET', self.schema_loc)
 
@@ -84,7 +112,7 @@ class Config:
                 else:
                     raise HTTPError(f"Failed to fetch schema from URL {self.schema_loc}")
             else:
-                raise ValueError(f"Passed schema location is not a path or a URL")
+                raise ValueError(f"Specified schema location {self.schema_loc} is neither a URL nor Path")
         return self.__schema
 
 
@@ -95,13 +123,24 @@ def run(config: Config):
         schema=config.schema
     )
 
+def get_appropriate_schema(schema_data: str):
+    # parse schema url to determine whether Url or Path passed
+    parsed_schema = urlparse(schema_data)
+
+    if len(parsed_schema.scheme) == 0 or (parsed_schema.scheme not in ['http', 'https']):
+        return schema_data
+    elif Path(schema_data).exists():
+        return Path(schema_data)
+
+    raise ValueError(f"Specified schema location {parsed_schema} is neither a URL nor Path")
+
 
 def main():
     parser = argparse.ArgumentParser('mdframe', 'Prints metadatafiles in a neat dataframe')
     parser.add_argument('-d', '--directory',
                         type=str,
                         help="Path to the directory containing the data and the metadata",
-                        default="data")
+                        default=Path(__file__).parent / "data_dir")
     parser.add_argument('-m', '--metadata-ext',
                         help="Extension of the metadata files",
                         choices=SUPPORTED_METADATA_FILE_EXTENSIONS,
@@ -109,20 +148,13 @@ def main():
     parser.add_argument('-s', '--schema',
                         type=str,
                         help="URL or Path to the schema file for validating the metadata",
-                        default="schema.json")
+                        default=Path(__file__).parent / "schema.json")
     args = parser.parse_args()
 
-    # parse schema url to determine whether Url or Path passed
-    parsed_schema = urlparse(args.schema)
-
-    # only change schema if it is not a Path (if it is a Url, just pass it as a string)
-    if parsed_schema.scheme not in ['http', 'https']:
-        try:
-            Path(args.schema).exists()
-            schema = Path(args.schema)
-        except:
-            raise ValueError(f"Specified schema location {parsed_schema} is neither a URL nor Path")
-
+    schema = args.schema
+    if args.schema != Path(__file__).parent / "schema.json":
+        schema = get_appropriate_schema(args.schema)
+    
     config = Config(
         data_dir_path=Path(args.directory),
         metadata_file_extension=args.metadata_ext,
