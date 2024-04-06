@@ -1,9 +1,10 @@
 import argparse
 import json
 from dataclasses import dataclass
-from jsonschema import validate
+from jsonschema import validate, ValidationError, SchemaError
 import pandas as pd
 import toml
+from toml.decoder import TomlDecodeError
 from typing import Dict, Any, Tuple, Optional, Literal, get_args, List
 from pathlib import Path
 import urllib3
@@ -19,18 +20,23 @@ SUPPORTED_METADATA_FILE_EXTENSIONS = get_args(MetadataFileExtension)
 # change return type here
 def load_metadata_file(metadata_file_path: Path, schema: Dict) -> Dict[str, Any]:
     if not metadata_file_path.exists():
-        raise ValueError(f"Path {metadata_file_path} does not seem to point to a valid file")
+        raise FileNotFoundError(f"Path {metadata_file_path} does not seem to point to a valid file")
 
     try:
         with open(metadata_file_path, "r") as f:
             metadata_file_contents = toml.load(f)
+    except toml.decoder.TomlDecodeError as toml_exception:
+        raise toml_exception
 
+    try:
         # validates JSON according to schema located in schema.json
         validate(instance = metadata_file_contents, schema = schema)
+    except SchemaError as schema_error:
+        raise schema_error 
+    except ValidationError as validation_error:
+        raise validation_error
 
-        return metadata_file_contents
-    except:
-        return None        
+    return metadata_file_contents
 
 
 def metadata_file_to_df(metadata_file_contents):

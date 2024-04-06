@@ -1,0 +1,42 @@
+gid = 66
+uid = "4b62bc24-3366-41f8-a6b1-8a174ac5b4d6"
+
+[item]
+nutrition_subgroup = "mashed potatoes and potato mixtures"
+food_type = "mashed potatoes"
+sdfsdf "22343"
+description = "a ball-shaped mashed potatoes portion"
+
+[metrics]
+weight = 123
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project02042024163959"
+rgbd_file_names = [
+    "66_mashed_potatoes_0_0",
+    "66_mashed_potatoes_0_1",
+]
+nutrition_facts_sources = [
+    
+]
+texture_sources = [
+    "IMG_4267",
+    "IMG_4268",
+    "IMG_4269",
+    "IMG_4270",
+    "IMG_4271",
+    "IMG_4272",
+]
+
+quality = 2
+quality_comments = "good capture but merge alignment failed in RevoScan"
+merged = false
+textured = false
+
+[time]
+started = "16:36:18"
+finished = "16:51:22"
