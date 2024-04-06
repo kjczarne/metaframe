@@ -57,7 +57,6 @@ def load_metadata_file(metadata_file_path: Path, schema: Dict) -> Dict[str, Any]
         specific_file_name = str(metadata_file_path)
         specific_file_name = specific_file_name[specific_file_name.rfind('/')+1:]
 
-        # using general exception instead of TomlDecodeError because TomlDecodeError needs irrelevant parameters for initialization
         raise TomlDecodeError(f"Crashed when processing metadata file {specific_file_name}; {toml_error}", doc=toml_error.doc, pos=toml_error.pos) from toml_error
 
     try:
