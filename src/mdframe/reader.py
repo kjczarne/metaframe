@@ -88,9 +88,6 @@ def data_dir_to_dataframes(data_dir_path: Path,
                            schema: Dict) -> List[pd.DataFrame]:
     metadata_file_paths = data_dir_path.glob(f"*.{metadata_file_extension}")    
     metadata_file_contents = [load_metadata_file(path, schema) for path in metadata_file_paths]
-
-    # remove all None(s) representing empty reads
-    metadata_file_contents = [text for text in metadata_file_contents if text != None]
     
     metadata_records = []
     for text in metadata_file_contents:
