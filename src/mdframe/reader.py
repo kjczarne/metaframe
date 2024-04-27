@@ -19,7 +19,7 @@ SUPPORTED_METADATA_FILE_EXTENSIONS = get_args(MetadataFileExtension)
 
 @dataclass
 class Config:
-    data_dir_path: Path
+    data_path: Path
     metadata_file_extension: Optional[MetadataFileExtension]
     # data_file_extensions: List[DataFileExtension]
     schema_loc: Path | str
@@ -55,25 +55,21 @@ def load_metadata_file(metadata_file_path: Path, schema: Dict) -> Dict[str, Any]
     if not metadata_file_path.exists():
         raise FileNotFoundError(f"Path {metadata_file_path} does not seem to point to a valid file")
 
+    specific_file_name = str(metadata_file_path)
+    specific_file_name = specific_file_name[specific_file_name.rfind('/')+1:]
+
     try:
         with open(metadata_file_path, "r") as f:
             metadata_file_contents = toml.load(f)
     except toml.decoder.TomlDecodeError as toml_error:
-        specific_file_name = str(metadata_file_path)
-        specific_file_name = specific_file_name[specific_file_name.rfind('/')+1:]
-
         raise TomlDecodeError(f"Crashed when processing metadata file {specific_file_name}; {toml_error}", doc=toml_error.doc, pos=toml_error.pos) from toml_error
 
     try:
         # validates JSON according to schema located in schema.json
         validate(instance = metadata_file_contents, schema = schema)
     except SchemaError as schema_error:
-        specific_file_name = str(metadata_file_path)
-        specific_file_name = specific_file_name[specific_file_name.rfind('/')+1:]
         raise SchemaError(f"Crashed when processing metadata file {specific_file_name}; {schema_error.message}") from schema_error
     except ValidationError as validation_error:
-        specific_file_name = str(metadata_file_path)
-        specific_file_name = specific_file_name[specific_file_name.rfind('/')+1:]
         raise ValidationError( f"Crashed when processing metadata file {specific_file_name}; {validation_error.message}") from validation_error
 
     return metadata_file_contents
@@ -83,10 +79,10 @@ def metadata_file_to_df(metadata_file_contents):
     return pd.DataFrame(metadata_file_contents)
 
 
-def data_dir_to_dataframes(data_dir_path: Path,
+def data_to_dataframes(data_path: Path,
                            metadata_file_extension: MetadataFileExtension,
                            schema: Dict) -> List[pd.DataFrame]:
-    metadata_file_paths = data_dir_path.glob(f"*.{metadata_file_extension}")    
+    metadata_file_paths = data_path.glob(f"*.{metadata_file_extension}")    
     metadata_file_contents = [load_metadata_file(path, schema) for path in metadata_file_paths]
     
     metadata_records = []
@@ -97,7 +93,7 @@ def data_dir_to_dataframes(data_dir_path: Path,
     
 @dataclass
 class Config:
-    data_dir_path: Path
+    data_path: Path
     metadata_file_extension: Optional[MetadataFileExtension]
     # data_file_extensions: List[DataFileExtension]
     schema_loc: Path | str
@@ -126,8 +122,8 @@ class Config:
 
 
 def run(config: Config):
-    return data_dir_to_dataframes(
-        data_dir_path=config.data_dir_path, 
+    return data_to_dataframes(
+        data_path=config.data_path, 
         metadata_file_extension=config.metadata_file_extension, 
         schema=config.schema
     )
@@ -149,7 +145,7 @@ def main():
     parser.add_argument('-d', '--directory',
                         type=str,
                         help="Path to the directory containing the data and the metadata",
-                        default=Path(__file__).parent / "data_dir")
+                        default=Path(__file__).parent / "data")
     parser.add_argument('-m', '--metadata-ext',
                         help="Extension of the metadata files",
                         choices=SUPPORTED_METADATA_FILE_EXTENSIONS,
@@ -165,7 +161,7 @@ def main():
         schema = get_appropriate_schema(args.schema)
     
     config = Config(
-        data_dir_path=Path(args.directory),
+        data_path=Path(args.directory),
         metadata_file_extension=args.metadata_ext,
         schema_loc=schema,
     )

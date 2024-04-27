@@ -1,0 +1,6 @@
+,gid,uid,nutrition_subgroup,food_type,description,weight,unit,ingredients,project_name,rgbd_file_names,nutrition_facts_sources,texture_sources,quality,quality_comments,merged,textured,started,finished
+0,75,444eabc3-1fc9-4d17-b9d6-554b105b8b6b,nachos,nachos,single triangular nacho chip,1,g,[],Project02102024181220,"['75_nachos_0_0', '75_nachos_0_1']",['IMG_7377'],"['IMG_7378', 'IMG_7379']",3,"Good capture quality with no artefacts. Automatic merge failed.
+The texture is less crisp in comparison with a real nacho.
+",False,False,18:11:39,18:29:29
+1,62,ec321437-2ec7-4c1b-9329-1c345fd2bf3d,burritos and tacos,taco,"single, wet taco with meat, veggies, and cheese",55,g,[],Project02022024172848,"['62_taco_1_0', '62_taco_1_1']",[],[],2,two halves don't exactly line up in the merge,False,False,17:22:05,17:39:28
+2,66,4b62bc24-3366-41f8-a6b1-8a174ac5b4d6,mashed potatoes and potato mixtures,mashed potatoes,a ball-shaped mashed potatoes portion,123,g,[],Project02042024163959,"['66_mashed_potatoes_0_0', '66_mashed_potatoes_0_1']",[],"['IMG_4267', 'IMG_4268', 'IMG_4269', 'IMG_4270', 'IMG_4271', 'IMG_4272']",2,good capture but merge alignment failed in RevoScan,False,False,16:36:18,16:51:22

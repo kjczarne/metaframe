@@ -17,12 +17,12 @@ rgbd_file_names = [
     "",
 ]
 nutrition_facts_sources = []
-quality = 
+quality = -1
 quality_comments = ""
 
 [time]
 started = "16:33:12"
-finished = 
+finished = "00:00:00"
 
 [[qa]]
 done = true

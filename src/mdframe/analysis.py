@@ -1,14 +1,8 @@
 from pathlib import Path
 from typing import Dict, Any, Tuple, Optional, Literal, get_args, List
-from reader import Config, run
+from mdframe.reader import Config, run
 import pandas as pd
 import matplotlib.pyplot as plt
-
-config = Config(
-    data_dir_path=Path(__file__).parent / "data_dir", 
-    metadata_file_extension="toml",
-    schema_loc=Path('schema.json')
-)
 
 def load_flattened_data(config):
     """
@@ -42,6 +36,7 @@ def load_flattened_data(config):
     df = pd.DataFrame(entries)
     return df
 
+
 def filter_data(config, query, filename):
     """
     Filters data from a DataFrame based on a given query and saves the result to a CSV file.
@@ -67,7 +62,8 @@ def filter_data(config, query, filename):
     print(df)
 
     df.to_csv(filename)
-  
+
+
 # TODO: augment generate_histogram to use load_data function
 def generate_histogram(config, property_name='quality', data_type='discrete'):
     """Generates a histogram based on the given configuration, property name, and data type.
@@ -94,7 +90,7 @@ def generate_histogram(config, property_name='quality', data_type='discrete'):
         raise ValueError(f"{data_type} must either be 'discrete' or 'continuous'")
 
     entries = run(config)
-    
+
     # convert all pandas Series objects into dictionaries, and flatten them in order to isolate property_name
     entries = [pd.Series.to_dict(entry) for entry in entries]
     entries = [flatten_property_dict(entry) for entry in entries]
@@ -128,13 +124,20 @@ def generate_histogram(config, property_name='quality', data_type='discrete'):
 
 
 if __name__ == '__main__':
+    config = Config(
+        data_path=Path(__file__).parent / "data", 
+        metadata_file_extension="toml",
+        schema_loc=Path('schema.json')
+    )
+
     df = load_flattened_data(config)
     print(df.columns)
 
     # generate histogram
-    generate_histogram(config, "quality", data_type='discrete')
+    # generate_histogram(config, "quality", data_type='discrete')
     # generate_histogram(config, "weight", data_type='continuous')
+    generate_histogram(config, property_name="merged", data_type="discrete")
 
     # filter data and get insights
-    filter_data(config, "df['quality'] == 1", "quality1-scans.csv")
-    filter_data(config, "df['nutrition_facts_sources'].astype(bool)", "empty-nutrition-facts.csv")
+    # filter_data(config, "df['quality'] == 1", "quality1-scans.csv")
+    # filter_data(config, "df['nutrition_facts_sources'].astype(bool)", "empty-nutrition-facts.csv")
