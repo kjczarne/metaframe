@@ -17,7 +17,6 @@ class TestReader(unittest.TestCase):
         df = run(config)
         print(df)
 
-    @unittest.expectedFailure
     def test_metadata_invalid(self):
         data_path = Path(__file__).parent / "invalid_data"
         schema_loc = Path('../src/mdframe/schema.json')
@@ -28,14 +27,8 @@ class TestReader(unittest.TestCase):
         )
 
         # expecting this to fail
-        try:
+        with self.assertRaises(toml.decoder.TomlDecodeError):
             df = run(config)
-            print(df)
-        except:
-            pass
-
-        with self.assertRaises(TypeError):  
-            s.split(2)
 
 if __name__ == "__main__":
     unittest.main()
