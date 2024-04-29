@@ -4,6 +4,17 @@ from mdframe.reader import Config, run
 import pandas as pd
 import matplotlib.pyplot as plt
 
+def flatten_property_dict(property_dict: Dict) -> Dict:
+    flattened_dict = dict()
+    for property_name, value in property_dict.items():
+        if isinstance(value, dict):
+            for subproperty, subvalue in value.items():
+                flattened_dict[subproperty] = subvalue
+        else:
+            flattened_dict[property_name] = value
+    return flattened_dict
+
+
 def load_flattened_data(config):
     """
     Loads and flattens data based on the given configuration.
@@ -17,16 +28,6 @@ def load_flattened_data(config):
     Note:
         This function flattens nested dictionaries in the data entries.
     """
-    def flatten_property_dict(property_dict: Dict) -> Dict:
-        flattened_dict = dict()
-        for property_name, value in property_dict.items():
-            if isinstance(value, dict):
-                for subproperty, subvalue in value.items():
-                    flattened_dict[subproperty] = subvalue
-            else:
-                flattened_dict[property_name] = value
-        return flattened_dict
-
     entries = run(config)
     
     # convert all pandas Series objects into dictionaries, and flatten them in order to isolate property_name

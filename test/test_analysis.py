@@ -1,36 +1,37 @@
 import unittest
 from pathlib import Path
 from mdframe.reader import run, Config
-from mdframe.analysis import load_flattened_data, filter_data, generate_histogram
+from mdframe.analysis import flatten_property_dict, load_flattened_data, filter_data, generate_histogram
 import pandas as pd
+import toml
 
 class TestAnalysis(unittest.TestCase):
 
-    def test_load_flattened_data(self):
-        config = Config(
-            data_path = Path(__file__).parent / "data" / "input", 
-            metadata_file_extension = "toml",
-            schema_loc = Path('../src/mdframe/schema.json')
-        )
+    def test_flatten_property_dict(self):
+        # first test
+        test_0_path = Path(__file__).parent / "data" / "test_0"
+        with open(test_0_path / "input_file.toml", "r") as f:
+            input_file_0 = toml.load(f)
+        with open(test_0_path / "output_file.toml", "r") as f:
+            output_file_0 = toml.load(f)
+        assert flatten_property_dict(input_file_0) == output_file_0
 
-        df = load_flattened_data(config)
-        df.to_csv('data/output/output_file_0.csv')
-        print(df)
+        # second test
+        test_1_path = Path(__file__).parent / "data" / "test_1"
+        with open(test_1_path / "input_file.toml", "r") as f:
+            input_file_1 = toml.load(f)
+        with open(test_1_path / "output_file.toml", "r") as f:
+            output_file_1 = toml.load(f)
+        assert flatten_property_dict(input_file_1) == output_file_1
+        
+        # third test
+        test_2_path = Path(__file__).parent / "data" / "test_2"
+        with open(test_2_path / "input_file.toml", "r") as f:
+            input_file_2 = toml.load(f)
+        with open(test_2_path / "output_file.toml", "r") as f:
+            output_file_2 = toml.load(f)
 
-        # test 1
-        ans_df = pd.read_csv('data/ans/output_file_0.csv')
-        # ans_df = pd.read_csv('data/ans/ans_file.csv', index_col=0)
-
-        print(df)
-        print('------------')
-        print(ans_df)
-
-        # assert df.equals(ans_df)
-        # ans_df.to_csv('asdf')
-
-        # f = pd.read_csv('asdf')
-        # # assert f.equals(ans_df)
-        # assert ans_df.equals(df)
+        assert flatten_property_dict(input_file_2) == output_file_2
 
     def test_filter_data(self):
         pass
