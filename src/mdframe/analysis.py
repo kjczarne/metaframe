@@ -60,12 +60,13 @@ def filter_data(config, query, filename):
     # df = df.query(query)
 
     df = df[eval(query)]
-    print(df)
+    # print(df)
 
     df.to_csv(filename)
 
 
 # TODO: augment generate_histogram to use load_data function
+# TODO: have generate_histogram use global flatten_property_dict method
 def generate_histogram(config, property_name='quality', data_type='discrete'):
     """Generates a histogram based on the given configuration, property name, and data type.
 

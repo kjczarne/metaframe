@@ -82,7 +82,7 @@ def metadata_file_to_df(metadata_file_contents):
 def data_to_dataframes(data_path: Path,
                            metadata_file_extension: MetadataFileExtension,
                            schema: Dict) -> List[pd.DataFrame]:
-    metadata_file_paths = data_path.glob(f"*.{metadata_file_extension}")    
+    metadata_file_paths = sorted(data_path.glob(f"*.{metadata_file_extension}"))
     metadata_file_contents = [load_metadata_file(path, schema) for path in metadata_file_paths]
     
     metadata_records = []
