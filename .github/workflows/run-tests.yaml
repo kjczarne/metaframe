@@ -1,0 +1,16 @@
+name: Run all tests
+on:
+  push
+
+jobs:
+  basic-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+      - name: Install poetry
+        uses: abatilo/actions-poetry@v2
+      - name: Install the project dependencies
+        run: poetry install
+      - name: Run all tests in test/ directory
+        run: poetry run pytest
