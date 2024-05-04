@@ -14,9 +14,9 @@ jobs:
       - name: Install the project dependencies and the `mdframe` package
         run: poetry install
       - name: Run all tests under Coverage
-        run: python -m coverage run -m pytest
+        run: poetry run coverage run -m pytest
       - name: Create XML coverage report
-        run: python -m coverage xml
+        run: poetry run coverage xml
       - name: Generate coverage report
         uses: orgoro/coverage@v3.1
         with:
