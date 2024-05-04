@@ -49,7 +49,6 @@ def filter_files(data_dir_path: str, file_type: str, query: str="", contain_list
     config = Config(data_dir_path, file_type)
     df_list = run(config)
     satisfied_files = []
-
     for df in df_list:
         if check_df(df, query, contain_list):
             satisfied_files.append(df.iloc[0,0])
