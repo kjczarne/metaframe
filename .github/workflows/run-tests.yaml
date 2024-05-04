@@ -1,7 +1,7 @@
 name: Run all tests
 on:
   pull_request:
-    types: [opened, edited, ready_for_review, review_requested, reopened]
+    types: [opened, edited, synchronize, ready_for_review, review_requested, reopened]
 
 jobs:
   basic-job:
