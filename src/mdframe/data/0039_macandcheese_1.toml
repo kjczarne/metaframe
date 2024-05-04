@@ -1,0 +1,45 @@
+gid = 39
+uid = "2b6cf430-af02-46f5-800a-49205c3deeb9"
+
+[item]
+nutrition_subgroup = "macaroni and cheese"
+food_type = "macaroni and cheese"
+description = "a single noodle"
+
+[metrics]
+weight = 1
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project10282023183815"
+rgbd_file_names = [
+    "39_macandcheese_1"
+]
+nutrition_facts_sources = [
+    "IMG_6903"
+]
+
+quality = 2
+quality_comments = "one of the holes was plugged up and couldn't merge"
+merged = false
+
+[time]
+started = "18:37:23"
+finished = "18:54:30"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: very good
+Model quality:  borderline accept, the merge was not ideal
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

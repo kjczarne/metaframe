@@ -1,0 +1,41 @@
+gid = 12
+uid = "6f15c47c-668d-45c8-a249-9b506f8b34ab"
+
+[item]
+nutrition_subgroup = "doughnuts sweet rolls pastries"
+food_type = "croissant"
+description = "tim hortons"
+
+[metrics]
+weight = 67
+unit = "g"
+
+[model]
+project_name = "Project09262023155836"
+rgbd_file_names = [
+    "12_croissant_0_0",
+    "12_croissant_0_1",
+]
+nutrition_facts_sources = []
+
+quality = 3
+quality_comments = "merge completed beautifully!"
+
+[time]
+started = "15:56:22"
+finished = "16:05:56"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: very good
+Model quality: very good
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

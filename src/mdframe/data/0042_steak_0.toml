@@ -1,0 +1,46 @@
+gid = 42
+uid = "a917e774-876f-4b0e-bf27-793a2fe6c8de"
+
+[item]
+nutrition_subgroup = "meats"
+food_type = "steak"
+description = "cooked beef steak"
+
+[metrics]
+weight = 206
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project11052023135628"
+rgbd_file_names = [
+    "42_steak_0_0",
+    "42_steak_0_1",
+]
+nutrition_facts_sources = [
+    
+]
+
+quality = 2
+quality_comments = "it captured the colour and texture very well and the marker-based merge worked pretty well"
+
+[time]
+started = "13:26:11"
+finished = "14:18:27"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = false
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+requires_nutritional_facts_imputation = true
+comments = """
+RGBD files: ok
+Model quality: the merge is off, re-do with a manual merge?
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false

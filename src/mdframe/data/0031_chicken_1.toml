@@ -1,0 +1,44 @@
+gid = 31
+uid = "8fde2475-c772-4854-922e-c455a2e28a0e"
+
+[item]
+nutrition_subgroup = "poultry"
+food_type = "whole chicken"
+description = "grain-fed, raised without antibiotics whole roasted chicken, hot "
+
+[metrics]
+weight = 1204
+unit = "g"
+
+[model]
+project_name = "Project10222023153242"
+rgbd_file_names = [
+    "31_chicken_1_0",
+    "31_chicken_1_1",
+    "31_chicken_1_2",
+    "31_chicken_1_3",
+]
+nutrition_facts_sources = [
+    "IMG_6835"
+]
+quality = 3
+quality_comments = "good chicken, but had to fill some holes on surface (alignment problems, only could use 2 scans)"
+
+[time]
+started = "15:01:30"
+finished = "16:02:18"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: very good
+Model quality:  very good
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

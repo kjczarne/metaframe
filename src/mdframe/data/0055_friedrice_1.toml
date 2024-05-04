@@ -1,0 +1,50 @@
+gid = 55
+uid = "f0aa3a66-7b90-4e00-9a5c-ae1e8b5b185f"
+
+[item]
+nutrition_subgroup = "fried rice and lo/chow mein"
+food_type = "fried rice"
+description = "vegetable fried rice"
+
+[metrics]
+weight = 73
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project11262023153635"
+rgbd_file_names = [
+    "55_friedrice_1_0",
+]
+nutrition_facts_sources = [
+    "IMG_7159",
+    "IMG_7160"   
+]
+texture_sources = [
+    "IMG_7162"
+]
+
+quality = 2
+quality_comments = "decent scan, hole filling is alright"
+merged = true
+textured = false
+
+[time]
+started = "15:29:00"
+finished = "15:44:12"
+
+[[qa]]
+done = true
+rgbd_files_present = false
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: missing
+Model quality:  very good
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = false

@@ -1,0 +1,40 @@
+gid = 6
+uid = "c098e840-d07c-4cbb-a78c-62f9f1461b43"
+
+[item]
+nutrition_subgroup = "cookies and brownies"
+food_type = "brownie"
+description = "very tasty"
+
+[metrics]
+weight = 104
+unit = "g"
+
+[model]
+project_name = "Project09172023154111"
+rgbd_file_names = [
+    "6_brownie_0_0",
+    "6_brownie_0_1",
+]
+quality = 3
+quality_comments = "very high quality"
+
+[time]
+started = "15:42:38"
+finished = "15:49:32"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = false
+ingredients_acceptable = true
+
+comments = """
+RGBD files: only 3 sides of the brownie represented on the video,
+this is also one of those samples without unique-frame markers
+Model quality: great
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = false

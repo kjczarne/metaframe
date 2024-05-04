@@ -1,0 +1,41 @@
+gid = 9
+uid = "aaa6d2f8-c14d-41c5-adef-71192973f45f"
+
+[item]
+nutrition_subgroup = "tomatoes (whole)"
+food_type = "tomatoes (whole)"
+description = "ripe and smooth whole red tomato, grown in Michigan"
+
+[metrics]
+weight = 301
+unit = "g"
+
+[model]
+project_name = "Project09242023135648"
+rgbd_file_names = [
+    "9_tomato_0_0",
+    "9_tomato_0_1",
+]
+nutrition_facts_sources = ["IMG_3966"]
+quality = 2
+quality_comments = "Difficulty capturing the bottom. Think it confused the axes. Tried using toothpicks and lamp"
+
+[time]
+started = "13:30:08"
+finished = "14:54:00"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = false
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: present and well done, the new RGBD pipeline has been used for the tomatoes.
+Model quality: bungled merge, coarse surface features,
+not representative of a tomato. This model does not look like a tomato.
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false

@@ -1,0 +1,40 @@
+gid = 4
+uid = "394f4db4-defd-4054-8680-cec70d14abc5"
+
+[item]
+nutrition_subgroup = "carrots"
+food_type = "carrot"
+description = ""
+
+[metrics]
+weight = 10
+unit = "g"
+
+[model]
+project_name = ""
+rgbd_file_names = [
+    "",
+    "",
+]
+nutrition_facts_sources = []
+quality = -1
+quality_comments = ""
+
+[time]
+started = "16:33:12"
+finished = "00:00:00"
+
+[[qa]]
+done = true
+rgbd_files_present = false
+model_quality_acceptable = false
+rgbd_quality_acceptable = false
+ingredients_acceptable = true
+
+comments = """
+RGBD files: none present
+Model quality: not included
+"""
+model_merge_required = false
+model_texture_required = false
+accepted = false

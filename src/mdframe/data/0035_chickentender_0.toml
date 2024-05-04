@@ -1,0 +1,42 @@
+gid = 35
+uid = "4de322d3-efdb-4711-b8de-1d2514683077"
+
+[item]
+nutrition_subgroup = "poultry"
+food_type = "chicken tender"
+description = "cut from whole chicken, no skin"
+
+[metrics]
+weight = 38
+unit = "g"
+
+[model]
+project_name = "Project10232023180304"
+rgbd_file_names = [
+    "35_chickentender_0_0",
+    "35_chickentender_0_1",
+]
+nutrition_facts_sources = [
+   "IMG_6874" 
+]
+quality = 3
+quality_comments = "one-click edited, shape and texture good, need to merge on meshlab"
+merged = false
+
+[time]
+started = "17:56:56"
+finished = "18:13:17"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: very good
+Model quality:  requires merging
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false

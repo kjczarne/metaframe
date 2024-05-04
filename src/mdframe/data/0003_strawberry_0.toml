@@ -1,0 +1,36 @@
+gid = 3
+uid = "b016d3fa-2d24-4d2e-8631-e70bb525636c"
+
+[item]
+nutrition_subgroup = "stawberries"
+food_type = "strawberry"
+description = "the smallest strawberry we could find, yellow lamp lighting used for capture, white light turned off"
+
+[metrics]
+weight = 10
+unit = "g"
+
+[model]
+project_name = "Project09152023161150"
+rgbd_file_names = [
+    "3_strawberry_0_0",
+    "3_strawberry_0_1",
+]
+quality = 2
+quality_comments = "Slight discoloration, one of the petals not correctly aligned"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: no unique-frame markers, distance to object a little bit too large, which might impact resolution
+of the object itself
+Model quality: minor misalignments on the leaves but acceptable in quality
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

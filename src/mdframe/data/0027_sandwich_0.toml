@@ -1,0 +1,53 @@
+gid = 27
+uid = "6bc151ed-0b2f-4c22-a02b-5bff57aba0ab"
+
+[item]
+nutrition_subgroup = "other sandwiches"
+food_type = "sandwich"
+description = ""
+
+[metrics]
+weight = 198
+unit = "g"
+ingredients = [
+    {name = "tomatoes", weight = 16},
+    {name = "onions", weight = 35},
+    {name = "cheese", weight = 19},
+    {name = "ham slice", weight = 15},
+    {name = "lettuce", weight = 10},
+    {name = "buns", weight = 106},
+]
+
+[model]
+project_name = "Project10192023222002"
+rgbd_file_names = [
+    "27_sandwich_0_0",
+    "27_sandwich_0_1",
+]
+nutrition_facts_sources = [
+    
+]
+quality = 2
+quality_comments = "use meshlab to merge"
+merged = false
+
+[time]
+started = "18:08:05"
+finished = "18:32:31"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = false
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: ok
+Model quality: requires post-processing, there are holes to be filled,
+the flopping-down ham piece has been fixed but there's a slight hole in its
+place close to the top of the bun.
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = false

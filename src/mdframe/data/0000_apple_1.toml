@@ -1,0 +1,33 @@
+gid = 0
+uid = "0f8f2553-04f9-4c41-b106-6b6c360c6f4e"
+
+[item]
+nutrition_subgroup = "apple"
+food_type = "apple"
+description = "Granny Smith Apple (green apple)"
+
+[metrics]
+weight = 194
+unit = "g"
+
+[model]
+project_name = "0_apple_1"
+rgbd_file_names = [
+    "2023-09-13--19-49-15",
+    "2023-09-13--19-49-37"
+]
+
+[[qa]]
+done = true
+rgbd_files_present = false
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: 2nd file missing
+RGBD files: no unique-frame markers
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = false

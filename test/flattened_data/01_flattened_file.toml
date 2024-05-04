@@ -1,0 +1,32 @@
+gid = 62
+uid = "ec321437-2ec7-4c1b-9329-1c345fd2bf3d"
+
+nutrition_subgroup = "burritos and tacos"
+food_type = "taco"
+description = "single, wet taco with meat, veggies, and cheese"
+
+weight = 55
+unit = "g"
+ingredients = [
+
+]
+
+project_name = "Project02022024172848"
+rgbd_file_names = [
+    "62_taco_1_0",
+    "62_taco_1_1",
+]
+nutrition_facts_sources = [
+    
+]
+texture_sources = [
+
+]
+
+quality = 2
+quality_comments = "two halves don't exactly line up in the merge"
+merged = false
+textured = false
+
+started = "17:22:05"
+finished = "17:39:28"

@@ -1,0 +1,42 @@
+gid = 4
+uid = "54714bb6-ecd6-424b-a93a-ddc0e3721bfa"
+
+[item]
+nutrition_subgroup = "carrots"
+food_type = "carrot"
+description = "french-cut cooking carrots"
+
+[metrics]
+weight = 39
+unit = "g"
+
+[model]
+project_name = "Project10062023171905"
+rgbd_file_names = [
+    "4_carrot_5_0",
+    "",
+]
+nutrition_facts_sources = [
+    
+]
+quality = 3
+quality_comments = "texture of pile captured in detail; hole at bottom of pile and those on surface left as is"
+
+[time]
+started = "17:11:19"
+finished = "17:25:18"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: a bit far from the object, but should still be ok
+Model quality: underside not meshed because we're dealing with an ustructured pile of carrot shreds
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

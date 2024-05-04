@@ -1,0 +1,45 @@
+gid = 11
+uid = "b82ec78b-6853-42f6-9549-456c65241a43"
+
+[item]
+nutrition_subgroup = "poultry"
+food_type = "chicken nugget"
+description = "3 pieces with different shapes"
+
+[metrics]
+weight = 45
+unit = "g"
+
+[model]
+project_name = "Project09242023171543"
+rgbd_file_names = [
+    "11_chickennugget_0_0",
+    "11_chickennugget_0_1",
+]
+nutrition_facts_sources = ["IMG_3969"]
+quality = 2
+quality_comments = "merging was difficult because of similar top and bottom of chicken nugget. 1 nugget merged succesfully, the other 2 had bottom holes that were filled with the software."
+merged = true
+
+[time]
+started = "17:10:43"
+finished = "17:27:34"
+
+[[qa]]
+done = true
+rgbd_files_present = false
+model_quality_acceptable = false
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: missing
+Model quality: 3 nuggets in one capture? This is wrong.
+I cannot even trust the weight assessment of this, because
+I can bet the 3 nuggets were measured together.
+This is a full-reject, downright.
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false
+unsalvageable = true

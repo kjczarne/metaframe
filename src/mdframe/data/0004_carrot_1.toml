@@ -1,0 +1,38 @@
+gid = 4
+uid = "c2296aa8-f025-4a9f-ac41-2715fd1a46f1"
+
+[item]
+nutrition_subgroup = "carrots"
+food_type = "carrot"
+description = "regular carrot"
+
+[metrics]
+weight = 129
+unit = "g"
+
+[model]
+project_name = "Project09172023114944"
+rgbd_file_names = [
+    "4_carrot_1_0",
+    "4_carrot_1_1",
+]
+quality = 1
+quality_comments = "merge completed but unsuccessfully, bad shape. issue: carrot ends are facing the other way"
+
+[time]
+started = "14:44:48"
+finished = "15:05:36"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = false
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+Model quality: sparse, misaligned point-cloud, merge misaligned, not acceptable for the dataset
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = false

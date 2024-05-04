@@ -1,0 +1,58 @@
+gid = 51
+uid = "02524187-5fab-402f-ab06-85cb437c88b3"
+
+[item]
+nutrition_subgroup = "pasta mixed dishes"
+food_type = "pasta"
+description = "penne pomodoro on a white plate"
+
+[metrics]
+weight = 321
+unit = "g"
+ingredients = [
+    "penne pasta",
+    "cheese",
+    "meatballs",
+    "tomato sauce"
+]
+
+[model]
+project_name = "Project11192023143227"
+rgbd_file_names = [
+    "51_pasta_0"
+]
+nutrition_facts_sources = [
+    "IMG_7081"
+]
+texture_sources = [
+    "IMG_7082",
+    "IMG_7083",
+    "IMG_7084",
+    "IMG_7085",
+    "IMG_7086"
+]
+
+quality = 3
+quality_comments = "very realistic scan with pretty good texture"
+merged = true
+textured = true
+
+[time]
+started = "14:38:34"
+finished = "15:14:20"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: very good
+Model quality:  good, very porous and without the bottom
+but it would be hard to turn the noodles on their underside in
+a deterministic way to elicit a good merge
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

@@ -1,0 +1,41 @@
+gid = 13
+uid = "0109fd8a-d459-4dfd-8061-928059017758"
+
+[item]
+nutrition_subgroup = "doughnuts sweet rolls pastries"
+food_type = "doughnut"
+description = "chocolate glazed, tim hortons"
+
+[metrics]
+weight = 71
+unit = "g"
+
+[model]
+project_name = "Project09262023165818"
+rgbd_file_names = [
+    "13_doughnut_0_0",
+    "13_doughnut_0_1",
+]
+nutrition_facts_sources = []
+
+quality = 3
+quality_comments = "good quality, software isn't able to deal with the hole in the middle :( has a light-brown crumb of a different doughnut on the top"
+
+[time]
+started = "16:58:46"
+finished = "17:09:47"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: very good
+Model quality: very good
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

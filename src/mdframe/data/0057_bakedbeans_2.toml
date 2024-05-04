@@ -1,0 +1,57 @@
+gid = 57
+uid = "0c27d71d-9f54-45a1-a1e1-39b916ec65c3"
+
+[item]
+nutrition_subgroup = "plant-based protein foods"
+food_type = "beans (bowl)"
+description = "single baked bean"
+
+[metrics]
+weight = 0.5455
+unit = "g"
+ingredients = [
+]
+
+[model]
+project_name = "Project11272023154654"
+rgbd_file_names = [
+    "57_bakedbeans_2_0",
+    "57_bakedbeans_2_1"
+]
+
+nutrition_facts_sources = [
+    "IMG_7207",
+    "IMG_7208",
+    "IMG_7209"
+]
+
+texture_sources = [
+    "IMG_7201",
+    "IMG_7202",
+    "IMG_7203",
+    "IMG_7204",
+    "IMG_7205"
+]
+
+quality = 3
+quality_comments = "looks more or less like a bean. Point cloud too small though, and texture is alright. Unable to merge 2 sides of bean."
+merged = false
+textured = true
+
+[time]
+started = "15:42:08"
+finished = "16:19:03"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: very good
+Model quality:  very good
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

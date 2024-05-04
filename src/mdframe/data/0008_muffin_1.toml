@@ -1,0 +1,42 @@
+gid = 8
+uid = "70e1b690-88e5-45fe-94e4-8e4eb01a2b2d"
+
+[item]
+nutrition_subgroup = "biscuits muffins quick breads"
+food_type = "muffin"
+description = "unwrapped blueberry muffin"
+
+[metrics]
+weight = 102
+unit = "g"
+
+[model]
+project_name = "Project09182023153958"
+rgbd_file_names = [
+    "8_muffin_1_0",
+    "8_muffin_1_1",
+]
+nutrition_facts_sources = []
+quality = 3
+quality_comments = "epic muffin"
+
+[time]
+started = "15:41:46"
+finished = "16:04:02"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: borderline pass, one of the sides seems not to be fully represented in the video
+and a number of frames are missing the scale markers. Also,
+this is still the old pipeline, i.e. the unique-frame markers are not present here.
+Model quality: spectacular.
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

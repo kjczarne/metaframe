@@ -1,0 +1,42 @@
+gid = 22
+uid = "412944e9-6f46-4f16-98f5-cd2dd157405f"
+
+[item]
+nutrition_subgroup = "broccoli"
+food_type = "broccoli"
+description = "whole bunch of raw broccoli"
+
+[metrics]
+weight = 251
+unit = "g"
+
+[model]
+project_name = "Project10082023152626"
+rgbd_file_names = [
+    "22_broccoli_2_0",
+    "22_broccoli_2_1",
+]
+nutrition_facts_sources = [
+    "IMG_4041"
+]
+quality = 3
+quality_comments = "great merge. Some spottiness texture. Some holes were left unfilled (as the broccoli is porous and the holes make sense)."
+
+[time]
+started = "14:26:48"
+finished = "15:40:06"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: very good
+Model quality: very good
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true
