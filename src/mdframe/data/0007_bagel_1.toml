@@ -1,0 +1,41 @@
+gid = 7
+uid = "f0530e18-ffb0-4b1f-947b-c8e03ca0b2d5"
+
+[item]
+nutrition_subgroup = "bagels and english muffins"
+food_type = "bagel"
+description = ""
+
+[metrics]
+weight = 74
+unit = "g"
+
+[model]
+project_name = "Project09172023163234"
+rgbd_file_names = [
+    "7_bagel_1_0",
+    "7_bagel_1_1",
+]
+quality = 3
+quality_comments = "some shadows in the area around the cut between the two bagels"
+
+[time]
+started = "16:32:56"
+finished = "16:41:25"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = false
+ingredients_acceptable = true
+
+comments = """
+RGBD files: the captures are too short and do not represent
+enough of the object especially on the sides. This one is not acceptable.
+It's a shame, because the 3D model looks great.
+Model quality: great.
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = false

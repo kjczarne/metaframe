@@ -1,0 +1,54 @@
+gid = 52
+uid = "ce928754-4263-46da-b2dd-cd3688556ebd"
+
+[item]
+nutrition_subgroup = "tortilla and corn chips"
+food_type = "tortilla and corn chips"
+description = "small pile of Fritos original corn chips"
+
+[metrics]
+weight = 11
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project11192023155625"
+rgbd_file_names = [
+    "52_tortillacornchips_2"
+]
+nutrition_facts_sources = [
+    "IMG_7099"
+]
+
+texture_sources = [
+    "IMG_7100",
+    "IMG_7101",
+    "IMG_7102",
+    "IMG_7103",
+    "IMG_7104"
+]
+
+quality = 2
+quality_comments = "couldn't scan the bottom of the pile of chips"
+merged = false
+textured = true
+
+[time]
+started = "15:28:52"
+finished = "16:08:09"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: very good
+Model quality:  requires merging
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false

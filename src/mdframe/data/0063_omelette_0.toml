@@ -1,0 +1,41 @@
+gid = 63
+uid = "e9593a3c-40fa-48c0-bc0a-c755ac9ceea5"
+
+[item]
+nutrition_subgroup = "eggs"
+food_type = "omelette"
+description = "omelette"
+
+[metrics]
+weight = 103
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project02022024175058"
+rgbd_file_names = [
+    "63_omelette_0_0",
+    "63_omelette_0_1",
+]
+nutrition_facts_sources = [
+    
+]
+texture_sources = [
+    "IMG_4227",
+    "IMG_4228",
+    "IMG_4229",
+    "IMG_4230",
+    "IMG_4321",
+    "IMG_4232"
+]
+
+quality = 2
+quality_comments = "unable to merge; individual scans look good"
+merged = false
+textured = false
+
+[time]
+started = "17:45:54"
+finished = "18:19:49"

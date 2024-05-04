@@ -1,0 +1,34 @@
+gid = 1
+uid = "81a72626-6da1-4f42-81bf-b8d2634ba0d5"
+
+[item]
+nutrition_subgroup = "biscuits muffins quick breads"
+food_type = "biscuit"
+description = ""
+
+[metrics]
+weight = 42
+unit = "g"
+
+[model]
+project_name = "Project09152023144532"
+rgbd_file_names = [
+    "2023-09-15--17-45-15",
+    "2023-09-15--17-44-55",
+]
+quality = 3
+quality_comments = ""
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: no unique-frame marker
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

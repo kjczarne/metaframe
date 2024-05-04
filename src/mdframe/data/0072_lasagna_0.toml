@@ -1,0 +1,39 @@
+gid = 72
+uid = "ff08bed0-f7d7-4033-888b-7d1a75ed2944"
+
+[item]
+nutrition_subgroup = "pasta mixed dishes"
+food_type = "lasagna"
+description = "chicken lasagna"
+
+[metrics]
+weight = 436
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project02092024184030"
+rgbd_file_names = [
+    "72_lasagna_0_0",
+]
+nutrition_facts_sources = [
+    
+]
+texture_sources = [
+    "IMG_7365",
+    "IMG_7366",
+    "IMG_7367",
+    "IMG_7368",
+    "IMG_7369",
+]
+
+quality = 2
+quality_comments = "lasagna looks nice, but bottom surface's coloring is scuffed. Unable to flip over"
+merged = true
+textured = false
+
+[time]
+started = "18:35:45"
+finished = "18:57:21"

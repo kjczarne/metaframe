@@ -1,0 +1,41 @@
+gid = 13
+uid = "1c02da33-a5aa-4e2e-ac13-58b55475739e"
+
+[item]
+nutrition_subgroup = "doughnuts sweet rolls pastries"
+food_type = "doughnut"
+description = "spherical sprinkles, tim hortons"
+
+[metrics]
+weight = 84
+unit = "g"
+
+[model]
+project_name = "Project09262023175423"
+rgbd_file_names = [
+    "13_doughnut_2_0",
+    "13_doughnut_2_1",
+]
+nutrition_facts_sources = []
+
+quality = 3
+quality_comments = "fantastic quality. slight discoloration in the doughnut hole"
+
+[time]
+started = "17:52:00"
+finished = "18:00:56"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: very good
+Model quality: very good
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

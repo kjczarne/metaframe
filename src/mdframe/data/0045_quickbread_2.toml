@@ -1,0 +1,46 @@
+gid = 45
+uid = "8080d849-a2fb-4f58-b740-73dc60c17583"
+
+[item]
+nutrition_subgroup = "biscuits muffins quick breads"
+food_type = "quick bread"
+description = "slice of original pound cake"
+
+[metrics]
+weight = 52
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project11052023170035"
+rgbd_file_names = [
+    "45_quickbread_2_0",
+    "45_quickbread_2_1",
+]
+nutrition_facts_sources = [
+    "IMG_6931"
+]
+
+quality = 3
+quality_comments = "great looking slice, some minor discolorations"
+
+[time]
+started = "15:28:07"
+finished = "17:12:31"
+
+[[qa]]
+done = true
+rgbd_files_present = false
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+requires_nutritional_facts_imputation = true
+comments = """
+RGBD files: missing `2_0`
+Model quality: ok
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false

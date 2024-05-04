@@ -1,0 +1,46 @@
+gid = 39
+uid = "6b6a89dc-4687-4c97-93bd-172c451c7eb9"
+
+[item]
+nutrition_subgroup = "macaroni and cheese"
+food_type = "macaroni and cheese"
+description = "a pile of noodles"
+
+[metrics]
+weight = 16
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project10282023183012"
+rgbd_file_names = [
+    "39_macandcheese_0"
+]
+nutrition_facts_sources = [
+    "IMG_6903"
+]
+
+quality = 3
+quality_comments = "good, realistic capture done without a plate - just took the top scan"
+
+[time]
+started = "18:27:44"
+finished = "18:35:55"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: very good
+Model quality:  very good, bottom missing but
+that was intentional (we cannot turn over a pile of noodles
+without losing its integrity)
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

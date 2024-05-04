@@ -1,0 +1,51 @@
+gid = 46
+uid = "c3a8dfa3-c757-463c-9111-bb117c1a9104"
+
+[item]
+nutrition_subgroup = "corn"
+food_type = "corn"
+description = "single piece of corn"
+
+[metrics]
+weight = 0.1
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project11102023180856"
+rgbd_file_names = [
+    "46_corn_2_0",
+    "46_corn_2_1",
+]
+nutrition_facts_sources = [
+    "IMG_4128"
+]
+texture_sources = [
+    "IMG_4133",
+    "IMG_4134"
+]
+
+quality = 3
+quality_comments = "good individual scans, unable to merge using revpoint"
+merged = false
+textured = false
+
+[time]
+started = "18:07:34"
+finished = "18:26:47"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: very good
+Model quality:  requires merging
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false

@@ -1,0 +1,39 @@
+gid = 76
+uid = "dd6af67d-a818-4c6d-82d0-bc5f1869b5a8"
+
+[item]
+nutrition_subgroup = "rice"
+food_type = "rice"
+description = "steamed white rice in a bowl"
+
+[metrics]
+weight = 315
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project02142024225014"
+rgbd_file_names = [
+    "74_rice_0_0",
+]
+nutrition_facts_sources = [
+    
+]
+texture_sources = [
+    "IMG_4321",
+    "IMG_4322",
+    "IMG_4323",
+    "IMG_4324",
+    "IMG_4325"
+]
+
+quality = 1
+quality_comments = "rice texture captured well, however unable to capture bowl adequately"
+merged = false
+textured = true
+
+[time]
+started = "17:43:57"
+finished = "18:34:19"

@@ -1,0 +1,35 @@
+gid = 68
+uid = "cf8138a9-e8fa-49b9-8719-d3e1d3609fde"
+
+[item]
+nutrition_subgroup = "soups"
+food_type = "soup"
+description = "Tim Horton's chicken noodle soup"
+
+[metrics]
+weight = 76
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project02042024173443"
+rgbd_file_names = [
+    "68_soup_0_0",
+]
+nutrition_facts_sources = [
+    "IMG_4280"
+]
+texture_sources = [
+    "IMG_4279"
+]
+
+quality = 2
+quality_comments = "poor quality texture but looks like a soup..."
+merged = false
+textured = true
+
+[time]
+started = "17:32:44"
+finished = "17:44:04"

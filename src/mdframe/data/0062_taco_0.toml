@@ -1,0 +1,41 @@
+gid = 62
+uid = "02415e64-7b21-49f9-b168-53686437d49d"
+
+[item]
+nutrition_subgroup = "burritos and tacos"
+food_type = "taco"
+description = "single, somewhat broken taco with meat, veggies, and cheese"
+
+[metrics]
+weight = 75
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project02022024165511"
+rgbd_file_names = [
+    "62_taco_0_0",
+    "62_taco_0_1",
+]
+nutrition_facts_sources = [
+    
+]
+texture_sources = [
+    "IMG_4214",
+    "IMG_4216",
+    "IMG_4217",
+    "IMG_4218",
+    "IMG_4219",
+    "IMG_4220"
+]
+
+quality = 1
+quality_comments = "one of the scans was very poor, could not see inside of the taco"
+merged = false
+textured = false
+
+[time]
+started = "16:41:16"
+finished = "17:16:46"

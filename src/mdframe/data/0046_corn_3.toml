@@ -1,0 +1,50 @@
+gid = 46
+uid = "1c8d0ab3-951e-4f29-a2bc-efdb68a00cda"
+
+[item]
+nutrition_subgroup = "corn"
+food_type = "corn"
+description = "bowl of corn"
+
+[metrics]
+weight = 317
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project11102023182756"
+rgbd_file_names = [
+    "46_corn_3_0",
+]
+nutrition_facts_sources = [
+    "IMG_4128"
+]
+texture_sources = [
+    "IMG_4135",
+    "IMG_4136"
+]
+
+quality = 3
+quality_comments = "good individual scans, unable to merge using revpoint"
+merged = false
+textured = false
+
+[time]
+started = "18:27:01"
+finished = "18:56:56"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: very good
+Model quality:  very good
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

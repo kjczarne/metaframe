@@ -1,0 +1,40 @@
+gid = 7
+uid = "69b07b2e-33bf-44ce-a262-c88a32ce0106"
+
+[item]
+nutrition_subgroup = "bagels and english muffins"
+food_type = "bagel"
+description = ""
+
+[metrics]
+weight = 84
+unit = "g"
+
+[model]
+project_name = "Project09172023164140"
+rgbd_file_names = [
+    "7_bagel_2_0",
+    "7_bagel_2_1",
+]
+quality = 3
+quality_comments = "some shadows in the area around the cut between the two bagels"
+
+[time]
+started = "16:36:12"
+finished = "16:47:13"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = false
+ingredients_acceptable = true
+
+comments = """
+RGBD files: the object is pretty much not visible from the sides in
+any of the frames. This is unacceptable.
+Model quality: great.
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = false

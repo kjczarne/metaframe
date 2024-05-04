@@ -1,0 +1,51 @@
+gid = 16
+uid = "62301514-ca53-435f-90e5-2a7069dcdab8"
+
+[item]
+nutrition_subgroup = "plant-based protein foods"
+food_type = "almond"
+description = "a singular almond"
+
+[metrics]
+weight = 2
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project02152024225224"
+rgbd_file_names = [
+    "16_almond_4_0",
+    "16_almond_4_1",
+]
+nutrition_facts_sources = [
+    "IMG_4334"
+]
+texture_sources = [
+    "IMG_4335",
+    "IMG_4336"
+]
+
+quality = 3
+quality_comments = "Good capture quality, texture a bit too smooth. Revopoint didn't manage automatic merge"
+merged = false
+textured = false
+
+[time]
+started = "23:02:15"
+finished = "23:14:47"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: very good
+Model quality:  very good
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

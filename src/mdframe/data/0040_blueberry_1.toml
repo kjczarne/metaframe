@@ -1,0 +1,45 @@
+gid = 40
+uid = "d9eb4b83-78c6-4bb0-b71e-a7075b6524fc"
+
+[item]
+nutrition_subgroup = "blueberries"
+food_type = "blueberries"
+description = "one single blueberry"
+
+[metrics]
+weight = 2.33
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project10302023194103"
+rgbd_file_names = [
+    "40_blueberry_1_0",
+    "40_blueberry_1_1",
+]
+nutrition_facts_sources = [
+    
+]
+
+quality = 2
+quality_comments = "captured additional rotated images on top so got rid of them through isolation and couldn't merge"
+
+[time]
+started = "19:37:32"
+finished = "20:01:16"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: very good
+Model quality:  requires merging
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false

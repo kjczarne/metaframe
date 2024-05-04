@@ -1,0 +1,56 @@
+gid = 53
+uid = "11202f76-b2c4-48e6-9187-cef1f75251d3"
+
+[item]
+nutrition_subgroup = "fish"
+food_type = "fish"
+description = "salmon"
+
+[metrics]
+weight = 226
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project11242023173526"
+rgbd_file_names = [
+    "53_salmon_0_0",
+    "53_salmon_0_1",
+]
+nutrition_facts_sources = [
+    
+]
+texture_sources = [
+    "IMG_4164",
+    "IMG_4165",
+    "IMG_4166",
+    "IMG_4167",
+    "IMG_4168",
+    "IMG_4169"
+]
+
+quality = 3
+quality_comments = "good scans, merged decently"
+merged = true
+textured = false
+
+[time]
+started = "17:46:05"
+finished = "18:19:49"
+
+[[qa]]
+done = true
+rgbd_files_present = false
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+requires_nutritional_facts_imputation = true
+comments = """
+RGBD files: missing
+Model quality: very good
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false

@@ -1,0 +1,41 @@
+gid = 15
+uid = "5dbe2746-9c3b-4c13-aae8-0c0515d01978"
+
+[item]
+nutrition_subgroup = "doughnuts sweet rolls pastries"
+food_type = "cinnamon bun, williams"
+description = ""
+
+[metrics]
+weight = 152
+unit = "g"
+
+[model]
+project_name = "Project09282023150224"
+rgbd_file_names = [
+    "15_cinnamonbun_2_0",
+    "15_cinnamonbun_2_1",
+]
+nutrition_facts_sources = []
+
+quality = 3
+quality_comments = "fantastic quality as previous"
+
+[time]
+started = "14:40:42"
+finished = "15:11:29"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: very good
+Model quality: spectacular
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true
