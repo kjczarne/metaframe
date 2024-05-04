@@ -1,0 +1,35 @@
+gid = 67
+uid = "bc9559d2-0abf-4082-9ef9-1aae49507116"
+
+[item]
+nutrition_subgroup = "coleslaw"
+food_type = "coleslaw"
+description = "coleslaw in a bowl"
+
+[metrics]
+weight = 95
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project02042024171955"
+rgbd_file_names = [
+    "67_coleslaw_1_0",
+]
+nutrition_facts_sources = [
+    
+]
+texture_sources = [
+    "IMG_4278"
+]
+
+quality = 2
+quality_comments = "good capture, a little porous"
+merged = false
+textured = true
+
+[time]
+started = "17:19:05"
+finished = "17:28:00"

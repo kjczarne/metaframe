@@ -1,0 +1,46 @@
+gid = 43
+uid = "b770d982-8de3-4597-8d55-35638f49a27f"
+
+[item]
+nutrition_subgroup = "eggs"
+food_type = "boiled egg"
+description = "hard boiled whole egg with shell peeled"
+
+[metrics]
+weight = 53
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project11052023150755"
+rgbd_file_names = [
+    "43_boiledegg_1_0",
+    "43_boiledegg_1_1",
+]
+nutrition_facts_sources = [
+    
+]
+
+quality = 3
+quality_comments = "accurate image capture with marker-based tracking but couldn't merge"
+merged = false
+
+[time]
+started = "14:59:05"
+finished = "15:36:08"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: very good
+Model quality:  requires merging
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false

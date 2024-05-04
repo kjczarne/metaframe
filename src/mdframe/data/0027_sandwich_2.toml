@@ -1,0 +1,49 @@
+gid = 27
+uid = "bb138af5-820e-48ea-aed7-3bb923c99c5f"
+
+[item]
+nutrition_subgroup = "other sandwiches"
+food_type = "sandwich"
+description = "roasted garlic ciabatta buns + ham"
+
+[metrics]
+weight = 152
+unit = "g"
+ingredients = [
+    {name = "cheese", weight = 20},
+    {name = "ham slice", weight = 12},
+    {name = "lettuce", weight = 15},
+    {name = "buns", weight = 105},
+]
+
+[model]
+project_name = "Project10202023211202"
+rgbd_file_names = [
+    "27_sandwich_2_0",
+    "27_sandwich_2_1",
+]
+nutrition_facts_sources = [
+    
+]
+quality = 3
+quality_comments = "use meshlab to merge"
+merged = false
+
+[time]
+started = "17:04:17"
+finished = "17:19:11"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = false
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: ok
+Model quality: requires merging
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false

@@ -1,0 +1,45 @@
+gid = 36
+uid = "5ba0cf9d-73c1-40e1-a25a-514a9b514072"
+
+[item]
+nutrition_subgroup = "melons"
+food_type = "melon"
+description = "watermelon"
+
+[metrics]
+weight = 35
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project10252023172141"
+rgbd_file_names = [
+    "36_melon_0_0",
+    "36_melon_0_1",
+]
+nutrition_facts_sources = [
+    
+]
+
+quality = 1
+quality_comments = ""
+
+[time]
+started = "17:17:31"
+finished = "null"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: very good
+Model quality:  requires merging
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false

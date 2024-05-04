@@ -1,0 +1,42 @@
+gid = 24
+uid = "bd4964f4-a5c6-4c5a-942c-a9b619c7ab5b"
+
+[item]
+nutrition_subgroup = "other vegetables and combinations"
+food_type = "avocado"
+description = "whole round green unripe avocado with green sticker"
+
+[metrics]
+weight = 210
+unit = "g"
+
+[model]
+project_name = "Project10082023173343"
+rgbd_file_names = [
+    "24_avocado_0_0",
+    "24_avocado_0_1",
+]
+nutrition_facts_sources = [
+    "IMG_4043"
+]
+quality = 3
+quality_comments = "great merge using sticker. Complete avocado, but with different colour patches."
+
+[time]
+started = "17:38:02"
+finished = "18:04:32"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: very good
+Model quality:  very good
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

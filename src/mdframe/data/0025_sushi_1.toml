@@ -1,0 +1,43 @@
+gid = 25
+uid = "24aff157-729d-4f37-b166-13a8768ff6ea"
+
+[item]
+nutrition_subgroup = "egg rolls dumplings sushi"
+food_type = "sushi"
+description = "california roll with cucumber, crab meat, red caviar, avocado, rice, seaweed"
+
+[metrics]
+weight = 26
+unit = "g"
+
+[model]
+project_name = "Project10162023161944"
+rgbd_file_names = [
+    "25_sushi_1_0",
+    "25_sushi_1_1",
+]
+nutrition_facts_sources = [
+    
+]
+quality = 1
+quality_comments = "tracking lost because of scattered points and the merge didn't turn out well but tried marker based merge"
+
+[time]
+started = "15:57:33"
+finished = "16:42:44"
+
+[[qa]]
+done = true
+rgbd_files_present = false
+model_quality_acceptable = false
+rgbd_quality_acceptable = true
+ingredients_acceptable = false
+
+comments = """
+RGBD files: missing, possibly due to sync issues?
+Model quality: terrible, misaligned, texture unacceptably poor
+Ingredients list: not decomposed into individual ingredients
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false

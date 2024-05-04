@@ -1,0 +1,45 @@
+gid = 44
+uid = "e9db1d42-052f-4f0a-8dc4-fd5d8264c8f8"
+
+[item]
+nutrition_subgroup = "yeast breads"
+food_type = "yeast bread"
+description = "whole loaf of sourdough bread, round in shape"
+
+[metrics]
+weight = 659
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project11052023161736"
+rgbd_file_names = [
+    "44_yeastbread_2_0",
+    "44_yeastbread_2_1",
+]
+nutrition_facts_sources = [
+    "IMG_6928"
+]
+
+quality = 3
+quality_comments = "great scans and merge, minor discolouration ring (high contrast) around base, but very recognizable"
+
+[time]
+started = "14:41:12"
+finished = "16:28:53"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: very good
+Model quality:  very good
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

@@ -1,0 +1,51 @@
+gid = 26
+uid = "ca838ce1-f1ac-47a1-af6f-1ee45f62e99e"
+
+[item]
+nutrition_subgroup = "meat mixed dishes"
+food_type = "burger"
+description = ""
+
+[metrics]
+weight = 275
+unit = "g"
+ingredients = [
+    {name = "tomatoes", weight = 30},
+    {name = "onions", weight = 24},
+    {name = "cheese", weight = 19},
+    {name = "beef patty", weight = 115},
+    {name = "lettuce", weight = 7},
+    {name = "buns", weight = 76},
+]
+
+[model]
+project_name = "Project10192023205512"
+rgbd_file_names = [
+    "26_burger_2_0",
+    "26_burger_2_1",
+]
+nutrition_facts_sources = [
+    
+]
+quality = 3
+quality_comments = "unable to merge, use meshlab"
+merged = false
+
+[time]
+started = "16:53:14"
+finished = "17:18:48"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = false
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: ok
+Model quality: requires merging
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false

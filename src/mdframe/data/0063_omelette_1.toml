@@ -1,0 +1,42 @@
+gid = 63
+uid = "bdfddd1c-e6a7-4bce-af6b-e2d5b2257f43"
+
+[item]
+nutrition_subgroup = "eggs"
+food_type = "omelette"
+description = "ham and onion omelette"
+
+[metrics]
+weight = 124
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project02022024180254"
+rgbd_file_names = [
+    "63_omelette_1_0",
+    "63_omelette_1_1",
+]
+nutrition_facts_sources = [
+    
+]
+texture_sources = [
+    "IMG_4233",
+    "IMG_4234",
+    "IMG_4235",
+    "IMG_4236",
+    "IMG_4237",
+    "IMG_4238",
+    "IMG 4240"
+]
+
+quality = 2
+quality_comments = "unable to merge; individual scans look good"
+merged = false
+textured = false
+
+[time]
+started = "17:57:03"
+finished = "18:22:05"

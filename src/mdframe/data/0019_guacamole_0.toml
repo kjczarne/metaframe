@@ -1,0 +1,43 @@
+gid = 19
+uid = "343a45ed-55bd-46b0-b75d-72f87c34c9de"
+
+[item]
+nutrition_subgroup = "guacamole"
+food_type = "guacomole"
+description = "organic Wholly Guacomole"
+
+[metrics]
+weight = 54
+unit = "g"
+
+[model]
+project_name = "Project10022023164354"
+rgbd_file_names = [
+    "19_guacamole_0_0",
+]
+nutrition_facts_sources = [
+    "IMG_4017",
+    "IMG_4018"
+]
+quality = 3
+quality_comments = "great scan of guacamole in small bowl"
+
+[time]
+started = "16:37:39"
+finished = "16:57:42"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: very good
+Model quality: good, the bowl hasn't been captured fully
+but I assume we care only about the guacamole.
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

@@ -1,0 +1,41 @@
+gid = 24
+uid = "37f8200b-431f-4d0b-aa0f-22154694e2ea"
+
+[item]
+nutrition_subgroup = "other vegetables and combinations"
+food_type = "avocado"
+description = ""
+
+[metrics]
+weight = 188
+unit = "g"
+
+[model]
+project_name = "Project10082023181846"
+rgbd_file_names = [
+
+]
+nutrition_facts_sources = [
+    "IMG_4044"
+]
+quality = 3
+quality_comments = "common discoloration but no issues with the mesh integrity"
+
+[time]
+started = "17:40:14"
+finished = "18:26:10"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: very good
+Model quality:  very good
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

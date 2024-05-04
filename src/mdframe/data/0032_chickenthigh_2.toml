@@ -1,0 +1,43 @@
+gid = 32
+uid = "970f345a-e991-4c49-b90c-834892248691"
+
+[item]
+nutrition_subgroup = "poultry"
+food_type = "chicken thigh"
+description = "chicken thigh with legs attached + skin"
+
+[metrics]
+weight = 183
+unit = "g"
+
+[model]
+project_name = "Project10232023173055"
+rgbd_file_names = [
+    "32_chickenthigh_2_0",
+    "32_chickenthigh_2_1",
+]
+nutrition_facts_sources = [
+   "IMG_6874" 
+]
+quality = 3
+quality_comments = "tried out one-click editing, texture much more beautiful. need to merge on meshlab"
+merged = false
+
+[time]
+started = "17:22:08"
+finished = "17:45:22"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = false
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+requires_nutritional_facts_imputation = true
+comments = """
+RGBD files: ok
+Model quality: Merge required
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false

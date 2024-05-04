@@ -1,0 +1,56 @@
+gid = 37
+uid = "008cbe60-bdb5-4bc4-a5c0-2f4fafef791d"
+
+[item]
+nutrition_subgroup = "meats"
+food_type = "pork ribs"
+description = "Half rack pork back ribs maple bacon, cold - whole rack"
+
+[metrics]
+weight = 331
+unit = "g"
+ingredients = [
+    
+]
+
+[model]
+project_name = "Project11262023131536"
+rgbd_file_names = [
+    "37_porkribs_1_0",
+    "37_porkribs_1_1",
+]
+nutrition_facts_sources = [
+    "IMG_7129",
+    "IMG_7130",
+]
+texture_sources = [
+    "IMG_7122",
+    "IMG_7123",
+    "IMG_7125",
+    "IMG_7126",
+    "IMG_7127",
+    "IMG_7128",
+]
+
+quality = 2
+quality_comments = "good scan, merged very well"
+merged = true
+textured = false
+
+[time]
+started = "13:20:16"
+finished = "13:51:55"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+comments = """
+RGBD files: very good
+Model quality:  very good
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

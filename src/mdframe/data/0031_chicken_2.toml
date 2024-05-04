@@ -1,0 +1,47 @@
+gid = 31
+uid = "e07dad32-bca9-493a-9ad6-5d946be57e05"
+
+[item]
+nutrition_subgroup = "poultry"
+food_type = "whole chicken"
+description = "BBQ Seasoned Family Sized Chicken, Hot 1kg"
+
+[metrics]
+weight = 992
+unit = "g"
+ingredients = [
+
+]
+
+[model]
+project_name = "Project10282023152827"
+rgbd_file_names = [
+    "31_chicken_2_0",
+    "31_chicken_2_1",
+]
+nutrition_facts_sources = [
+    "IMG_6892","IMG_6893"
+]
+
+quality = 2
+quality_comments = "merged scan has multiple lighting and colours of each scan"
+
+[time]
+started = "15:21:03"
+finished = "16:51:54"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = false
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: very good
+Model quality: borderline accept, a bit porous but representative
+of a whole chicken
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = false

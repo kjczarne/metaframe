@@ -1,0 +1,42 @@
+gid = 24
+uid = "2ac1cacd-2c1a-4597-8667-92ecfa210c16"
+
+[item]
+nutrition_subgroup = "other vegetables and combinations"
+food_type = "avocado"
+description = "whole round ripe avocado with a sticker"
+
+[metrics]
+weight = 199
+unit = "g"
+
+[model]
+project_name = "Project10082023181015"
+rgbd_file_names = [
+    "24_avocado_1_0",
+    "24_avocado_1_1",
+]
+nutrition_facts_sources = [
+    "IMG_4044"
+]
+quality = 3
+quality_comments = "common discoloration on the texture, no mesh artefacts"
+
+[time]
+started = "17:38:56"
+finished = "18:17:58"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: very good
+Model quality:  very good
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

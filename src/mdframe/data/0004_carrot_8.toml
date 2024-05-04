@@ -1,0 +1,42 @@
+gid = 17
+uid = "fca6531d-5b09-40f8-9fc0-15f6e174217a"
+
+[item]
+nutrition_subgroup = "carrots"
+food_type = "carrot"
+description = "20 cm long carrot with peel on and a small stem stub."
+
+[metrics]
+weight = 102
+unit = "g"
+
+[model]
+project_name = "Project10022023153909"
+rgbd_file_names = [
+    "4_carrot_8_0",
+    "4_carrot_8_1",
+]
+nutrition_facts_sources = [
+    
+]
+quality = 3
+quality_comments = "after scanning on 2 different axis, raw scan and merge were a lot better. Isolation was detected appropriately, minimal holes detected."
+
+[time]
+started = "15:05:56"
+finished = "15:41:16"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = true
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+Model quality: slight artefacts in the mesh surface close to the head of the carrot.
+Still, should be acceptable.
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = true

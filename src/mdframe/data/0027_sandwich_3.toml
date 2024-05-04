@@ -1,0 +1,49 @@
+gid = 27
+uid = "cdc4ba90-b014-4159-b3f9-68666bc89f98"
+
+[item]
+nutrition_subgroup = "other sandwiches"
+food_type = "sandwich"
+description = "dempsters whole grain bread + beef"
+
+[metrics]
+weight = 137
+unit = "g"
+ingredients = [
+    {name = "cheese", weight = 21},
+    {name = "beef slice", weight = 30},
+    {name = "lettuce", weight = 10},
+    {name = "buns", weight = 75},
+]
+
+[model]
+project_name = "Project10202023212012"
+rgbd_file_names = [
+    "27_sandwich_3_0",
+    "27_sandwich_3_1",
+]
+nutrition_facts_sources = [
+    
+]
+quality = 3
+quality_comments = "unable to merge, use meshlab"
+merged = false
+
+[time]
+started = "17:16:31"
+finished = "17:40:35"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = false
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: ok
+Model quality: requires merging
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false

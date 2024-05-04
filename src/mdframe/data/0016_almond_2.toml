@@ -1,0 +1,40 @@
+gid = 16
+uid = "afcbca9b-9f27-45ac-abc7-423347ed8293"
+
+[item]
+nutrition_subgroup = "plant-based protein foods"
+food_type = "almond, plural"
+description = "almonds in a bowl"
+
+[metrics]
+weight = 28
+unit = "g"
+
+[model]
+project_name = "Project09292023171818"
+rgbd_file_names = [
+    "16_almond_2_0"
+]
+nutrition_facts_sources = []
+quality = 3
+quality_comments = "both bowl and almonds captured in great detail"
+
+[time]
+started = "17:39:17"
+finished = "18:19:42"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = false
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: very good
+Model quality: weird blue discoloration of the entire 3D model.
+Investigate if this can be fixed.
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = false

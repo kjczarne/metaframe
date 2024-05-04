@@ -1,0 +1,43 @@
+gid = 27
+uid = "d4fef155-a90f-4e4e-928e-04817066ee7a"
+
+[item]
+nutrition_subgroup = "shellfish"
+food_type = "shrimp"
+description = ""
+
+[metrics]
+weight = 8
+unit = "g"
+
+[model]
+project_name = "Project10202023223557"
+rgbd_file_names = [
+    "28_shrimp_1_0",
+    "28_shrimp_1_1",
+]
+nutrition_facts_sources = [
+    "IMG_6823"
+]
+quality = 3
+quality_comments = "need to merge on meshlab"
+merged = false
+
+[time]
+started = "18:32:07"
+finished = "18:44:35"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = false
+rgbd_quality_acceptable = true
+ingredients_acceptable = true
+
+comments = """
+RGBD files: ok
+Model quality: requires merging
+"""
+model_merge_required = true
+model_texture_required = true
+accepted = false

@@ -1,0 +1,44 @@
+gid = 25
+uid = "8f40dcf6-3beb-4141-b9da-042a90ff1d6e"
+
+[item]
+nutrition_subgroup = "egg rolls dumplings sushi"
+food_type = "sushi"
+description = "sushi roll with salmon"
+
+[metrics]
+weight = 12
+unit = "g"
+
+[model]
+project_name = "Project10162023181013"
+rgbd_file_names = [
+    "25_sushi_5_0",
+    "25_sushi_5_1",
+]
+nutrition_facts_sources = [
+    
+]
+quality = 2
+quality_comments = "sparse points but using dark object feature worked well"
+
+[time]
+started = "18:03:02"
+finished = "18:37:31"
+
+[[qa]]
+done = true
+rgbd_files_present = true
+model_quality_acceptable = false
+rgbd_quality_acceptable = true
+ingredients_acceptable = false
+
+comments = """
+RGBD files: present
+Model quality: could be salvaged but there's a lot of shadow
+captured in the model, this would require some post-processing.
+Ingredients list: not decomposed into individual ingredients
+"""
+model_merge_required = false
+model_texture_required = true
+accepted = false
