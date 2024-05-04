@@ -1,2 +1,6 @@
 __pycache__
 **/.DS_Store
+coverage_html
+.coverage
+coverage.xml
+*.csv

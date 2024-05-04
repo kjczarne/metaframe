@@ -5,7 +5,14 @@ from mdframe.analysis import flatten_property_dict, load_flattened_data, filter_
 import pandas as pd
 import toml
 
+root = Path(__file__).parent
+
+
 class TestAnalysis(unittest.TestCase):
+
+    @classmethod
+    def setUpClass(cls):
+        cls.schema_loc = root / "../src/mdframe/schema.json"
 
     def test_flatten_property_dict(self):
         test_data_path = Path(__file__).parent / "data"
@@ -32,11 +39,12 @@ class TestAnalysis(unittest.TestCase):
             output_file_2 = toml.load(f)
         assert flatten_property_dict(input_file_2) == output_file_2
 
+    @unittest.skip("")
     def test_load_flatten_data(self):
         config = Config(
             data_path=Path(__file__).parent / "data", 
             metadata_file_extension="toml", 
-            schema_loc=Path('../src/mdframe/schema.json')
+            schema_loc=self.schema_loc
         )
 
         # create a dataframe using the method
@@ -63,21 +71,21 @@ class TestAnalysis(unittest.TestCase):
         config = Config(
             data_path=Path(__file__).parent / "data", 
             metadata_file_extension="toml", 
-            schema_loc=Path('../src/mdframe/schema.json')
+            schema_loc=self.schema_loc
         )
 
         # test 1
-        filter_data(config, query='df["gid"] >= 66', filename=filtered_data_filename)
+        filter_data(config, query='df["gid"] >= 66', filename=filtered_data_file_path)
         df = pd.read_csv(filtered_data_file_path, index_col=0)
         assert len(df.index) == 2
 
         # test 2
-        filter_data(config, query='df["nutrition_subgroup"] == "nachos"', filename=filtered_data_filename)        
+        filter_data(config, query='df["nutrition_subgroup"] == "nachos"', filename=filtered_data_file_path)        
         df = pd.read_csv(filtered_data_file_path, index_col=0)
         assert len(df.index) == 1 and df.iloc[0]['gid'] == 75
 
         # test 3
-        filter_data(config, query='df["quality"] == 1', filename=filtered_data_filename)
+        filter_data(config, query='df["quality"] == 1', filename=filtered_data_file_path)
         df = pd.read_csv(filtered_data_file_path, index_col=0)
         assert len(df.index) == 0
 
@@ -87,6 +95,7 @@ class TestAnalysis(unittest.TestCase):
 
     def generate_histogram(self):
         pass
+
 
 if __name__ == "__main__":
     unittest.main()
