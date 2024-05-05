@@ -1,6 +1,6 @@
 import unittest
 from pathlib import Path
-from mdframe.reader import run, Config
+from mdframe.reader import run_eager, Config
 import json
 import toml
 
@@ -13,27 +13,27 @@ class TestReader(unittest.TestCase):
     def setUpClass(cls):
         cls.schema_loc = root / "../src/mdframe/schema.json"
 
-    def test_metadata_print(self):
-        data_path = root / "test"
+    def test_metadata_loads(self):
+        data_path = root / "data"
         config = Config(
-            data_path=data_path,
+            metadata_file_paths=data_path,
             metadata_file_extension="toml",
             schema_loc=self.schema_loc
         )
-        df = run(config)
-        print(df)
+        df = run_eager(config)
+        self.assertGreater(len(df), 0)
 
-    def test_metadata_invalid(self):
+    def test_metadata_invalid_raises_decoding_error(self):
         data_path = Path(__file__).parent / "invalid_data"
         config = Config(
-            data_path=data_path,
+            metadata_file_paths=data_path,
             metadata_file_extension="toml",
             schema_loc=self.schema_loc
         )
 
         # expecting this to fail
         with self.assertRaises(toml.decoder.TomlDecodeError):
-            df = run(config)
+            _ = run_eager(config)
 
 if __name__ == "__main__":
     unittest.main()
