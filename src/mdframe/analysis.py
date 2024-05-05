@@ -15,7 +15,7 @@ def flatten_property_dict(property_dict: Dict) -> Dict:
     return flattened_dict
 
 
-def load_flattened_data(config):
+def load_flattened_data(config: Config) -> pd.DataFrame:
     """
     Loads and flattens data based on the given configuration.
 
@@ -30,15 +30,13 @@ def load_flattened_data(config):
     """
     entries = run(config)
     
-    # convert all pandas Series objects into dictionaries, and flatten them in order to isolate property_name
-    entries = [pd.Series.to_dict(entry) for entry in entries]
     entries = [flatten_property_dict(entry) for entry in entries]
 
     df = pd.DataFrame(entries)
     return df
 
 
-def filter_data(config, query, filename):
+def filter_data(config: Config, query: str, filename: str):
     """
     Filters data from a DataFrame based on a given query and saves the result to a CSV file.
 
@@ -60,14 +58,13 @@ def filter_data(config, query, filename):
     # df = df.query(query)
 
     df = df[eval(query)]
-    # print(df)
 
     df.to_csv(filename)
 
 
 # TODO: augment generate_histogram to use load_data function
 # TODO: have generate_histogram use global flatten_property_dict method
-def generate_histogram(config, property_name='quality', data_type='discrete'):
+def generate_histogram(config: Config, property_name: str ='quality', data_type: str = 'discrete'):
     """Generates a histogram based on the given configuration, property name, and data type.
 
     Args:
@@ -127,7 +124,7 @@ def generate_histogram(config, property_name='quality', data_type='discrete'):
 
 if __name__ == '__main__':
     config = Config(
-        data_path=Path(__file__).parent / "data", 
+        metadata_file_paths=Path(__file__).parent / "data", 
         metadata_file_extension="toml",
         schema_loc=Path('schema.json')
     )
