@@ -2,7 +2,7 @@ import argparse
 import json
 import warlock
 from warlock.core import model as warlock_model
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from jsonschema import validate, ValidationError, SchemaError
 import pandas as pd
 import toml
@@ -36,12 +36,11 @@ class DynClass(warlock_model.Model):
 class Config:
     metadata_file_paths: List[Path] | Path
     metadata_file_extension: MetadataFileExtension | None
-    # data_file_extensions: List[DataFileExtension]
     schema_loc: Path
     representation: DataframeBackend = "raw"
     sort: bool = True
-    __schema: Dict | None = None
-    __class_: Any | None = None
+    __schema: Dict | None = field(default=None, repr=False)  # avoiding nasty prints
+    __class_: Any | None = field(default=None, repr=False)
 
     @property
     def schema(self):
@@ -90,7 +89,7 @@ class Config:
         except toml.decoder.TomlDecodeError as toml_error:
             raise TomlDecodeError(f"Crashed when processing metadata file {specific_file_name}; {toml_error}", doc=toml_error.doc, pos=toml_error.pos) from toml_error
 
-        return self.Class(metadata_file_contents)
+        return self.Class(metadata_file_contents)  # pylint: disable=not-callable
 
 
 def glob_all_dirs(path: Path | List[Path], pattern: str) -> Iterator[Path]:
@@ -116,8 +115,8 @@ def load_metadata_files(config: Config,
         output_metadata_file_paths = globbed_metadata_file_paths
 
     # Define a sequence of functions to apply to each path left-to-right:
-    f = compose_left(transform_fn,
-                     config._load_one_metadata_file)
+    f = compose_left(config._load_one_metadata_file,
+                     transform_fn)
     # Note that after `transform_fn` is applied a `DynClass` instance
     # can be transformed into any arbitrary object, hence `Any`.
 
@@ -126,11 +125,20 @@ def load_metadata_files(config: Config,
 
 
 def metadata_file_to_pandas_df(metadata_file_contents: DynClass) -> pd.DataFrame:
-    return pd.DataFrame(metadata_file_contents.__dict__)
+    return pd.DataFrame(dict(metadata_file_contents))
 
 
-def run(config: Config):
-    load_fn = partial(load_metadata_files, config=config)
+def run(config: Config, lazy: bool = True) -> Iterator[Any]:
+    if lazy:
+        # If lazy, we want to return a generator:
+        load_fn = partial(load_metadata_files, config=config)
+    else:
+        # If not lazy, we want to load all metadata files at once
+        # and return a list of them:
+        load_fn = compose_left(partial(load_metadata_files, config=config),
+                               list)
+
+    # Then we match on the representation switch to decide which backend to use:
     match config.representation:
         case "pandas":
             return load_fn(transform_fn=metadata_file_to_pandas_df)
@@ -140,6 +148,11 @@ def run(config: Config):
             return load_fn()  # relying on the identity lambda from `load_metadata_files`
         case _:
             raise ValueError(f"Unsupported representation {config.representation}")
+
+
+def run_eager(config: Config) -> List[Any]:
+    """Alias for `run(config, lazy=False)`"""
+    return run(config, lazy=False)
 
 
 def get_appropriate_schema(schema_data: str):
@@ -180,7 +193,7 @@ def main():
     schema = args.schema
     if args.schema != Path(__file__).parent / "schema.json":
         schema = get_appropriate_schema(args.schema)
-    
+
     config = Config(
         metadata_file_paths=Path(args.directory),
         metadata_file_extension=args.metadata_ext,
@@ -188,7 +201,7 @@ def main():
         representation=args.representation,
         sort=args.sort
     )
-    dfs = list(run(config))
+    dfs = list(run(config, lazy=False))
     print(dfs)
     print("Done")
 
