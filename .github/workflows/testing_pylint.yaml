@@ -13,8 +13,6 @@ jobs:
         run: poetry install
       - name: Check style with pylint
         run: |
-          python -m pip install --upgrade pip
-          pip install pylint
           for d in *; do
-            pylint $d
+            poetry run pylint $d
           done
