@@ -1,5 +1,7 @@
 name: Run all tests
-on: [push]
+on:
+  pull_request:
+    types: [opened, edited, synchronize, ready_for_review, review_requested, reopened]
 
 jobs:
   run-tests:
@@ -20,10 +22,3 @@ jobs:
         with:
           coverageFile: coverage.xml
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Check style with pylint
-        run: |
-          """
-            for d in *; do
-              pylint $d
-            done
-          """

@@ -1,0 +1,20 @@
+name: Run all tests
+on: [push]
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+      - name: Install poetry
+        uses: abatilo/actions-poetry@v2
+      - name: Install the project dependencies and the `mdframe` package
+        run: poetry install
+      - name: Check style with pylint
+        run: |
+          """
+            for d in *; do
+              pylint $d
+            done
+          """
