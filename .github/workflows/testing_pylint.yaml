@@ -15,7 +15,4 @@ jobs:
           pip install poetry
           poetry install
       - name: Check style with pylint
-        run: |
-          sed -i '/bad-whitespace/d' pyproject.toml || true
-          sed -i '/bad-continuation/d' pyproject.toml || true
-          poetry run pylint $(git ls-files '*.py')
+        run: poetry run pylint $(git ls-files '*.py')
