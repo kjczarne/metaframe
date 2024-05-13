@@ -13,8 +13,6 @@ jobs:
         run: poetry install
       - name: Check style with pylint
         run: |
-          """
-            for d in *; do
-              pylint $d
-            done
-          """
+          for d in *; do
+            pylint $d
+          done
