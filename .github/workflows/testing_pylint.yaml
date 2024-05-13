@@ -12,7 +12,4 @@ jobs:
       - name: Install the project dependencies and the `mdframe` package
         run: poetry install
       - name: Check style with pylint
-        run: |
-          for d in *; do
-            poetry run pylint $d
-          done
+        run: poetry run pylint **/*
