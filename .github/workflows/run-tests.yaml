@@ -23,7 +23,7 @@ jobs:
           coverageFile: coverage.xml
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Check style with pylint
-        use: |
+        run: |
           """
             for d in *; do
               pylint $d
