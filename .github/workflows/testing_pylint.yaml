@@ -16,3 +16,5 @@ jobs:
           poetry install
       - name: Check style with pylint
         run: poetry run pylint $(git ls-files '*.py')
+      - name: Run tests
+        run: poetry run pytest
