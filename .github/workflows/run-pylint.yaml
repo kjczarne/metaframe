@@ -1,4 +1,4 @@
-name: Run all tests
+name: Run pylint
 on:
   pull_request:
     types: [opened, edited, synchronize, ready_for_review, review_requested, reopened]
