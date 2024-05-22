@@ -4,7 +4,7 @@ on:
     types: [opened, edited, synchronize, ready_for_review, review_requested, reopened]
 
 jobs:
-  run-tests:
+  run-pylint:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repository
@@ -16,12 +16,5 @@ jobs:
           python -m pip install --upgrade pip
           pip install poetry
           poetry install
-      - name: Run all tests under Coverage
-        run: poetry run coverage run -m pytest
-      - name: Create XML coverage report
-        run: poetry run coverage xml
-      - name: Generate coverage report
-        uses: orgoro/coverage@v3.1
-        with:
-          coverageFile: coverage.xml
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Check style with pylint
+        run: poetry run pylint $(git ls-files '*.py')
